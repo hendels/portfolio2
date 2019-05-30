@@ -1,0 +1,26 @@
+SZYBKI TEMPLATE JAK WEBDEV NATALIA
+http://webdevnatalia.com/
+
+* 3+ kafelki na gorze, przy scroolowaniu przechodzi animacja do poszczegolnej sekcji
+* kafelki: projects, contact, skills, about
+    Contact:
+        *git / 
+        *linked in
+    Projects:
+        sections: 
+        Bikeysh, OnePage, GoogleMap
+
+* effects - particles on background - some blue squares on white background
+
+colors:
+na dole jak w team cherry references
+
+jebnij swoje zdjecia z sesji;
+
+
+// sekcja doświadczenie:
+czym jest DYNAMICS NAV - to system klasy ERP (like SAP, but medium companies sector)
+wymień firmy dla których pracowałeś
+
+// motivation:
+now i need some guidance to improve and not making errors

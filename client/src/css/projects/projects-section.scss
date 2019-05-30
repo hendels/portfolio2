@@ -1,0 +1,60 @@
+
+//vars
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$grey: #262626;
+$primary: #ddd;
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        'left-container stack' 
+        'left-container info' 
+        'left-container features' 
+        'left-container demo' ;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+
+}
+.left-container {
+    display: grid;
+    grid-area: left-container;
+    width: 600px;
+    height: 350px;
+    border: 2px solid black ;
+    box-shadow: $shadow;
+}
+.carousel-img {
+    // height: 170px;
+    // width: auto;/*maintain aspect ratio*/
+    // max-width: 500px;
+}
+.technology-stack {
+    display: grid;
+    grid-area: left-container;
+}
+.stack {
+    display: grid;
+    grid-area: stack;
+}
+.info {
+    display: grid;
+    grid-area: info;
+}
+.features {
+    display: grid;
+    grid-area: features;
+}
+.git,
+.demo {
+    display: grid;    
+    grid-area: demo;
+    .project-btn {
+        color: orange;
+    }
+}
+.project-btn {
+    background: $primary;
+    box-shadow: $shadow;
+    padding: 1rem;
+}

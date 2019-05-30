@@ -1,0 +1,130 @@
+.top-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+      grid-template-areas: 'showcase showcase top-box-a' 'showcase showcase top-box-b';
+}
+
+.showcase {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(../../img/me1.jpg);
+  background-size: cover;
+  background-position: 0% 30%;
+  padding: 3rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'title title title' 'description description description' 'git-link linkedIn-link email' 'blank blank flip';
+  -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  z-index: 0;
+}
+
+.showcase h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--white);
+  text-shadow: #000 0px 0px 2px;
+}
+
+.showcase p {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: description;
+  font-size: 1.3rem;
+  margin-top: 0;
+  text-shadow: #000 0px 0px 2px;
+}
+
+.showcase .git-link {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: git-link;
+  max-height: 25px;
+  max-width: 70px;
+  text-align: center;
+  background: #262626;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+}
+
+.showcase .email {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: email;
+  max-height: 25px;
+  max-width: 70px;
+  text-align: center;
+  background: #262626;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+}
+
+.showcase .linkedIn-link {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: linkedIn-link;
+  max-height: 25px;
+  max-width: 70px;
+  text-align: center;
+  background: #262626;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+}
+
+.showcase .flipBtn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: flip;
+  max-height: 25px;
+  background: #262626;
+  text-align: center;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+.top-box {
+  background: #ddd;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: top-box-b;
+}
+/*# sourceMappingURL=aboutMe.css.map */

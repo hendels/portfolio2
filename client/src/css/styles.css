@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    /* margin: 30px 50px; */
+    /* line-height: 1.4; */
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}

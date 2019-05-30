@@ -1,0 +1,16 @@
+//vars
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$grey: #262626;
+$primary: #ddd;
+
+@mixin regular-box {
+    background: $primary;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: $shadow;
+    padding: 1.5rem;
+    .price {
+        font-size: 2.5rem; 
+    }
+}

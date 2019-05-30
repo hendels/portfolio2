@@ -1,0 +1,28 @@
+@import '../general/components.scss';
+//vars
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$grey: #262626;
+$primary: #ddd;
+
+.cv-section {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        'cv-description  cv-box';
+    grid-template-columns: 60% 20%;
+    h2 {
+
+    }
+    p {
+
+    }
+}
+.cv-description{
+    display: grid;
+    grid-area: cv-description;
+}
+.regular-box {
+    @include regular-box;
+    grid-area: cv-box;
+}
+
