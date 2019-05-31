@@ -1,4 +1,6 @@
 .container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -ms-grid;
   display: grid;
   grid-gap: 5px;
@@ -18,9 +20,45 @@
   grid-area: left-container;
   width: 600px;
   height: 350px;
-  border: 2px solid black;
   -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
           box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.project-btn {
+  background: #ddd;
+  -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  padding: 0.7rem;
+}
+
+a.project-btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+a.project-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#133160), to(#c96567));
+  background: linear-gradient(to right, #133160 0%, #c96567 100%);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+a.project-btn:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .technology-stack {
@@ -30,6 +68,7 @@
   -ms-grid-row-span: 4;
   -ms-grid-column: 1;
   grid-area: left-container;
+  margin: 7px;
 }
 
 .stack {
@@ -38,6 +77,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: stack;
+  margin: 7px;
 }
 
 .info {
@@ -46,6 +86,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: info;
+  margin: 7px;
 }
 
 .features {
@@ -54,6 +95,7 @@
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: features;
+  margin: 7px;
 }
 
 .git,
@@ -63,17 +105,11 @@
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: demo;
+  margin: 7px;
 }
 
 .git .project-btn,
 .demo .project-btn {
   color: orange;
-}
-
-.project-btn {
-  background: #ddd;
-  -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  padding: 1rem;
 }
 /*# sourceMappingURL=projects-section.css.map */

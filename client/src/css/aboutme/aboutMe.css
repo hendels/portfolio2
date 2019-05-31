@@ -12,7 +12,7 @@
   -ms-grid-column-span: 2;
   grid-area: showcase;
   min-height: 400px;
-  background: url(../../img/me1.jpg);
+  background: url(../../img/me2.jpg);
   background-size: cover;
   background-position: 0% 30%;
   padding: 3rem;
@@ -21,8 +21,6 @@
       grid-template-areas: 'title title title' 'description description description' 'git-link linkedIn-link email' 'blank blank flip';
   -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
           box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
   z-index: 0;
 }
 

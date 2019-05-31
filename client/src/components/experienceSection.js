@@ -20,6 +20,7 @@ const ExperienceSection = () => {
                 <h1>Entry 1</h1>
             </div>
             <div icon={jsIcon}><h1>Individual Learning</h1></div>
+            <div icon='03.2018'><h3>decided to change branch</h3></div>
             <div>
                 <h1>Entry 2</h1>
                 <ul>

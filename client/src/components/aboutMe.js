@@ -18,11 +18,7 @@ class AboutMe extends React.Component {
                 {/* left section */}
                 <div className="showcase">
                     <h1>{this.state.flipped ? 'My name is Przemy' : 'My name is Przemek.'}</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Maiores earum modi rerum impedit! Voluptatibus, 
-                        nemo reprehenderit!
-                    </p>
-
+                    <p>wanna be web dev / 'some icon' Krakow / Wroclaw</p>
                     <a href="" className="linkedIn-link">linkedin link</a>
                     <a href="" className="git-link">git link</a>
                     <a href="" className="email">pharendarz@gmail.com</a>
@@ -41,9 +37,7 @@ class AboutMe extends React.Component {
                     <a href="" className="btn">blank</a>
                 </div>
                 <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Maiores earum modi rerum impedit! Voluptatibus, 
-                        nemo reprehenderit!
+                <p>hard worker / scraper /
                     </p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maiores earum modi rerum impedit! Voluptatibus, 

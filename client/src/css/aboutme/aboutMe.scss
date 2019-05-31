@@ -17,7 +17,7 @@ $primary: #ddd;
 .showcase {
     grid-area: showcase;
     min-height: 400px;
-    background: url(../../img/me1.jpg);
+    background: url(../../img/me2.jpg);
     background-size: cover;
     background-position: 0% 30%;
     padding: 3rem;
@@ -32,7 +32,7 @@ $primary: #ddd;
     // align-items: flex-start;
     // justify-content: center;
     box-shadow: $shadow;
-    filter: grayscale(70%);
+    // filter: grayscale(70%);
     z-index: 0;
     h1 {
         grid-area: title;

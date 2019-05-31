@@ -24,3 +24,5 @@ wymień firmy dla których pracowałeś
 
 // motivation:
 now i need some guidance to improve and not making errors
+* i have background in sales analytics, medium-sized (100+ users) system administration
+* fast learner

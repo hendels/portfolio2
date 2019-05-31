@@ -2,8 +2,9 @@ import React from 'react';
 // style
 import '../css/projects/projects-section.css';
 // app components
-import Carousel from '../components/carousel';
+import Carousel from './carouselScreenshots';
 import TechnologyStack from '../components/technologyStack';
+import Features from '../components/projectFeatures';
 
 class ProjectContainer extends React.Component {
     state = {
@@ -23,21 +24,17 @@ class ProjectContainer extends React.Component {
             case 'stack':
                 activeComponent = <TechnologyStack className='technology-stack' stack={this.props.stack}/> 
                 break;
-            case 'information':
-                activeComponent = <Carousel /> 
+            case 'about':
+                activeComponent = <Features features={this.props.features} /> 
                 break;
             case 'features':
-                activeComponent = <Carousel /> 
-                break;
-            case 'demo':
-                activeComponent = <Carousel /> 
+                activeComponent = <Features features={this.props.features} /> 
                 break;
             default:
                 break;
         }
         return (
             <div>
-                <h1>PROJECTS</h1>
                 <h2>{this.props.projectName}</h2>
                 <div className='container'>
                     <div className='left-container'>
@@ -51,12 +48,14 @@ class ProjectContainer extends React.Component {
                             <a className='project-btn' onClick={()=>this.handleChangeElement('stack')}>Stack</a>
                         </li>
                         <li className='info'>
-                            <a className='project-btn' onClick={()=>this.handleChangeElement('information')}>Information</a>
+                            <a className='project-btn' onClick={()=>this.handleChangeElement('about')}>About</a>
                         </li>
                         <li className='features'>
                             <a className='project-btn' onClick={()=>this.handleChangeElement('features')}>Features</a>
                         </li>
+                        {/* TODO - combine demo + git to 2 buttons next to each other */}
                         <li className='demo'>
+                            {/* TODO - add label (animated) to inform that dyno is loading couple of seconds */}
                             <a className='project-btn' onClick={()=>this.handleChangeElement('demo')}>Live Demo</a>
                         </li>
                         <li className='git'>

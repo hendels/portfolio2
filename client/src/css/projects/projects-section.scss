@@ -4,7 +4,14 @@ $shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 $grey: #262626;
 $primary: #ddd;
 
+$container-width: 600px;
+$container-height: 350px;
+
+$logo-height: 170px;
+$logo-max-width: 500px;
+
 .container {
+    box-sizing: border-box;
     display: grid;
     grid-gap: 5px;
     grid-template-areas:
@@ -19,31 +26,66 @@ $primary: #ddd;
 .left-container {
     display: grid;
     grid-area: left-container;
-    width: 600px;
-    height: 350px;
-    border: 2px solid black ;
+    width: $container-width;
+    height: $container-height;
+    // border: 2px solid black ;
     box-shadow: $shadow;
 }
-.carousel-img {
-    // height: 170px;
+.project-btn {
+    background: $primary;
+    box-shadow: $shadow;
+    padding: 0.7rem;
+}
+a.project-btn {
+    // border-bottom: 1px solid red;
+    // transform: translate(-50%, -50%);
+    position: relative;
+    display: block;
+    text-align: center;
+    transition: .5s;
+}
+a.project-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #133160 0%,#c96567 100%);
+    // z-index: -1;
+    transform: scaleX(0);
+    transition: .5s;
+    transform-origin: left;
+
+}
+a.project-btn:hover:before{
+    transform: scaleX(1);
+}
+
+.logo-img {
+    // height: $logo-height;
     // width: auto;/*maintain aspect ratio*/
-    // max-width: 500px;
+    // max-width: $logo-max-width;
 }
 .technology-stack {
     display: grid;
     grid-area: left-container;
+    margin: 7px;
 }
 .stack {
     display: grid;
     grid-area: stack;
+    margin: 7px;
 }
 .info {
     display: grid;
     grid-area: info;
+    margin: 7px;
 }
 .features {
     display: grid;
     grid-area: features;
+    margin: 7px;
 }
 .git,
 .demo {
@@ -52,9 +94,5 @@ $primary: #ddd;
     .project-btn {
         color: orange;
     }
-}
-.project-btn {
-    background: $primary;
-    box-shadow: $shadow;
-    padding: 1rem;
+    margin: 7px;
 }

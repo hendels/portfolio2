@@ -11,11 +11,18 @@ import ContactForm from './components/contactForm';
 import './css/styles.css'
 const App = () =>  {
   const projectName = 'Bikeysh';
+  const features = [
+    `it's RWD`,
+    `search bar`,
+    `tag management`,
+    `crawler`
+  ]
   const stack = {
       mongodb: true,
       sass: true,
-      react: true
-  }
+      react: true,
+      RWD: true,
+  };
   return (
     <div >
         <Navbar/>
@@ -23,9 +30,10 @@ const App = () =>  {
         <SkillsSection/>
         <ExperienceSection/>
         <CvSection/>
-        <ProjectSection projectName='Bikeysh' stack={stack}/>
-        <ProjectSection projectName='One Page Site' stack={stack}/>
-        <ProjectSection projectName='Google Map Redux App' stack={stack}/>
+        <h1>PROJECTS</h1>
+        <ProjectSection projectName='Bikeysh' stack={stack} features={features}/>
+        <ProjectSection projectName='One Page Site' stack={stack} features={features}/>
+        <ProjectSection projectName='Google Map Redux App' stack={stack} features={features}/>
         <ContactForm/>
     </div>
   );
