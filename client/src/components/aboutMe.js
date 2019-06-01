@@ -39,17 +39,12 @@ class AboutMe extends React.Component {
                 <div>
                 <p>hard worker / scraper /
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Maiores earum modi rerum impedit! Voluptatibus, 
-                        nemo reprehenderit!
+                    <p>https://github.com/kamranahmedse/developer-roadmap
+                        napisz ze pokrywasz jakis t am procent tego linka
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Maiores earum modi rerum impedit! Voluptatibus, 
-                        nemo reprehenderit!
+                    <p>hire me!
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Maiores earum modi rerum impedit! Voluptatibus, 
-                        nemo reprehenderit!
+                    <p>napisz ze znasz devtools / redux dev tools / chrome devtools / react devtools
                     </p>
                 </div>
             </section>

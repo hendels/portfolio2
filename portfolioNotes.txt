@@ -17,7 +17,8 @@ na dole jak w team cherry references
 
 jebnij swoje zdjecia z sesji;
 
-
+// Bikeysh
+it was quite a challenge to do it by myself
 // sekcja doświadczenie:
 czym jest DYNAMICS NAV - to system klasy ERP (like SAP, but medium companies sector)
 wymień firmy dla których pracowałeś
@@ -26,3 +27,8 @@ wymień firmy dla których pracowałeś
 now i need some guidance to improve and not making errors
 * i have background in sales analytics, medium-sized (100+ users) system administration
 * fast learner
+
+// workservice:
+* processed massive amount of sales data
+// DDC:
+* migrating from old systems to new versions
