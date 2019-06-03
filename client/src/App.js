@@ -8,6 +8,7 @@ import ProjectSection from "./components/projectContainer";
 import ProjectSection2 from "./components/projectContainer2";
 import SkillsSection from "./components/skillsSection";
 import ContactForm from "./components/contactForm";
+import Tutorial from "./components/tutorial";
 //styles
 import "./css/styles.css";
 import "./css/bootstrap/bootstrap.css";
@@ -29,8 +30,8 @@ const App = () => {
       <ExperienceSection />
       <CvSection />
       <h1>PROJECTS</h1>
-      <ProjectSection2 />
-      <ProjectSection projectName="Bikeysh" stack={stack} features={features} />
+      {/* <Tutorial /> */}
+      {/* <ProjectSection projectName="Bikeysh" stack={stack} features={features} />
       <ProjectSection
         projectName="One Page Site"
         stack={stack}
@@ -41,7 +42,8 @@ const App = () => {
         stack={stack}
         features={features}
       />
-      <ContactForm />
+      // put this portfolio as a project also
+      <ContactForm /> */}
     </div>
   );
 };

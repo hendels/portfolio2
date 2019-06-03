@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////////////////////////////////
+FLOW:
+
+PROTOTYPE > MOCK PROTOTYPE > CUT TO PARTS AS REACT COMPONENTS > ADD FUNCTIONALITY TO COMPONENTS
+///////////////////////////////////////////////////////////////////////////////////////
+
 SZYBKI TEMPLATE JAK WEBDEV NATALIA
 http://webdevnatalia.com/
 
@@ -24,6 +30,7 @@ czym jest DYNAMICS NAV - to system klasy ERP (like SAP, but medium companies sec
 wymień firmy dla których pracowałeś
 
 // motivation:
+i have 2+ years of experience as a proffesional Dynamics NAV programmer. 
 now i need some guidance to improve and not making errors
 * i have background in sales analytics, medium-sized (100+ users) system administration
 * fast learner
@@ -32,3 +39,7 @@ now i need some guidance to improve and not making errors
 * processed massive amount of sales data
 // DDC:
 * migrating from old systems to new versions
+
+// SKILLAZ
+* bootstrap css, bootstrap react, materialUi react
+* git

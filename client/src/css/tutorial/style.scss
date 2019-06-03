@@ -1,0 +1,94 @@
+$primary: #3296a6;
+$primary-overlay: rgba(142, 230, 248, 0.3);
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.6);
+
+body {
+  margin-top: 105px;
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px $primary;
+  opacity: 0.9;
+  background: #000;
+  .nav-link,
+  .nav-item {
+    font-size: 1.2rem;
+    padding-right: 1.4rem;
+    //
+    position: relative;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .nav-link::before,
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #133160 0%, #c96567 100%);
+    // z-index: -1;
+    transform: scaleX(0);
+    transition: 0.5s;
+    transform-origin: left;
+  }
+  .nav-link:hover:before,
+  .nav-item:hover:before {
+    transform: scaleX(1);
+  }
+}
+
+#showcase {
+  position: relative;
+  // padding-top: 3rem;
+  // padding-bottom: 1rem;
+  background: url(../../img/tut/mountains.jpg);
+  min-height: 600px;
+  text-shadow: #000 0px 0px 2px;
+  .primary-overlay {
+    background: $primary-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+img.book {
+  max-width: 100%;
+  height: auto;
+}
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px #ddd solid;
+}
+#authors {
+  img {
+    margin-top: -50px;
+  }
+
+  .card:hover {
+    background: $primary;
+    color: #fff;
+    .fab {
+      color: #fff;
+    }
+    .fab:hover {
+      color: red;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #showcase {
+    min-height: 500px;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  .mb-resp {
+    margin-bottom: 1rem;
+  }
+}
