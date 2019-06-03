@@ -1,0 +1,13 @@
+@import "../general/palette.scss";
+
+.skills-title {
+  width: 100%;
+  height: 100%;
+  box-shadow: $shadow;
+}
+.skills-content {
+  background: $newWarning;
+  color: #fff;
+
+  height: 100%;
+}

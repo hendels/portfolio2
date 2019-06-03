@@ -23,7 +23,7 @@ import person2 from "../img/tut/person2.jpg";
 import person3 from "../img/tut/person3.jpg";
 import person4 from "../img/tut/person4.jpg";
 
-import "../css/tutorial/style.css";
+// import "../css/tutorial/style.css";
 
 class Tutorial extends React.Component {
   render() {

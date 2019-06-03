@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,ECCH,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,wBAAwB;CDA1C;;AACD,AAAA,eAAe,CAAC;EACd,UAAU,ECJC,OAAO;EDKlB,KAAK,EAAE,IAAI;EAEX,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "skills.scss",
+        "../general/palette.scss"
+    ],
+    "names": [],
+    "file": "skills.css"
+}

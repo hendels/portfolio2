@@ -20,7 +20,7 @@ http://webdevnatalia.com/
 
 colors:
 na dole jak w team cherry references
-
+moze jakies gory w tle ładne;
 jebnij swoje zdjecia z sesji;
 
 // Bikeysh
@@ -30,6 +30,7 @@ czym jest DYNAMICS NAV - to system klasy ERP (like SAP, but medium companies sec
 wymień firmy dla których pracowałeś
 
 // motivation:
+AVAILABLE FROM NOW
 i have 2+ years of experience as a proffesional Dynamics NAV programmer. 
 now i need some guidance to improve and not making errors
 * i have background in sales analytics, medium-sized (100+ users) system administration
