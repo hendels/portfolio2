@@ -36,6 +36,18 @@ now i need some guidance to improve and not making errors
 * i have background in sales analytics, medium-sized (100+ users) system administration
 * fast learner
 
+* hard worker / scraper 
+          
+* https://github.com/kamranahmedse/developer-roadmap napisz ze
+pokrywasz jakis t am procent tego linka
+
+* napisz ze znasz devtools / redux dev tools / chrome devtools / react
+devtools
+
+        
+* {this.state.flipped ? "My name is Przemy" : "My name is Przemek."} < ma to sens?
+
+wanna be web dev / 'some icon' Krakow / Wroclaw
 // workservice:
 * processed massive amount of sales data
 // DDC:

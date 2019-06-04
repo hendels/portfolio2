@@ -1,11 +1,14 @@
 import React from "react";
 // app
 import Navbar from "./components/navbar";
+import Home from "./components/home";
 import AboutMe from "./components/aboutMe";
+
 import SkillsSection from "./components/skillsSection";
 import ExperienceSection from "./components/experienceSection";
 import CvSection from "./components/cvSection";
-// import ProjectSection from "./components/projectContainer";
+import ProjectHeader from "./components/projectHeader";
+import ProjectSection from "./components/projectContainer";
 // import ProjectSection2 from "./components/projectContainer2";
 // import ContactForm from "./components/contactForm";
 // import Tutorial from "./components/tutorial";
@@ -17,6 +20,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.homeSectionRef = React.createRef();
+    this.aboutMeSectionRef = React.createRef();
     this.skillsSectionRef = React.createRef();
     this.experienceSectionRef = React.createRef();
     this.projectsSectionRef = React.createRef();
@@ -33,6 +37,7 @@ class App extends React.Component {
     };
     const refs = {
       home: this.homeSectionRef,
+      aboutMe: this.aboutMeSectionRef,
       skills: this.skillsSectionRef,
       experience: this.experienceSectionRef,
       projects: this.projectsSectionRef,
@@ -40,15 +45,33 @@ class App extends React.Component {
     };
     return (
       <div>
-        <Navbar refs={refs} />
-        <AboutMe refHome={refs.home} />
-        <SkillsSection refSkills={refs.skills} />
-        <ExperienceSection refExperience={refs.experience} />
-        <CvSection />
-        <h1>PROJECTS</h1>
+        <Navbar refs={refs} navOffAtPixel={200} />
+        <Home refs={refs} />
+        <AboutMe refAboutMe={refs.aboutMe} sectionName="ABTZ" />
+        <SkillsSection refSkills={refs.skills} sectionName="SKLZ" />
+        <ExperienceSection refExperience={refs.experience} sectionName="EXPZ" />
+
         {/* <Tutorial /> */}
-        {/* <ProjectSection projectName="Bikeysh" stack={stack} features={features} />
+        <ProjectHeader sectionName="PRTZ" refProjects={refs.projects} />
         <ProjectSection
+          showHeader
+          colorVariant="variant-1"
+          // sectionName="PRTZ"
+          // refProjects={refs.projects}
+          projectName="Bikeysh"
+          stack={stack}
+          features={features}
+        />
+        <ProjectSection
+          colorVariant="variant-2"
+          sectionName="PRTZ"
+          refProjects={refs.projects}
+          projectName="Bikeysh"
+          stack={stack}
+          features={features}
+        />
+        {/* <CvSection /> */}
+        {/* <ProjectSection
           projectName="One Page Site"
           stack={stack}
           features={features}

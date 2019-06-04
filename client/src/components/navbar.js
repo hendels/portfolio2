@@ -24,8 +24,8 @@ class Navbar extends React.Component {
     const scrollPositionY = +window.scrollY;
     return this.setState({ scrollPositionY });
   };
-  headerColorChange() {
-    const scrollChangeHeight = 400;
+  headerColorChange(refs) {
+    const scrollChangeHeight = this.props.navOffAtPixel;
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > scrollChangeHeight) {
       document.body.getElementsByTagName("nav")[0].classList.remove("black");
@@ -45,7 +45,6 @@ class Navbar extends React.Component {
     }
   };
   handleClickToNavItem(e, ref, focusedId) {
-    console.log(`event`, e);
     e.preventDefault();
     this.setState(
       {
@@ -56,29 +55,67 @@ class Navbar extends React.Component {
         window.scrollTo(0, ref.current.offsetTop);
 
         // find selected nav-item by given focusedId
-        this.changeFocusOnNavItem(focusedId);
+        // this.changeFocusOnNavItem(focusedId);
       }
     );
   }
-
+  handleOnUpdateScrollspy = items => {
+    const navItems = document.getElementsByClassName("is-current");
+    let element = null;
+    for (let i = 0; i < navItems.length; i++) {
+      element = navItems.item(i).textContent.toLowerCase();
+    }
+    const navClasses = [
+      "selected-home",
+      "selected-about",
+      "selected-skills",
+      "selected-experience",
+      "selected-projects",
+      "selected-contact"
+    ];
+    const currentIndex = items.findIndex(item => item === `section-${element}`);
+    for (let i = 0; i < items.length; i++) {
+      if (currentIndex === i) {
+        document.body
+          .getElementsByTagName("nav")[0]
+          .classList.add(navClasses[i]);
+      } else {
+        document.body
+          .getElementsByTagName("nav")[0]
+          .classList.remove(navClasses[i]);
+      }
+    }
+  };
   componentDidMount() {
-    window.addEventListener("scroll", this.headerColorChange);
+    window.addEventListener("scroll", () =>
+      this.headerColorChange(this.props.refs)
+    );
     // window.addEventListener("scroll", debounce(this.handleScroll, 16));
   }
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.headerColorChange);
+    window.removeEventListener("scroll", () =>
+      this.headerColorChange(this.props.refs)
+    );
     // window.removeEventListener("scroll", debounce(this.handleScroll, 16));
   }
 
   render() {
     const { refs } = this.props;
     const isScrolling = !!this.state.scrollPositionY;
-    console.log(
-      "debounce::: ",
-      this.state.scrollPositionY,
-      " scrolling? ",
-      isScrolling
-    );
+    const scrollSpyItems = [
+      "section-home",
+      "section-about",
+      "section-skills",
+      "section-experience",
+      "section-projects",
+      "section-contact"
+    ];
+    // console.log(
+    //   "debounce::: ",
+    //   this.state.scrollPositionY,
+    //   " scrolling? ",
+    //   isScrolling
+    // );
     return (
       <nav>
         <div className="logo">
@@ -86,8 +123,10 @@ class Navbar extends React.Component {
         </div>
         <ul>
           <Scrollspy
-            items={["section-home", "section-skills", "section-experience"]}
+            items={scrollSpyItems}
             currentClassName="is-current"
+            onUpdate={() => this.handleOnUpdateScrollspy(scrollSpyItems)}
+            root
           >
             <li>
               <a
@@ -97,6 +136,18 @@ class Navbar extends React.Component {
                 onClick={e => this.handleClickToNavItem(e, refs.home, "home")}
               >
                 Home
+              </a>
+            </li>
+            <li>
+              <a
+                className="navItem"
+                id="home"
+                href="section-about"
+                onClick={e =>
+                  this.handleClickToNavItem(e, refs.aboutMe, "about")
+                }
+              >
+                About
               </a>
             </li>
             <li>
@@ -124,20 +175,23 @@ class Navbar extends React.Component {
               </a>
             </li>
 
-            {/* <li>
-            <a
-              className="navItem"
-              id="projects"
-              href="section-experience"
-              onClick={() => this.handleClickToNavItem(refs.projects, "projects")}
-            >
-              Projects
-            </a>
-          </li> */}
+            <li>
+              <a
+                className="navItem"
+                id="projects"
+                href="section-projects"
+                onClick={e =>
+                  this.handleClickToNavItem(e, refs.projects, "projects")
+                }
+              >
+                Projects
+              </a>
+            </li>
             {/* <li>
             <a
               className="navItem"
               id="contact"
+              href="section-contact"
               onClick={() =>
                 this.handleClickToNavItem(refs.contact, "contact")
               }

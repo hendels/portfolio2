@@ -16,6 +16,8 @@ nav {
 nav .logo {
   float: left;
   opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 nav .logo img {
@@ -52,6 +54,28 @@ nav ul li a:hover {
   background: #5f1e84;
 }
 
+nav.selected-home ul li a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: none;
+}
+
+nav.selected-about .logo h1 {
+  color: #990100;
+}
+
+nav.selected-skills .logo h1 {
+  color: #a3ffbe;
+}
+
+nav.selected-experience .logo h1 {
+  color: #00b9ae;
+}
+
+nav.selected-projects .logo h1 {
+  color: #ff4b3e;
+}
+
 nav.black {
   background: rgba(26, 26, 26, 0.8);
   height: 60px;
@@ -70,8 +94,8 @@ nav ul li a.focused {
   background: purple;
 }
 
-.is-current {
-  background: #ff4b3e;
-  opacity: 0.5;
+.is-current a {
+  color: #fff;
+  background: purple;
 }
 /*# sourceMappingURL=navbar-animated.css.map */

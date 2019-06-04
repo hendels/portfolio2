@@ -1,98 +1,101 @@
-
 //vars
+@import "../general/palette.scss";
 $shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 $grey: #262626;
 $primary: #ddd;
 
 $container-width: 600px;
-$container-height: 350px;
+$container-height: 480px;
 
 $logo-height: 170px;
 $logo-max-width: 500px;
-
-.container {
-    box-sizing: border-box;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-areas:
-        'left-container stack' 
-        'left-container info' 
-        'left-container features' 
-        'left-container demo' ;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
-
+.carousel-img {
+  //   height: $container-height;
+  //   width: auto;
 }
-.left-container {
-    display: grid;
-    grid-area: left-container;
-    width: $container-width;
-    height: $container-height;
-    // border: 2px solid black ;
-    box-shadow: $shadow;
+.projects-title {
+  width: 100%;
+  height: 100%;
+  box-shadow: $shadow;
+}
+
+.projects-content {
+  background: $newInfo;
+  color: $newPrimary;
+  height: 100%;
+  box-shadow: $shadow;
+}
+
+.project-buttons-group {
+  height: $container-height;
+  //   height: 100%;
+  width: 100%;
+}
+.variant-1 {
+  background: $projectVariant1;
+}
+.variant-2 {
+  background: $projectVariant2;
 }
 .project-btn {
-    background: $primary;
-    box-shadow: $shadow;
-    padding: 0.7rem;
+  background: $primary;
+  box-shadow: $shadow;
+  padding: 0.7rem;
 }
 a.project-btn {
-    // border-bottom: 1px solid red;
-    // transform: translate(-50%, -50%);
-    position: relative;
-    display: block;
-    text-align: center;
-    transition: .5s;
+  position: relative;
+  display: block;
+  text-align: center;
+  transition: 0.5s;
 }
 a.project-btn::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, #133160 0%,#c96567 100%);
-    // z-index: -1;
-    transform: scaleX(0);
-    transition: .5s;
-    transform-origin: left;
-
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #133160 0%, #c96567 100%);
+  // z-index: -1;
+  transform: scaleX(0);
+  transition: 0.5s;
+  transform-origin: left;
 }
-a.project-btn:hover:before{
-    transform: scaleX(1);
+a.project-btn:hover:before {
+  transform: scaleX(1);
 }
 
 .logo-img {
-    // height: $logo-height;
-    // width: auto;/*maintain aspect ratio*/
-    // max-width: $logo-max-width;
+  // height: $logo-height;
+  // width: auto;/*maintain aspect ratio*/
+  // max-width: $logo-max-width;
 }
 .technology-stack {
-    display: grid;
-    grid-area: left-container;
-    margin: 7px;
+  //   display: grid;
+  grid-area: left-container;
+  margin: 7px;
 }
 .stack {
-    display: grid;
-    grid-area: stack;
-    margin: 7px;
+  //   display: grid;
+  grid-area: stack;
+  margin: 7px;
 }
 .info {
-    display: grid;
-    grid-area: info;
-    margin: 7px;
+  //   display: grid;
+  grid-area: info;
+  margin: 7px;
 }
 .features {
-    display: grid;
-    grid-area: features;
-    margin: 7px;
+  //   display: grid;
+  grid-area: features;
+  margin: 7px;
 }
 .git,
 .demo {
-    display: grid;    
-    grid-area: demo;
-    .project-btn {
-        color: orange;
-    }
-    margin: 7px;
+  //   display: grid;
+  grid-area: demo;
+  .project-btn {
+    color: orange;
+  }
+  margin: 7px;
 }

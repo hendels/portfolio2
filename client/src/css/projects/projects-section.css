@@ -1,27 +1,29 @@
-.container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 5px;
-      grid-template-areas: 'left-container stack'  'left-container info'  'left-container features'  'left-container demo';
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 25% 25% 25% 25%;
-      grid-template-rows: 25% 25% 25% 25%;
-}
-
-.left-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 1;
-  grid-area: left-container;
-  width: 600px;
-  height: 350px;
+.projects-title {
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
           box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.projects-content {
+  background: #f3eff5;
+  color: #001427;
+  height: 100%;
+  -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.project-buttons-group {
+  height: 480px;
+  width: 100%;
+}
+
+.variant-1 {
+  background: #bfd7ea;
+}
+
+.variant-2 {
+  background: #087e8b;
 }
 
 .project-btn {
@@ -35,12 +37,12 @@ a.project-btn {
   position: relative;
   display: block;
   text-align: center;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 a.project-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 0;
@@ -50,8 +52,8 @@ a.project-btn::before {
   background: linear-gradient(to right, #133160 0%, #c96567 100%);
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -62,48 +64,27 @@ a.project-btn:hover:before {
 }
 
 .technology-stack {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 1;
   grid-area: left-container;
   margin: 7px;
 }
 
 .stack {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: stack;
   margin: 7px;
 }
 
 .info {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: info;
   margin: 7px;
 }
 
 .features {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
   grid-area: features;
   margin: 7px;
 }
 
 .git,
 .demo {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
   grid-area: demo;
   margin: 7px;
 }

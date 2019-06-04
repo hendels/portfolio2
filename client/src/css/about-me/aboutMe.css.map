@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,ECQH,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,wBAAwB;CDP1C;;AAED,AAAA,cAAc,CAAC;EACb,UAAU,ECEF,OAAO;EDDf,KAAK,ECJM,OAAO;EDKlB,MAAM,EAAE,IAAI;EACZ,UAAU,ECCH,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,wBAAwB;CDA1C",
+    "sources": [
+        "aboutMe.scss",
+        "../general/palette.scss"
+    ],
+    "names": [],
+    "file": "aboutMe.css"
+}
