@@ -58,6 +58,10 @@
   top: 0;
 }
 
+.hide-element {
+  display: none !important;
+}
+
 .demo-button-overlay {
   position: absolute;
   background: #000;

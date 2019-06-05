@@ -66,6 +66,9 @@ $logo-max-width: 500px;
   height: 80px;
   top: 0;
 }
+.hide-element {
+  display: none !important;
+}
 // # down section
 .demo-button-overlay {
   position: absolute;
@@ -89,7 +92,7 @@ $logo-max-width: 500px;
   left: 20%;
   text-align: center;
 }
-// technology stack section
+// // technology stack section
 // container
 .stack-overlay {
   position: absolute;

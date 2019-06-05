@@ -15,26 +15,41 @@ class ProjectContainer extends React.Component {
   handleChangeElement = element => {
     this.setState({ activeComponent: element });
   };
-  handleWatchForNavbar = projectRef => {
+  handleWatchForNavbar = (projectRef, projectEndRef) => {
     const windowsScrollTop = window.pageYOffset;
-    if (windowsScrollTop >= projectRef.current.offsetTop)
-      console.log("ive got ref");
+    const startRef = projectRef.current.offsetTop;
+    const endRef = startRef + projectEndRef.current.offsetTop;
+    // console.log(startRef, endRef);
+    // if (windowsScrollTop >= startRef && windowsScrollTop >= startRef)
+    //   console.log("ive got ref for::: " + this.props.projectName);
+    const containerTitle = `${this.props.projectName.toLowerCase()}_title`;
+    const classList = document.getElementById(containerTitle).classList;
+    console.log(this.props.projectName, ":::", classList);
+    if (windowsScrollTop <= endRef && windowsScrollTop >= startRef) {
+      console.log("ive got ::: " + this.props.projectName);
+      classList.remove("hide-element");
+      classList.add("hide-element");
+      this.props.handleChangeSubbar(this.props.projectName);
+    } else {
+      classList.add("hide-element");
+      classList.remove("hide-element");
+    }
   };
   componentDidMount() {
     window.addEventListener("scroll", () =>
-      this.handleWatchForNavbar(this.props.refProject)
+      this.handleWatchForNavbar(this.props.refProject, this.props.refEndProject)
     );
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", () =>
-      this.handleWatchForNavbar(this.props.refProject)
+      this.handleWatchForNavbar(this.props.refProject, this.props.refEndProject)
     );
   }
   render() {
     let activeComponent;
     switch (this.state.activeComponent) {
       case "imageSlider":
-        activeComponent = <Carousel />;
+        activeComponent = <Carousel refEndProject={this.props.refEndProject} />;
         break;
       case "stack":
         activeComponent = (
@@ -54,15 +69,15 @@ class ProjectContainer extends React.Component {
         break;
     }
     return (
-      <section
-        id={this.props.projectName.toLowerCase()}
-        ref={this.props.refProject}
-      >
+      <section ref={this.props.refProject}>
         <Container>
           <Row noGutters>
             <Col md={12}>
               {/*  overlays */}
-              <div className="project-title-overlay">
+              <div
+                id={`${this.props.projectName.toLowerCase()}_title`}
+                className="project-title-overlay"
+              >
                 <div className="d-flex justify-content-start">
                   <h1 className="display-4 text-white pr-5">
                     {this.props.projectName}
@@ -85,7 +100,7 @@ class ProjectContainer extends React.Component {
               </div>
 
               <div className="stack-overlay">
-                <CarouselStack />
+                <CarouselStack refEndProject={this.props.refEndProject} />
               </div>
               <div className="after-bracket-overlay display-2">
                 <p className="overlay-text">&#125;</p>

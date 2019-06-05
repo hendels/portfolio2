@@ -19,6 +19,9 @@ import "./css/bootstrap/bootstrap.css";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentSubbar: ""
+    };
     this.homeSectionRef = React.createRef();
     this.aboutMeSectionRef = React.createRef();
     this.skillsSectionRef = React.createRef();
@@ -30,6 +33,11 @@ class App extends React.Component {
     this.bikeyshEndSectionRef = React.createRef();
     this.googleMapEndSectionRef = React.createRef();
   }
+  handleChangeSubbar = subbar => {
+    this.setState({ currentSubbar: subbar }, () => {
+      console.log("SUBBAR:::", subbar);
+    });
+  };
   render() {
     // const projectName = "Bikeysh";
 
@@ -40,21 +48,29 @@ class App extends React.Component {
       experience: this.experienceSectionRef,
       projects: this.projectsSectionRef,
       bikeysh: this.bikeyshSectionRef,
-      bikeyshEnd: this.bikeyshSectionRef,
+      bikeyshEnd: this.bikeyshEndSectionRef,
       googleMap: this.googleMapSectionRef,
-      googleMapEnd: this.googleMapSectionRef,
+      googleMapEnd: this.googleMapEndSectionRef,
       contact: this.contactSectionRef
     };
     return (
       <div>
-        <Navbar refs={refs} navOffAtPixel={200} />
+        <Navbar
+          refs={refs}
+          navOffAtPixel={200}
+          subbar={this.state.currentSubbar}
+        />
         <Home refs={refs} />
         <AboutMe refAboutMe={refs.aboutMe} sectionName="ABTZ" />
         <SkillsSection refSkills={refs.skills} sectionName="SKLZ" />
         <ExperienceSection refExperience={refs.experience} sectionName="EXPZ" />
 
         {/* <Tutorial /> */}
-        <ProjectsSection sectionName="PRTZ" refs={refs} />
+        <ProjectsSection
+          sectionName="PRTZ"
+          refs={refs}
+          handleChangeSubbar={this.handleChangeSubbar}
+        />
         {/* <ProjectSection
           colorVariant="variant-2"
           // sectionName="PRTZ"

@@ -15,7 +15,9 @@ class CvCarousel extends Component {
       return (
         <div>
           <img src={screenshot.link} className="carousel-img" />
-          <p className="screenshot-feature">{screenshot.label}</p>
+          <p className="screenshot-feature" ref={this.props.refEndProject}>
+            {screenshot.label}
+          </p>
         </div>
       );
     });

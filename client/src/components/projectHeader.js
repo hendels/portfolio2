@@ -34,19 +34,23 @@ const ProjectHeader = props => {
       </Container>
       <ProjectSection
         refProject={props.refs.bikeysh}
+        refEndProject={props.refs.bikeyshEnd}
         showHeader
         colorVariant="variant-1"
         projectName="Bikeysh"
         stack={stack}
         features={features}
+        handleChangeSubbar={props.handleChangeSubbar}
       />
       <ProjectSection
         refProject={props.refs.googleMap}
+        refEndProject={props.refs.googleMapEnd}
         showHeader
         colorVariant="variant-2"
         projectName="Project 2"
         stack={stack}
         features={features}
+        handleChangeSubbar={props.handleChangeSubbar}
       />
     </section>
   );
