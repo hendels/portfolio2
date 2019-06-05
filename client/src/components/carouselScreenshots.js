@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import { Carousel } from "react-responsive-carousel";
 import screenshots from "../config/screenshots";
 // styles
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../css/projects/projects-section.css";
+import "../css/projects/carousel-projects.css";
 
 class CvCarousel extends Component {
   // TODO - turn off animation after some value of pixel reach or last element - somehow
@@ -14,7 +15,7 @@ class CvCarousel extends Component {
       return (
         <div>
           <img src={screenshot.link} className="carousel-img" />
-          <p className="legend">{screenshot.label}</p>
+          <p className="screenshot-feature">{screenshot.label}</p>
         </div>
       );
     });
@@ -25,6 +26,7 @@ class CvCarousel extends Component {
         // width='50vw'
         showThumbs={false}
         showStatus={false}
+        showIndicators={false}
       >
         {carouselScreenshots}
       </Carousel>

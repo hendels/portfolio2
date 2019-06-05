@@ -7,8 +7,8 @@ import AboutMe from "./components/aboutMe";
 import SkillsSection from "./components/skillsSection";
 import ExperienceSection from "./components/experienceSection";
 import CvSection from "./components/cvSection";
-import ProjectHeader from "./components/projectHeader";
-import ProjectSection from "./components/projectContainer";
+import ProjectsSection from "./components/projectHeader";
+
 // import ProjectSection2 from "./components/projectContainer2";
 // import ContactForm from "./components/contactForm";
 // import Tutorial from "./components/tutorial";
@@ -25,22 +25,24 @@ class App extends React.Component {
     this.experienceSectionRef = React.createRef();
     this.projectsSectionRef = React.createRef();
     this.contactSectionRef = React.createRef();
+    this.bikeyshSectionRef = React.createRef();
+    this.googleMapSectionRef = React.createRef();
+    this.bikeyshEndSectionRef = React.createRef();
+    this.googleMapEndSectionRef = React.createRef();
   }
   render() {
-    const projectName = "Bikeysh";
-    const features = [`it's RWD`, `search bar`, `tag management`, `crawler`];
-    const stack = {
-      mongodb: true,
-      sass: true,
-      react: true,
-      RWD: true
-    };
+    // const projectName = "Bikeysh";
+
     const refs = {
       home: this.homeSectionRef,
       aboutMe: this.aboutMeSectionRef,
       skills: this.skillsSectionRef,
       experience: this.experienceSectionRef,
       projects: this.projectsSectionRef,
+      bikeysh: this.bikeyshSectionRef,
+      bikeyshEnd: this.bikeyshSectionRef,
+      googleMap: this.googleMapSectionRef,
+      googleMapEnd: this.googleMapSectionRef,
       contact: this.contactSectionRef
     };
     return (
@@ -52,24 +54,15 @@ class App extends React.Component {
         <ExperienceSection refExperience={refs.experience} sectionName="EXPZ" />
 
         {/* <Tutorial /> */}
-        <ProjectHeader sectionName="PRTZ" refProjects={refs.projects} />
-        <ProjectSection
-          showHeader
-          colorVariant="variant-1"
+        <ProjectsSection sectionName="PRTZ" refs={refs} />
+        {/* <ProjectSection
+          colorVariant="variant-2"
           // sectionName="PRTZ"
           // refProjects={refs.projects}
-          projectName="Bikeysh"
+          projectName="GoogleMaps"
           stack={stack}
           features={features}
-        />
-        <ProjectSection
-          colorVariant="variant-2"
-          sectionName="PRTZ"
-          refProjects={refs.projects}
-          projectName="Bikeysh"
-          stack={stack}
-          features={features}
-        />
+        /> */}
         {/* <CvSection /> */}
         {/* <ProjectSection
           projectName="One Page Site"

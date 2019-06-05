@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/aboutme/home.css";
+import "../css/home/home.css";
 // photos
 import mePhoto from "../img/me-resized.jpg";
 import person1 from "../img/person1.jpg";
@@ -30,7 +30,14 @@ class Home extends React.Component {
   }
   render() {
     const Name = "Przemek ";
-    const { home, aboutMe, skills, experience, projects, contact } = this.props.refs;
+    const {
+      home,
+      aboutMe,
+      skills,
+      experience,
+      projects,
+      contact
+    } = this.props.refs;
     return (
       <section id="section-home" ref={home}>
         <Container id="main-header">
@@ -81,7 +88,9 @@ class Home extends React.Component {
                   <div className="bg-primary d-flex flex-row align-items-stretch text-center text-white">
                     <div
                       className="main-header-item p-4 bg-danger"
-                      onClick={e => this.handleClickToNavItem(e, aboutMe, "about")}
+                      onClick={e =>
+                        this.handleClickToNavItem(e, aboutMe, "about")
+                      }
                     >
                       {/* <a
                         onClick={e =>

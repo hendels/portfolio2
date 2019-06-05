@@ -2,14 +2,8 @@ import scr1 from "../img/me1.jpg";
 import scr2 from "../img/sender.jpg";
 import scr3 from "../img/whippet.jpg";
 import scr4 from "../img/whippet_logo.jpg";
-import sass from "../svg/resized/sass.png";
-import css from "../svg/resized/css.png";
-import mongodb from "../svg/resized/mongodb.png";
-import nodejs from "../svg/resized/nodejs.png";
-import react from "../svg/resized/react.png";
-import redux from "../svg/resized/redux.png";
-import html from "../svg/resized/html.png";
-import js from "../svg/resized/js.png";
+import redux from "../svg/redux.svg";
+import mongodb from "../svg/mongodb.svg";
 
 const resolution = "400x300";
 {
@@ -50,35 +44,51 @@ export default {
   ],
   logos: [
     {
-      link: sass,
+      iconClass: "fab fa-sass",
+      iconSvg: "",
+      specificClass: "sass-icon",
       label: "sass"
     },
     {
-      link: css,
+      iconClass: "fab fa-css3-alt",
+      iconSvg: "",
+      specificClass: "css-icon",
       label: "css 3"
     },
     {
-      link: html,
+      iconClass: "fab fa-html5",
+      iconSvg: "",
+      specificClass: "html-icon",
       label: "html 5"
     },
     {
-      link: mongodb,
+      iconClass: "fas fa-database",
+      iconSvg: mongodb,
+      specificClass: "mongodb-icon",
       label: "mongodb"
     },
     {
-      link: nodejs,
+      iconClass: "fab fa-node-js",
+      iconSvg: "",
+      specificClass: "nodejs-icon",
       label: "nodejs"
     },
     {
-      link: react,
+      iconClass: "fab fa-react",
+      iconSvg: "",
+      specificClass: "react-icon",
       label: "react"
     },
     {
-      link: redux,
+      iconClass: "redux",
+      iconSvg: redux,
+      specificClass: "redux-icon",
       label: "redux"
     },
     {
-      link: js,
+      iconClass: "fab fa-js",
+      iconSvg: "",
+      specificClass: "js-icon",
       label: "Our beloved"
     }
   ]

@@ -26,6 +26,156 @@
   background: #087e8b;
 }
 
+.carousel .slide .screenshot-feature {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.25;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.carousel:hover .slide .screenshot-feature {
+  opacity: 1;
+}
+
+.project-title-overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+  top: 0;
+}
+
+.demo-button-overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  width: 20%;
+  height: 80px;
+  bottom: 0;
+  left: 0%;
+  text-align: center;
+}
+
+.git-button-overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  width: 20%;
+  height: 80px;
+  bottom: 0;
+  left: 20%;
+  text-align: center;
+}
+
+.stack-overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  width: 50%;
+  height: 80px;
+  bottom: 0;
+  left: 45%;
+}
+
+.pre-bracket-overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  width: 5%;
+  height: 80px;
+  max-height: 80px;
+  bottom: 0;
+  left: 40%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.after-bracket-overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  width: 5%;
+  height: 80px;
+  max-height: 80px;
+  bottom: 0;
+  left: 95%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.overlay-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 4.2rem;
+  opacity: 1;
+  color: #fff;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.carousel-logo-label {
+  margin: 0;
+}
+
+.icon-svg {
+  padding-top: 8px;
+}
+
+.nodejs-icon {
+  padding-top: 8px;
+  font-size: 3rem;
+  color: #8cc84b;
+}
+
+.html-icon {
+  padding-top: 8px;
+  color: #ef6026;
+  font-size: 3rem;
+}
+
+.css-icon {
+  padding-top: 8px;
+  color: #25a1e1;
+  font-size: 3rem;
+}
+
+.js-icon {
+  padding-top: 8px;
+  color: #f0db4f;
+  font-size: 3rem;
+}
+
+.react-icon {
+  padding-top: 8px;
+  color: #5ed4f4;
+  font-size: 3rem;
+}
+
+.sass-icon {
+  padding-top: 8px;
+  color: #cd6799;
+  font-size: 3rem;
+}
+
 .project-btn {
   background: #ddd;
   -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
@@ -61,36 +211,5 @@ a.project-btn::before {
 a.project-btn:hover:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-.technology-stack {
-  grid-area: left-container;
-  margin: 7px;
-}
-
-.stack {
-  grid-area: stack;
-  margin: 7px;
-}
-
-.info {
-  grid-area: info;
-  margin: 7px;
-}
-
-.features {
-  grid-area: features;
-  margin: 7px;
-}
-
-.git,
-.demo {
-  grid-area: demo;
-  margin: 7px;
-}
-
-.git .project-btn,
-.demo .project-btn {
-  color: orange;
 }
 /*# sourceMappingURL=projects-section.css.map */

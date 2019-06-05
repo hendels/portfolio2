@@ -40,10 +40,14 @@ now i need some guidance to improve and not making errors
           
 * https://github.com/kamranahmedse/developer-roadmap napisz ze
 pokrywasz jakis t am procent tego linka
-
+* i have database / backend background, i just know how it works, is is an asset in front end development
 * napisz ze znasz devtools / redux dev tools / chrome devtools / react
 devtools
-
+* uczenei sie samemu powoli staje sie nieefektywne, potrzebuje właściwego kierunku nadanego przez starszych doświadczeniem kolegów / koleżanek - time to get a job.
+* i like to be: 
+    - pixelperfect
+    - professional
+    - passional
         
 * {this.state.flipped ? "My name is Przemy" : "My name is Przemek."} < ma to sens?
 
@@ -56,3 +60,8 @@ wanna be web dev / 'some icon' Krakow / Wroclaw
 // SKILLAZ
 * bootstrap css, bootstrap react, materialUi react
 * git
+
+// EXPERIENCE
+* wypisz technologie
+* vba -programowanie / nav , ca-l programowanie na pierwszym miejscu
+* vba - creating apps

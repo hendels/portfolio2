@@ -1,40 +1,47 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import screenshots from '../config/screenshots';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import screenshots from "../config/screenshots";
 // styles
-import '../css/projects/projects-section.css';
-
+import "../css/projects/projects-section.css";
+import "../css/projects/carousel-technology-stack.css";
 class Logos extends Component {
-    // TODO - turn off animation after some value of pixel reach or last element - somehow
-    render() {
-        let carouselScreenshots = screenshots.logos.map(logo => {
-            return (
-                <div>
-                    <img src={logo.link} className='logo-img'/>
-                    <p className="legend">{logo.label}</p>
-                </div>
-            )
-        })
-        return (
-            <Carousel 
-                // autoPlay
-                interval={1000}
-                transitionTime={1000}
-                centerMode
-                centerSlidePercentage={50}
-                emulateTouch
-                infiniteLoop
-                // width='50vw'
-                showThumbs={false}
-                showStatus={false}
-                showIndicators={false}
-            >
-                {carouselScreenshots}
-            </Carousel>
-        );
-    }
-};
+  // TODO - turn off animation after some value of pixel reach or last element - somehow
+  render() {
+    let carouselElements = screenshots.logos.map(logo => {
+      return (
+        <div>
+          {logo.iconSvg !== "" ? (
+            <div className="icon-svg">
+              <img src={logo.iconSvg} style={{ height: "3rem" }} />
+            </div>
+          ) : (
+            <i className={`${logo.iconClass} ${logo.specificClass}`} />
+          )}
+          <p className="carousel-logo-label">{logo.label}</p>
+        </div>
+      );
+    });
+    return (
+      <Carousel
+        autoPlay
+        interval={1000}
+        transitionTime={500}
+        centerMode
+        centerSlidePercentage={33}
+        emulateTouch
+        infiniteLoop
+        // width='50vw'
+        showThumbs={false}
+        showStatus={false}
+        showIndicators={false}
+        showArrows={false}
+      >
+        {carouselElements}
+      </Carousel>
+    );
+  }
+}
 
 export default Logos;
