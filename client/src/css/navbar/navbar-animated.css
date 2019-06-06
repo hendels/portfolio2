@@ -26,6 +26,15 @@ nav .logo img {
   transition: 0.5s;
 }
 
+nav .project-specific {
+  float: left;
+  color: #fff;
+}
+
+nav .project-specific span {
+  padding-left: 1rem;
+}
+
 nav ul {
   float: right;
   margin: 0;

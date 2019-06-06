@@ -28,14 +28,15 @@ it was quite a challenge to do it by myself
 // sekcja doświadczenie:
 czym jest DYNAMICS NAV - to system klasy ERP (like SAP, but medium companies sector)
 wymień firmy dla których pracowałeś
-
+TODO:::
+* wyjeb wszystkie komentarze w projektach po polsku, sprawdz je - dodaj wiele nowych, skup sie na tym!
 // motivation:
 AVAILABLE FROM NOW
 i have 2+ years of experience as a proffesional Dynamics NAV programmer. 
 now i need some guidance to improve and not making errors
 * i have background in sales analytics, medium-sized (100+ users) system administration
 * fast learner
-
+* i decided to change technology, for about 14 months im learning by myself javascript
 * hard worker / scraper 
           
 * https://github.com/kamranahmedse/developer-roadmap napisz ze
@@ -48,7 +49,8 @@ devtools
     - pixelperfect
     - professional
     - passional
-        
+* add workservice app as a ux design app? why not. It's material design
+
 * {this.state.flipped ? "My name is Przemy" : "My name is Przemek."} < ma to sens?
 
 wanna be web dev / 'some icon' Krakow / Wroclaw
@@ -65,3 +67,6 @@ wanna be web dev / 'some icon' Krakow / Wroclaw
 * wypisz technologie
 * vba -programowanie / nav , ca-l programowanie na pierwszym miejscu
 * vba - creating apps
+
+// PROJECTS
+// # portfolio - made using React and some classes from bootstrap library, but it's highly cssesed to show you, that i can css (flex, grid).

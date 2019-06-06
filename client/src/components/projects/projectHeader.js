@@ -1,8 +1,9 @@
 import React from "react";
-import "../css/projects/projects-section.css";
+import "../../css/projects/projects-section.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectSection from "./projectContainer";
+import BlankSpace from "../blankSpace";
 
 const ProjectHeader = props => {
   const features = [`it's RWD`, `search bar`, `tag management`, `crawler`];
@@ -12,6 +13,7 @@ const ProjectHeader = props => {
     react: true,
     RWD: true
   };
+  const { bikeysh, googleMap } = props.projects;
   return (
     <section id="section-projects" ref={props.refs.projects}>
       <Container>
@@ -32,26 +34,34 @@ const ProjectHeader = props => {
           </Col>
         </Row>
       </Container>
+      <BlankSpace />
       <ProjectSection
         refProject={props.refs.bikeysh}
         refEndProject={props.refs.bikeyshEnd}
         showHeader
         colorVariant="variant-1"
-        projectName="Bikeysh"
+        projectName={bikeysh.name}
+        projectId={bikeysh.id}
+        idSubbar={bikeysh.idSubbar}
         stack={stack}
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
+      <BlankSpace />
       <ProjectSection
         refProject={props.refs.googleMap}
         refEndProject={props.refs.googleMapEnd}
         showHeader
         colorVariant="variant-2"
-        projectName="Project 2"
+        projectName={googleMap.name}
+        projectId={googleMap.id}
+        idSubbar={googleMap.idSubbar}
         stack={stack}
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
+      <BlankSpace />
+      <BlankSpace />
     </section>
   );
 };

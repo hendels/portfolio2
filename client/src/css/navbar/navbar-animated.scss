@@ -33,6 +33,14 @@ nav {
       transition: 0.5s;
     }
   }
+  .project-specific {
+    float: left;
+    // font-size: 2rem;
+    color: #fff;
+    span {
+      padding-left: 1rem;
+    }
+  }
   ul {
     float: right;
     margin: 0;

@@ -10,12 +10,22 @@ import "../css/projects/carousel-projects.css";
 class CvCarousel extends Component {
   // TODO - turn off animation after some value of pixel reach or last element - somehow
   render() {
+    const { turnOffElements, refEndProject } = this.props;
     console.log("screenshots", screenshots);
     let carouselScreenshots = screenshots.unsplash.map(screenshot => {
       return (
         <div>
-          <img src={screenshot.link} className="carousel-img" />
-          <p className="screenshot-feature" ref={this.props.refEndProject}>
+          <img
+            src={screenshot.link}
+            className={`${turnOffElements ? "add-blur" : null}`}
+            alt="unable to load image."
+          />
+          <p
+            className={`screenshot-feature ${
+              turnOffElements ? "hide-element" : null
+            }`}
+            ref={refEndProject}
+          >
             {screenshot.label}
           </p>
         </div>
@@ -24,11 +34,12 @@ class CvCarousel extends Component {
     return (
       <Carousel
         dynamicHeight
-        emulateTouch
+        emulateTouch={!turnOffElements}
         // width='50vw'
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
+        showArrows={!turnOffElements}
       >
         {carouselScreenshots}
       </Carousel>

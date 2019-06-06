@@ -7,7 +7,7 @@ import AboutMe from "./components/aboutMe";
 import SkillsSection from "./components/skillsSection";
 import ExperienceSection from "./components/experienceSection";
 import CvSection from "./components/cvSection";
-import ProjectsSection from "./components/projectHeader";
+import ProjectsSection from "./components/projects/projectHeader";
 
 // import ProjectSection2 from "./components/projectContainer2";
 // import ContactForm from "./components/contactForm";
@@ -20,7 +20,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSubbar: ""
+      currentSubbarId: ""
     };
     this.homeSectionRef = React.createRef();
     this.aboutMeSectionRef = React.createRef();
@@ -34,7 +34,7 @@ class App extends React.Component {
     this.googleMapEndSectionRef = React.createRef();
   }
   handleChangeSubbar = subbar => {
-    this.setState({ currentSubbar: subbar }, () => {
+    this.setState({ currentSubbarId: subbar }, () => {
       console.log("SUBBAR:::", subbar);
     });
   };
@@ -53,12 +53,26 @@ class App extends React.Component {
       googleMapEnd: this.googleMapEndSectionRef,
       contact: this.contactSectionRef
     };
+    const projectBikeysh = {
+      id: "bikeysh",
+      idSubbar: "subbar_bikeysh",
+      name: "Bikeysh",
+      elementsSubbar: ["Bikeysh", "Features", "About"]
+    };
+    const projectGoogleMap = {
+      id: "googleMap",
+      idSubbar: "subbar_googleMap",
+      name: "Google Map",
+      elementsSubbar: ["GoogleMap", "Features", "About"]
+    };
+    const projects = { bikeysh: projectBikeysh, googleMap: projectGoogleMap };
     return (
       <div>
         <Navbar
           refs={refs}
           navOffAtPixel={200}
-          subbar={this.state.currentSubbar}
+          subbarId={this.state.currentSubbarId}
+          projects={projects}
         />
         <Home refs={refs} />
         <AboutMe refAboutMe={refs.aboutMe} sectionName="ABTZ" />
@@ -70,6 +84,7 @@ class App extends React.Component {
           sectionName="PRTZ"
           refs={refs}
           handleChangeSubbar={this.handleChangeSubbar}
+          projects={projects}
         />
         {/* <ProjectSection
           colorVariant="variant-2"

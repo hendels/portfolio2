@@ -44,20 +44,22 @@ class Navbar extends React.Component {
       else document.getElementById(element).classList.remove("focused");
     }
   };
-  handleClickToNavItem(e, ref, focusedId) {
+  handleClickToNavItem(e, ref, focusedId, focus) {
     e.preventDefault();
-    this.setState(
-      {
-        focusedNavItem: focusedId ? focusedId : false
-      },
-      () => {
-        // scroll to given ref
-        window.scrollTo(0, ref.current.offsetTop);
+    if (focus)
+      this.setState(
+        {
+          focusedNavItem: focusedId ? focusedId : false
+        },
+        () => {
+          // scroll to given ref
+          window.scrollTo(0, ref.current.offsetTop);
 
-        // find selected nav-item by given focusedId
-        // this.changeFocusOnNavItem(focusedId);
-      }
-    );
+          // find selected nav-item by given focusedId
+          // this.changeFocusOnNavItem(focusedId);
+        }
+      );
+    else window.scrollTo(0, ref.current.offsetTop);
   }
   handleOnUpdateScrollspy = items => {
     const navItems = document.getElementsByClassName("is-current");
@@ -100,7 +102,7 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const { refs } = this.props;
+    const { refs, subbarId } = this.props;
     const isScrolling = !!this.state.scrollPositionY;
     const scrollSpyItems = [
       "section-home",
@@ -110,17 +112,44 @@ class Navbar extends React.Component {
       "section-projects",
       "section-contact"
     ];
+    const { bikeysh, googleMap } = this.props.projects;
     // console.log(
     //   "debounce::: ",
     //   this.state.scrollPositionY,
     //   " scrolling? ",
     //   isScrolling
     // );
+    const elementsSubbarBikeysh = bikeysh.elementsSubbar.map(element => {
+      return (
+        <span
+          onClick={e => this.handleClickToNavItem(e, refs.bikeysh, "", false)}
+        >
+          {element}
+        </span>
+      );
+    });
+    const elementsSubbarGoogleMap = googleMap.elementsSubbar.map(element => {
+      return (
+        <span
+          onClick={e => this.handleClickToNavItem(e, refs.googleMap, "", false)}
+        >
+          {element}
+        </span>
+      );
+    });
     return (
       <nav>
         <div className="logo">
           <h1>HRDZ</h1>
         </div>
+        {/* subbars - project specific - left side bar*/}
+        <div id={bikeysh.idSubbar} className="project-specific">
+          {elementsSubbarBikeysh}
+        </div>
+        <div id={googleMap.idSubbar} className="project-specific">
+          {elementsSubbarGoogleMap}
+        </div>
+        {/* standard right side bar */}
         <ul>
           <Scrollspy
             items={scrollSpyItems}
@@ -133,7 +162,9 @@ class Navbar extends React.Component {
                 className="navItem"
                 id="home"
                 href="section-home"
-                onClick={e => this.handleClickToNavItem(e, refs.home, "home")}
+                onClick={e =>
+                  this.handleClickToNavItem(e, refs.home, "home", true)
+                }
               >
                 Home
               </a>
@@ -144,7 +175,7 @@ class Navbar extends React.Component {
                 id="home"
                 href="section-about"
                 onClick={e =>
-                  this.handleClickToNavItem(e, refs.aboutMe, "about")
+                  this.handleClickToNavItem(e, refs.aboutMe, "about", true)
                 }
               >
                 About
@@ -156,7 +187,7 @@ class Navbar extends React.Component {
                 id="skills"
                 href="section-skills"
                 onClick={e =>
-                  this.handleClickToNavItem(e, refs.skills, "skills")
+                  this.handleClickToNavItem(e, refs.skills, "skills", true)
                 }
               >
                 Skills
@@ -168,7 +199,12 @@ class Navbar extends React.Component {
                 id="experience"
                 href="section-experience"
                 onClick={e =>
-                  this.handleClickToNavItem(e, refs.experience, "experience")
+                  this.handleClickToNavItem(
+                    e,
+                    refs.experience,
+                    "experience",
+                    true
+                  )
                 }
               >
                 Experience
@@ -181,7 +217,7 @@ class Navbar extends React.Component {
                 id="projects"
                 href="section-projects"
                 onClick={e =>
-                  this.handleClickToNavItem(e, refs.projects, "projects")
+                  this.handleClickToNavItem(e, refs.projects, "projects", true)
                 }
               >
                 Projects
