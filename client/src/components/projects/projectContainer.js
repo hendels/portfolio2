@@ -35,6 +35,7 @@ class ProjectContainer extends React.Component {
         this.setState({ about: false, features: !this.state.features });
         break;
       default:
+        this.setState({ about: false, features: false });
         break;
     }
     // freeze all carousels to not disturb attention
@@ -105,8 +106,12 @@ class ProjectContainer extends React.Component {
                 />
               </div>
               {/* middle */}
-              {about ? <ProjectAbout /> : null}
-              {features ? <ProjectFeatures /> : null}
+              {about ? (
+                <ProjectAbout handleShowElement={this.handleShowElement} />
+              ) : null}
+              {features ? (
+                <ProjectFeatures handleShowElement={this.handleShowElement} />
+              ) : null}
               {/* down */}
               <div className="demo-button-overlay">
                 <h3 className="text-white">Demo</h3>

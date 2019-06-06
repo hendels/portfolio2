@@ -119,24 +119,32 @@ class Navbar extends React.Component {
     //   " scrolling? ",
     //   isScrolling
     // );
-    const elementsSubbarBikeysh = bikeysh.elementsSubbar.map(element => {
-      return (
-        <span
-          onClick={e => this.handleClickToNavItem(e, refs.bikeysh, "", false)}
-        >
-          {element}
-        </span>
-      );
-    });
-    const elementsSubbarGoogleMap = googleMap.elementsSubbar.map(element => {
-      return (
-        <span
-          onClick={e => this.handleClickToNavItem(e, refs.googleMap, "", false)}
-        >
-          {element}
-        </span>
-      );
-    });
+    const elementsSubbarBikeysh = bikeysh.elementsSubbar.map(
+      (element, index) => {
+        return (
+          <span
+            className={index === 0 ? "project-specific-name" : null}
+            onClick={e => this.handleClickToNavItem(e, refs.bikeysh, "", false)}
+          >
+            {element}
+          </span>
+        );
+      }
+    );
+    const elementsSubbarGoogleMap = googleMap.elementsSubbar.map(
+      (element, index) => {
+        return (
+          <span
+            className={index === 0 ? "project-specific-name" : null}
+            onClick={e =>
+              this.handleClickToNavItem(e, refs.googleMap, "", false)
+            }
+          >
+            {element}
+          </span>
+        );
+      }
+    );
     return (
       <nav>
         <div className="logo">

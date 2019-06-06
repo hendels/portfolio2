@@ -14,7 +14,7 @@ html {
 
 nav {
   // margin: 0;
-  z-index: 1;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,17 +35,23 @@ nav {
   }
   .project-specific {
     float: left;
-    // font-size: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
     color: #fff;
     span {
       padding-left: 1rem;
     }
+    span.project-specific-name {
+      color: $newSecondary;
+    }
   }
   ul {
     float: right;
-    margin: 0;
-    padding: 0;
     display: flex;
+    margin: 0;
+    // padding: -25px 0;
+    // padding-bottom: 25px !important;
     li {
       list-style: none;
       a {

@@ -86,6 +86,11 @@
   font-size: 2rem;
 }
 
+.info-overlay .close-icon:hover {
+  color: orange;
+  font-size: 2rem;
+}
+
 .demo-button-overlay {
   position: absolute;
   background: #000;

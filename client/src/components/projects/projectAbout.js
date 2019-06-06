@@ -10,7 +10,10 @@ const About = props => {
             style={{ width: "100%" }}
           >
             <h1 className="display-4 p-2 text-white">ABOUT</h1>
-            <span className="p-2 fas fa-times-circle close-icon" />
+            <span
+              onClick={() => props.handleShowElement()}
+              className="p-2 fas fa-times-circle close-icon"
+            />
           </div>
         </Row>
         <Row>
