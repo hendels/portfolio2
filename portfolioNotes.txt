@@ -51,7 +51,6 @@ devtools
     - passional
 * add workservice app as a ux design app? why not. It's material design
 
-* {this.state.flipped ? "My name is Przemy" : "My name is Przemek."} < ma to sens?
 
 wanna be web dev / 'some icon' Krakow / Wroclaw
 // workservice:

@@ -17,7 +17,10 @@ class AboutMe extends React.Component {
             </Col>
             <Col md={9}>
               <div className="about-content">
-                <h4>Przemek Harendarz</h4>
+                <br />
+                <br />
+                <br />
+                <h4>About me</h4>
                 <p>
                   ipsum et veniam pariatur excepteur veniam adipisicing aute
                   ipsum ut. Adipisicing labore voluptate ut officia ea Lorem

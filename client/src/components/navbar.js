@@ -2,15 +2,7 @@ import React from "react";
 //styles
 import "../css/navbar/navbar-animated.css";
 import Scrollspy from "react-scrollspy";
-
-const debounce = (func, wait) => {
-  let timeout;
-  return (...args) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), wait);
-  };
-};
-
+import { Container } from "react-bootstrap";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -19,12 +11,8 @@ class Navbar extends React.Component {
       focusedNavItem: null
     };
   }
-  handleScroll = () => {
-    // + is unary operator, same as Number(window.scrollY)
-    const scrollPositionY = +window.scrollY;
-    return this.setState({ scrollPositionY });
-  };
-  headerColorChange(refs) {
+
+  headerColorChange() {
     const scrollChangeHeight = this.props.navOffAtPixel;
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > scrollChangeHeight) {
@@ -35,31 +23,53 @@ class Navbar extends React.Component {
       document.body.getElementsByTagName("nav")[0].classList.remove("black");
     }
   }
-  changeFocusOnNavItem = focusedId => {
-    const navItems = document.getElementsByClassName("navItem");
-    for (var i = 0; i < navItems.length; i++) {
-      const element = navItems.item(i).textContent.toLowerCase();
-      if (element === focusedId)
-        document.getElementById(element).classList.add("focused");
-      else document.getElementById(element).classList.remove("focused");
-    }
-  };
-  handleClickToNavItem(e, ref, focusedId, focus) {
+  // changeFocusOnNavItem = focusedId => {
+  //   const navItems = document.getElementsByClassName("navItem");
+  //   for (var i = 0; i < navItems.length; i++) {
+  //     const element = navItems.item(i).textContent.toLowerCase();
+  //     if (element === focusedId)
+  //       document.getElementById(element).classList.add("focused");
+  //     else document.getElementById(element).classList.remove("focused");
+  //   }
+  // };
+  handleClickToNavItem(e, ref, navItem, focus, refComponent, element) {
     e.preventDefault();
     if (focus)
       this.setState(
         {
-          focusedNavItem: focusedId ? focusedId : false
+          focusedNavItem: navItem ? navItem : false
         },
-        () => {
+        async () => {
           // scroll to given ref
           window.scrollTo(0, ref.current.offsetTop);
-
-          // find selected nav-item by given focusedId
-          // this.changeFocusOnNavItem(focusedId);
+          // animate buttons after scroll to home position with some delay
+          setTimeout(() => {
+            if (navItem.toLowerCase() === "home")
+              this.props.animateHomeButtons();
+          }, 500);
+          // find selected nav-item by given navItem id
+          // this.changeFocusOnNavItem(navItem);
         }
       );
     else window.scrollTo(0, ref.current.offsetTop);
+    // set state to given component ref
+    if (element)
+      switch (element.toLowerCase()) {
+        case "features":
+          refComponent.current.setState(
+            { about: false, features: !refComponent.current.state.features },
+            () => {}
+          );
+          break;
+        case "about":
+          refComponent.current.setState(
+            { about: !refComponent.current.state.about, features: false },
+            () => {}
+          );
+          break;
+        default:
+          break;
+      }
   }
   handleOnUpdateScrollspy = items => {
     const navItems = document.getElementsByClassName("is-current");
@@ -92,18 +102,15 @@ class Navbar extends React.Component {
     window.addEventListener("scroll", () =>
       this.headerColorChange(this.props.refs)
     );
-    // window.addEventListener("scroll", debounce(this.handleScroll, 16));
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", () =>
       this.headerColorChange(this.props.refs)
     );
-    // window.removeEventListener("scroll", debounce(this.handleScroll, 16));
   }
 
   render() {
     const { refs, subbarId } = this.props;
-    const isScrolling = !!this.state.scrollPositionY;
     const scrollSpyItems = [
       "section-home",
       "section-about",
@@ -113,18 +120,21 @@ class Navbar extends React.Component {
       "section-contact"
     ];
     const { bikeysh, googleMap } = this.props.projects;
-    // console.log(
-    //   "debounce::: ",
-    //   this.state.scrollPositionY,
-    //   " scrolling? ",
-    //   isScrolling
-    // );
     const elementsSubbarBikeysh = bikeysh.elementsSubbar.map(
       (element, index) => {
         return (
           <span
             className={index === 0 ? "project-specific-name" : null}
-            onClick={e => this.handleClickToNavItem(e, refs.bikeysh, "", false)}
+            onClick={e =>
+              this.handleClickToNavItem(
+                e,
+                refs.bikeysh,
+                "",
+                false,
+                refs.bikeyshComponent,
+                element
+              )
+            }
           >
             {element}
           </span>
@@ -137,7 +147,14 @@ class Navbar extends React.Component {
           <span
             className={index === 0 ? "project-specific-name" : null}
             onClick={e =>
-              this.handleClickToNavItem(e, refs.googleMap, "", false)
+              this.handleClickToNavItem(
+                e,
+                refs.googleMap,
+                "",
+                false,
+                refs.googleMapComponent,
+                element
+              )
             }
           >
             {element}
@@ -158,80 +175,86 @@ class Navbar extends React.Component {
           {elementsSubbarGoogleMap}
         </div>
         {/* standard right side bar */}
-        <ul>
-          <Scrollspy
-            items={scrollSpyItems}
-            currentClassName="is-current"
-            onUpdate={() => this.handleOnUpdateScrollspy(scrollSpyItems)}
-            root
-          >
-            <li>
-              <a
-                className="navItem"
-                id="home"
-                href="section-home"
-                onClick={e =>
-                  this.handleClickToNavItem(e, refs.home, "home", true)
-                }
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                className="navItem"
-                id="home"
-                href="section-about"
-                onClick={e =>
-                  this.handleClickToNavItem(e, refs.aboutMe, "about", true)
-                }
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                className="navItem"
-                id="skills"
-                href="section-skills"
-                onClick={e =>
-                  this.handleClickToNavItem(e, refs.skills, "skills", true)
-                }
-              >
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                className="navItem"
-                id="experience"
-                href="section-experience"
-                onClick={e =>
-                  this.handleClickToNavItem(
-                    e,
-                    refs.experience,
-                    "experience",
-                    true
-                  )
-                }
-              >
-                Experience
-              </a>
-            </li>
+        <Container>
+          <ul>
+            <Scrollspy
+              items={scrollSpyItems}
+              currentClassName="is-current"
+              onUpdate={() => this.handleOnUpdateScrollspy(scrollSpyItems)}
+              root
+            >
+              <li>
+                <a
+                  className="navItem"
+                  id="home"
+                  href="section-home"
+                  onClick={e =>
+                    this.handleClickToNavItem(e, refs.home, "home", true)
+                  }
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  className="navItem"
+                  id="home"
+                  href="section-about"
+                  onClick={e =>
+                    this.handleClickToNavItem(e, refs.aboutMe, "about", true)
+                  }
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  className="navItem"
+                  id="skills"
+                  href="section-skills"
+                  onClick={e =>
+                    this.handleClickToNavItem(e, refs.skills, "skills", true)
+                  }
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  className="navItem"
+                  id="experience"
+                  href="section-experience"
+                  onClick={e =>
+                    this.handleClickToNavItem(
+                      e,
+                      refs.experience,
+                      "experience",
+                      true
+                    )
+                  }
+                >
+                  Experience
+                </a>
+              </li>
 
-            <li>
-              <a
-                className="navItem"
-                id="projects"
-                href="section-projects"
-                onClick={e =>
-                  this.handleClickToNavItem(e, refs.projects, "projects", true)
-                }
-              >
-                Projects
-              </a>
-            </li>
-            {/* <li>
+              <li>
+                <a
+                  className="navItem"
+                  id="projects"
+                  href="section-projects"
+                  onClick={e =>
+                    this.handleClickToNavItem(
+                      e,
+                      refs.projects,
+                      "projects",
+                      true
+                    )
+                  }
+                >
+                  Projects
+                </a>
+              </li>
+              {/* <li>
             <a
               className="navItem"
               id="contact"
@@ -243,8 +266,9 @@ class Navbar extends React.Component {
               Contact
             </a>
           </li> */}
-          </Scrollspy>
-        </ul>
+            </Scrollspy>
+          </ul>
+        </Container>
       </nav>
     );
   }

@@ -6,16 +6,6 @@ import person1 from "../img/person1.jpg";
 // bootstrap
 import { Container, Row, Col } from "react-bootstrap";
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      flipped: false
-    };
-    this.handleFlip = this.handleFlip.bind(this);
-  }
-  handleFlip() {
-    this.setState({ flipped: !this.state.flipped });
-  }
   handleClickToNavItem(e, ref, focusedId) {
     e.preventDefault();
     this.setState(
@@ -27,6 +17,10 @@ class Home extends React.Component {
         window.scrollTo(0, ref.current.offsetTop);
       }
     );
+  }
+
+  componentDidMount() {
+    this.props.animateHomeButtons();
   }
   render() {
     const Name = "Przemek ";
@@ -82,7 +76,7 @@ class Home extends React.Component {
                   </Row>
                 </div>
                 <div className="p-4 bg-black">
-                  Wanna be Java Script developer
+                  Wanna be Java Script developer{" "}
                 </div>
                 <div>
                   <div className="bg-primary d-flex flex-row align-items-stretch text-center text-white">
@@ -92,11 +86,6 @@ class Home extends React.Component {
                         this.handleClickToNavItem(e, aboutMe, "about")
                       }
                     >
-                      {/* <a
-                        onClick={e =>
-                          this.handleClickToNavItem(e, home, "home")
-                        }
-                      > */}
                       <i className="fas fa-address-card fa-2x d-none d-sm-block" />
                       about me
                       {/* </a> */}

@@ -35,7 +35,9 @@ const ProjectHeader = props => {
         </Row>
       </Container>
       <BlankSpace />
+      {/* write that it has demo data and priviliges at admin level only */}
       <ProjectSection
+        ref={props.refs.bikeyshComponent}
         refProject={props.refs.bikeysh}
         refEndProject={props.refs.bikeyshEnd}
         showHeader
@@ -49,6 +51,7 @@ const ProjectHeader = props => {
       />
       <BlankSpace />
       <ProjectSection
+        ref={props.refs.googleMapComponent}
         refProject={props.refs.googleMap}
         refEndProject={props.refs.googleMapEnd}
         showHeader
@@ -60,7 +63,25 @@ const ProjectHeader = props => {
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
+      <ProjectSection
+        ref={props.refs.googleMapComponent}
+        refProject={props.refs.googleMap}
+        refEndProject={props.refs.googleMapEnd}
+        showHeader
+        colorVariant="variant-2"
+        projectName="musti"
+        projectId={googleMap.id}
+        idSubbar={googleMap.idSubbar}
+        stack={stack}
+        features={features}
+        handleChangeSubbar={props.handleChangeSubbar}
+      />
       <BlankSpace />
+      {/* // put this portfolio as a project also */}
+
+      {/* <Tutorial  - make websites from it and put as a websites also/> */}
+      {/* workservice mobile app - ui / ux design project */}
+      {/* music library - the idea is to chc */}
       <BlankSpace />
     </section>
   );

@@ -51,7 +51,7 @@ class ProjectContainer extends React.Component {
     const subbarClass = document.getElementById(this.props.idSubbar).classList;
     // TODO - change it to state dude
     if (windowsScrollTop <= endRef && windowsScrollTop >= startRef) {
-      console.log("ive got ::: " + this.props.projectName);
+      // console.log("ive got ::: " + this.props.projectName);
       containerTitleClass.remove("turn-off-element");
       containerTitleClass.add("turn-off-element");
       subbarClass.add("turn-off-element");
@@ -114,10 +114,10 @@ class ProjectContainer extends React.Component {
               ) : null}
               {/* down */}
               <div className="demo-button-overlay">
-                <h3 className="text-white">Demo</h3>
+                <h3 className="text-white">Git</h3>
               </div>
               <div className="git-button-overlay">
-                <h3 className="text-white">Git</h3>
+                <h1 className="display-4 text-white">stack =></h1>
               </div>
               <div className="pre-bracket-overlay display-2 ">
                 <p className="overlay-text">&#123;</p>

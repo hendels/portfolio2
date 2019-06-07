@@ -36,10 +36,15 @@ nav .project-specific {
 
 nav .project-specific span {
   padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav .project-specific span:hover {
+  background: #5f1e84;
 }
 
 nav .project-specific span.project-specific-name {
-  color: #ff4b3e;
+  color: orange;
 }
 
 nav ul {
@@ -88,7 +93,7 @@ nav.selected-experience .logo h1 {
 }
 
 nav.selected-projects .logo h1 {
-  color: #ff4b3e;
+  color: orange;
 }
 
 nav.black {

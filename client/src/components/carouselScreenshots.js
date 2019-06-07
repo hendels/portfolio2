@@ -11,7 +11,7 @@ class CvCarousel extends Component {
   // TODO - turn off animation after some value of pixel reach or last element - somehow
   render() {
     const { turnOffElements, refEndProject } = this.props;
-    console.log("screenshots", screenshots);
+    // console.log("screenshots", screenshots);
     let carouselScreenshots = screenshots.unsplash.map(screenshot => {
       return (
         <div>

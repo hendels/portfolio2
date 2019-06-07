@@ -41,6 +41,10 @@ nav {
     color: #fff;
     span {
       padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    span:hover {
+      background: $hover;
     }
     span.project-specific-name {
       color: $newSecondary;
