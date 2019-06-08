@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 // app components
 import CoreSkills from "./skillsCore";
-import AdditionalSkills from "./skillsAdditional";
+import AdditionalSkills from "./skillsTable";
 
 import "../../css/skills/skills.css";
 

@@ -63,19 +63,6 @@ const ProjectHeader = props => {
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
-      <ProjectSection
-        ref={props.refs.googleMapComponent}
-        refProject={props.refs.googleMap}
-        refEndProject={props.refs.googleMapEnd}
-        showHeader
-        colorVariant="variant-2"
-        projectName="musti"
-        projectId={googleMap.id}
-        idSubbar={googleMap.idSubbar}
-        stack={stack}
-        features={features}
-        handleChangeSubbar={props.handleChangeSubbar}
-      />
       <BlankSpace />
       {/* // put this portfolio as a project also */}
 
