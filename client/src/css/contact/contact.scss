@@ -1,0 +1,14 @@
+@import "../general/palette.scss";
+
+.contact-title {
+  width: 100%;
+  height: 100%;
+  box-shadow: $shadow;
+}
+
+.contact-content {
+  background: $newInfo;
+  color: $newPrimary;
+  height: 100%;
+  box-shadow: $shadow;
+}

@@ -3,7 +3,7 @@ import "../../css/projects/projects-section.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectSection from "./projectContainer";
-import BlankSpace from "../blankSpace";
+import BlankSpace from "../UI/blankSpace";
 
 const ProjectHeader = props => {
   const features = [`it's RWD`, `search bar`, `tag management`, `crawler`];
@@ -25,7 +25,7 @@ const ProjectHeader = props => {
           </Col>
           <Col md={9}>
             <div className="projects-content">
-              <h4>Project I've made</h4>
+              <h4>Projects I've made</h4>
               <p>
                 Basically everything is focused in React / Redux with Node.js
                 connected to MongoDB
@@ -69,7 +69,6 @@ const ProjectHeader = props => {
       {/* <Tutorial  - make websites from it and put as a websites also/> */}
       {/* workservice mobile app - ui / ux design project */}
       {/* music library - the idea is to chc */}
-      <BlankSpace />
     </section>
   );
 };

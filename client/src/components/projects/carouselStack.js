@@ -2,19 +2,19 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import screenshots from "../config/screenshots";
+import screenshots from "../../config/images";
 // styles
-import "../css/projects/projects-section.css";
-import "../css/projects/carousel-technology-stack.css";
+import "../../css/projects/projects-section.css";
+import "../../css/projects/carousel-technology-stack.css";
 class Logos extends Component {
   // TODO - turn off animation after some value of pixel reach or last element - somehow
   render() {
     let carouselElements = screenshots.logos.map(logo => {
       return (
-        <div>
+        <div className="logo-icons">
           {logo.iconSvg !== "" ? (
             <div className="icon-svg">
-              <img src={logo.iconSvg} style={{ height: "3rem" }} />
+              <img src={logo.iconSvg} />
             </div>
           ) : (
             <i className={`${logo.iconClass} ${logo.specificClass}`} />
@@ -30,7 +30,6 @@ class Logos extends Component {
         transitionTime={500}
         centerMode
         centerSlidePercentage={33}
-        emulateTouch
         infiniteLoop
         // width='50vw'
         showThumbs={false}

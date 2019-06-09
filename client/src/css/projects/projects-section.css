@@ -71,6 +71,10 @@
   top: 0;
 }
 
+.title-item {
+  font-size: 2.3rem;
+}
+
 .info-overlay {
   position: absolute;
   background: #000;
@@ -91,15 +95,15 @@
   font-size: 2rem;
 }
 
-.demo-button-overlay {
+.blank-button-overlay {
   position: absolute;
   background: #000;
   opacity: 0.5;
   z-index: 1;
   width: 20%;
   height: 80px;
-  bottom: 0%;
-  left: 0%;
+  bottom: 0;
+  left: 20%;
   text-align: center;
 }
 
@@ -110,8 +114,8 @@
   z-index: 1;
   width: 20%;
   height: 80px;
-  bottom: 0;
-  left: 20%;
+  bottom: 0%;
+  left: 0%;
   text-align: center;
 }
 
@@ -173,40 +177,37 @@
   padding-top: 8px;
 }
 
-.nodejs-icon {
+.icon-svg img {
+  height: 3rem;
+}
+
+.logo-icons i {
   padding-top: 8px;
   font-size: 3rem;
+}
+
+.nodejs-icon {
   color: #8cc84b;
 }
 
 .html-icon {
-  padding-top: 8px;
   color: #ef6026;
-  font-size: 3rem;
 }
 
 .css-icon {
-  padding-top: 8px;
   color: #25a1e1;
-  font-size: 3rem;
 }
 
 .js-icon {
-  padding-top: 8px;
   color: #f0db4f;
-  font-size: 3rem;
 }
 
 .react-icon {
-  padding-top: 8px;
   color: #5ed4f4;
-  font-size: 3rem;
 }
 
 .sass-icon {
-  padding-top: 8px;
   color: #cd6799;
-  font-size: 3rem;
 }
 
 .project-btn {
@@ -244,5 +245,26 @@ a.project-btn::before {
 a.project-btn:hover:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .icon-svg img {
+    height: 1.5rem;
+  }
+  .logo-icons i {
+    font-size: 1.5rem;
+  }
+  .blank-button-overlay h1 {
+    font-size: 2rem;
+  }
+  .title-item {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .title-item {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=projects-section.css.map */

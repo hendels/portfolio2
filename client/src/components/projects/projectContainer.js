@@ -2,8 +2,8 @@ import React from "react";
 // style
 import "../../css/projects/projects-section.css";
 // app components
-import Carousel from "../carouselScreenshots";
-import CarouselStack from "../carouselStack";
+import Carousel from "./carouselScreenshots";
+import CarouselStack from "./carouselStack";
 import ProjectTitle from "./projectTitle";
 import ProjectAbout from "./projectAbout";
 import ProjectFeatures from "./projectFeatures";
@@ -51,7 +51,6 @@ class ProjectContainer extends React.Component {
     const subbarClass = document.getElementById(this.props.idSubbar).classList;
     // TODO - change it to state dude
     if (windowsScrollTop <= endRef && windowsScrollTop >= startRef) {
-      // console.log("ive got ::: " + this.props.projectName);
       containerTitleClass.remove("turn-off-element");
       containerTitleClass.add("turn-off-element");
       subbarClass.add("turn-off-element");
@@ -113,10 +112,10 @@ class ProjectContainer extends React.Component {
                 <ProjectFeatures handleShowElement={this.handleShowElement} />
               ) : null}
               {/* down */}
-              <div className="demo-button-overlay">
+              <div className="git-button-overlay">
                 <h3 className="text-white">Git</h3>
               </div>
-              <div className="git-button-overlay">
+              <div className="blank-button-overlay">
                 <h1 className="display-4 text-white">stack =></h1>
               </div>
               <div className="pre-bracket-overlay display-2 ">

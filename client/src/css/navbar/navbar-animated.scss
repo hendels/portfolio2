@@ -4,23 +4,68 @@
 $black: #262626;
 $white: #fff;
 $active: purple;
-$hover: #5f1e84;
+$hover: #83bb00;
 $black-transparent: rgba(26, 26, 26, 0.8);
 
+$navHeight: 60px;
 //rest
 html {
   scroll-behavior: smooth;
 }
-
+// nav from side
+.burger-button {
+  float: right;
+  height: $navHeight;
+  width: $navHeight;
+  text-align: center;
+}
+.burger-icon {
+  // width: $navHeight;
+  // font-size: 1.5rem;
+  // position: relative;
+  // top: calc(50% - 14px); /* 50% - 3/4 of icon height */
+  // color: $active;
+}
+.nav-side-background {
+  position: absolute;
+  z-index: 2;
+  background: rgba(26, 25, 26, 0.6);
+  width: 100vw;
+  height: 100vh;
+}
+.nav-side {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: $navHeight;
+  width: 200px;
+  height: 95vh;
+  background: $black-transparent;
+  border: 1px solid black;
+}
+.nav-side .nav-side-items a {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 5px 20px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.nav-side .nav-side-items a.focused {
+  color: $white;
+  background: $active;
+}
+// navbar
 nav {
-  // margin: 0;
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  // padding: 10px; //100px 10px 100px;
+  height: $navHeight;
   transition: 0.5s;
 
   .logo {
@@ -50,30 +95,25 @@ nav {
       color: $newSecondary;
     }
   }
-  ul {
+  .nav-right-links {
     float: right;
-    display: flex;
     margin: 0;
-    // padding: -25px 0;
-    // padding-bottom: 25px !important;
-    li {
-      list-style: none;
-      a {
-        line-height: 80px;
-        padding: 5px 20px;
-        color: $black;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: 0.5s;
-      }
-      a:hover {
-        color: $white;
-        background: $hover;
-      }
+    a {
+      line-height: 80px;
+      padding: 5px 20px;
+      color: $black;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+    a:hover {
+      color: $white;
+      background: $hover;
     }
   }
 }
-nav.selected-home ul li a {
+
+nav.selected-home .nav-right-links a {
   transition: 0.5s;
   display: none;
 }
@@ -92,20 +132,34 @@ nav.selected-projects .logo h1 {
 }
 nav.black {
   background: $black-transparent;
-  // padding: 10px;
   height: 60px;
 }
-nav.black ul li a {
+.nav-side-items a,
+nav.black .nav-right-links a {
   color: $white;
 }
 nav.black .logo img {
   height: 60px;
 }
-nav ul li a.focused {
-  color: $white;
-  background: $active;
-}
+
 .is-current a {
   color: $white;
   background: $active;
+}
+
+@media (min-width: 769px) {
+  .nav-right-links {
+    display: inline;
+  }
+  .burger-button {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .nav-right-links {
+    display: none;
+  }
+  .burger-button {
+    display: inline;
+  }
 }

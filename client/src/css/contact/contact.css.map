@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,ECUH,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,wBAAwB;CDT1C;;AAED,AAAA,gBAAgB,CAAC;EACf,UAAU,ECEF,OAAO;EDDf,KAAK,ECJM,OAAO;EDKlB,MAAM,EAAE,IAAI;EACZ,UAAU,ECGH,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,wBAAwB;CDF1C",
+    "sources": [
+        "contact.scss",
+        "../general/palette.scss"
+    ],
+    "names": [],
+    "file": "contact.css"
+}

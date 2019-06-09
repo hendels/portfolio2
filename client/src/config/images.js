@@ -10,18 +10,22 @@ const resolution = "400x300";
   /* TODO - add label (animated) to inform that dyno is loading couple of seconds */
 }
 export default {
+  // if something is landing show it as first, when mobile mode - show only landing!
   bikeysh: [
     {
       link: scr2,
-      label: "hjk"
+      label: "hjk",
+      landing: true
     },
     {
       link: scr3,
-      label: "fgh"
+      label: "fgh",
+      landing: false
     },
     {
       link: scr4,
-      label: "asd"
+      label: "asd",
+      landing: false
     }
   ],
   unsplash: [

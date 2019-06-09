@@ -1,10 +1,17 @@
 import React from "react";
 import "../css/home/home.css";
+import ReactSvg from "react-svg";
+
 // photos
 import mePhoto from "../img/me-resized.jpg";
 import person1 from "../img/person1.jpg";
+// icons
+import CvIcon from "../svg/cv.svg";
 // bootstrap
 import { Container, Row, Col } from "react-bootstrap";
+
+const cvLink =
+  "https://drive.google.com/open?id=1_Czm0U78tT7b2iPh1gYdGPs_hPxzN-ch";
 class Home extends React.Component {
   handleClickToNavItem(e, ref, focusedId) {
     e.preventDefault();
@@ -37,8 +44,8 @@ class Home extends React.Component {
         <Container id="main-header">
           <Row noGutters>
             <Col md={5}>
-              <img src={mePhoto} />
-              {/* <div id="main-header-photo" /> */}
+              <img className="profile-photo" src={mePhoto} />
+              <div className="profile-overlay" />
             </Col>
             <Col md={7}>
               <div className="d-flex flex-column">
@@ -75,8 +82,18 @@ class Home extends React.Component {
                     </Col>
                   </Row>
                 </div>
-                <div className="p-4 bg-black">
-                  Wanna be Java Script developer{" "}
+                <div className="p-4 bg-black profile-label">
+                  <span className="description">
+                    <h3>Wanna be Java Script developer</h3>
+                  </span>
+                  <a href={cvLink} target="_blank" className="file-container">
+                    <ReactSvg
+                      className="svg-icon"
+                      src={CvIcon}
+                      style={{ height: "3rem" }}
+                    />
+                  </a>
+                  <span className="file-description">get CV here</span>
                 </div>
                 <div>
                   <div className="bg-primary d-flex flex-row align-items-stretch text-center text-white">

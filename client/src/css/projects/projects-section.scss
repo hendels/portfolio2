@@ -77,7 +77,9 @@ $logo-max-width: 500px;
   height: 80px;
   top: 0;
 }
-
+.title-item {
+  font-size: 2.3rem;
+}
 // # middle section
 .info-overlay {
   position: absolute;
@@ -100,15 +102,15 @@ $logo-max-width: 500px;
 // # down section
 $downSectionHeight: 80px;
 
-.demo-button-overlay {
+.blank-button-overlay {
   position: absolute;
   background: #000;
   opacity: 0.5;
   z-index: 1;
   width: 20%;
   height: $downSectionHeight;
-  bottom: 0%;
-  left: 0%;
+  bottom: 0;
+  left: 20%;
   text-align: center;
 }
 .git-button-overlay {
@@ -118,8 +120,8 @@ $downSectionHeight: 80px;
   z-index: 1;
   width: 20%;
   height: $downSectionHeight;
-  bottom: 0;
-  left: 20%;
+  bottom: 0%;
+  left: 0%;
   text-align: center;
 }
 // // technology stack section
@@ -182,43 +184,32 @@ $paddingBottomIcon: 8px;
 // * icons
 .icon-svg {
   padding-top: $paddingTopIcon;
+  img {
+    height: 3rem;
+  }
   // padding-bottom: $paddingBottomIcon;
 }
-.nodejs-icon {
+.logo-icons i {
   padding-top: $paddingTopIcon;
   font-size: $iconSize;
+}
+.nodejs-icon {
   color: #8cc84b;
-  // opacity: 1;
 }
 .html-icon {
-  padding-top: $paddingTopIcon;
   color: #ef6026;
-  font-size: $iconSize;
-  // opacity: 1;
 }
 .css-icon {
-  padding-top: $paddingTopIcon;
   color: #25a1e1;
-  font-size: $iconSize;
-  // opacity: 1;
 }
 .js-icon {
-  padding-top: $paddingTopIcon;
   color: #f0db4f;
-  font-size: $iconSize;
-  // opacity: 1;
 }
 .react-icon {
-  padding-top: $paddingTopIcon;
   color: #5ed4f4;
-  font-size: $iconSize;
-  // opacity: 1;
 }
 .sass-icon {
-  padding-top: $paddingTopIcon;
   color: #cd6799;
-  font-size: $iconSize;
-  // opacity: 1;
 }
 // OLDISH
 .project-btn {
@@ -247,4 +238,24 @@ a.project-btn::before {
 }
 a.project-btn:hover:before {
   transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .icon-svg img {
+    height: 1.5rem;
+  }
+  .logo-icons i {
+    font-size: 1.5rem;
+  }
+  .blank-button-overlay h1 {
+    font-size: 2rem;
+  }
+  .title-item {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 560px) {
+  .title-item {
+    font-size: 1.3rem;
+  }
 }

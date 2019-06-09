@@ -1,21 +1,19 @@
 import React from "react";
 // app
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbar/navbar";
 import Home from "./components/home";
 import AboutMe from "./components/aboutMe";
 
 import SkillsSection from "./components/skills/skillsSection";
 import ExperienceSection from "./components/experienceSection";
-import CvSection from "./components/cvSection";
 import ProjectsSection from "./components/projects/projectHeader";
 
-// import ProjectSection2 from "./components/projectContainer2";
-// import ContactForm from "./components/contactForm";
+import ContactForm from "./components/contactForm";
+import BlankSpace from "./components/UI/blankSpace";
 // import Tutorial from "./components/tutorial";
 //styles
-// import "./css/styles.css";
 import "./css/bootstrap/bootstrap.css";
-//
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -45,7 +43,6 @@ class App extends React.Component {
       "main-header-item"
     );
     const animateClass = "shadow-pop-long";
-
     for (let i = 0; i < homeButtons.length; i++) {
       await new Promise((resolve, reject) => {
         homeButtons[i].className += ` ${animateClass}`;
@@ -115,8 +112,8 @@ class App extends React.Component {
           handleChangeSubbar={this.handleChangeSubbar}
           projects={projects}
         />
-        {/* <CvSection /> */}
-        {/* <ContactForm /> */}
+        <ContactForm sectionName="CNTZ" refContact={refs.contact} />
+        <BlankSpace />
       </div>
     );
   }
