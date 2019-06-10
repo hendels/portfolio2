@@ -1,16 +1,39 @@
 // colors
+$main_pal_1: #231f20;
+$main_pal_2: #fce373;
+$main_pal_3: #9ad18b;
+$main_pal_4: #a385bd;
+$main_pal_5: #f37449;
+$main_pal_6: #f9a04e;
+$main_pal_7: #cca69a;
+$main_pal_8: #f8b5b8;
+$main_pal_9: #6fab9e;
+// other colors
 $paleAqua: #bfd7ea;
 $metalicSeaweed: #087e8b;
 $ogreOdor: #ff4b3e;
 // bootstrap override
-
-$newPrimary: #001427;
-$newSecondary: $ogreOdor;
-$newSuccess: #a3ffbe;
-$newDanger: #990100;
-$newWarning: #00b9ae;
-$newInfo: #f3eff5;
+$newPrimary: $main_pal_1; // 1
+$newSecondary: $main_pal_5; //2
+$newSuccess: $main_pal_6; //3
+$newDanger: $main_pal_4; //4
+$newWarning: $main_pal_3; //5
+$newInfo: $main_pal_9; //6
 // dedicated
 $projectVariant1: $paleAqua;
 $projectVariant2: $metalicSeaweed;
-$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
+$innerShadow: inset 0px 0px 0px 0px rgb(26, 26, 26);
+// fonts
+$font1: "Fira Sans Extra Condensed", sans-serif;
+$font2: "Cairo", sans-serif;
+$font3: "News Cycle", sans-serif;
+$font4: "Rajdhani", sans-serif;
+$font5: "Cuprum", sans-serif;
+$font6: "IBM Plex Sans", sans-serif;
+$font7: "Poiret One", cursive;
+$font8: "Josefin Slab", serif;
+$font9: "Unica One", cursive;
+$font10: "Julius Sans One", sans-serif;
+// # palettes
+// * because

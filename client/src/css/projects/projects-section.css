@@ -18,14 +18,6 @@
           box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
-.projects-content {
-  background: #f3eff5;
-  color: #001427;
-  height: 100%;
-  -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
-
 .project-buttons-group {
   height: 480px;
   width: 100%;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 // app
 import Navbar from "./components/navbar/navbar";
 import Home from "./components/home";
@@ -13,7 +14,7 @@ import BlankSpace from "./components/UI/blankSpace";
 // import Tutorial from "./components/tutorial";
 //styles
 import "./css/bootstrap/bootstrap.css";
-
+import "./css/general/main-html.css";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -50,15 +51,12 @@ class App extends React.Component {
           resolve();
         }, 200);
       });
-      // new Promise((resolve, reject) => {
       setTimeout(() => {
         homeButtons[i].className = homeButtons[i].className.substring(
           0,
           homeButtons[i].className.length - animateClass.length + 1
         );
-        // resolve();
       }, 1000);
-      // });
     }
   };
   handleChangeSubbar = subbar => {
@@ -102,18 +100,23 @@ class App extends React.Component {
           animateHomeButtons={this.animateHomeButtons}
         />
         <Home refs={refs} animateHomeButtons={this.animateHomeButtons} />
-        <AboutMe refAboutMe={refs.aboutMe} sectionName="ABTZ" />
-        <SkillsSection refSkills={refs.skills} sectionName="SKLZ" />
-        <ExperienceSection refExperience={refs.experience} sectionName="EXPZ" />
+        <AboutMe refAboutMe={refs.aboutMe} sectionName="ABOUT-ME" />
+        <SkillsSection refSkills={refs.skills} sectionName="SKILLS" />
+        <ExperienceSection
+          refExperience={refs.experience}
+          sectionName="EXPERIENCE"
+        />
 
         <ProjectsSection
-          sectionName="PRTZ"
+          sectionName="PROJECTS"
           refs={refs}
           handleChangeSubbar={this.handleChangeSubbar}
           projects={projects}
         />
-        <ContactForm sectionName="CNTZ" refContact={refs.contact} />
-        <BlankSpace />
+        <ContactForm sectionName="CONTACT" refContact={refs.contact} />
+        <Container>
+          <BlankSpace />
+        </Container>
       </div>
     );
   }

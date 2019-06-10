@@ -49,13 +49,13 @@ html {
   flex-direction: column;
   margin: 0;
   padding: 5px 20px;
-  color: $white;
+  color: $main_pal_1;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
 }
 .nav-side .nav-side-items a.focused {
-  color: $white;
+  color: $main_pal_1;
   background: $active;
 }
 // navbar
@@ -72,7 +72,6 @@ nav {
     float: left;
     opacity: 0.5;
     transition: 0.5s;
-    // color: #fff;
     img {
       height: 80px;
       transition: 0.5s;
@@ -83,7 +82,7 @@ nav {
     font-size: 1rem;
     text-transform: uppercase;
     padding-top: 2rem;
-    color: #fff;
+    color: $main_pal_1;
     span {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -107,29 +106,49 @@ nav {
       transition: 0.5s;
     }
     a:hover {
-      color: $white;
-      background: $hover;
+      color: $main_pal_1;
+      background: $main_pal_9;
     }
   }
+}
+// # color changes
+// * scrollspy
+.nav-right-links .is-current a {
+  color: $main_pal_1;
 }
 
 nav.selected-home .nav-right-links a {
   transition: 0.5s;
   display: none;
+  color: $main_pal_2;
 }
 
 nav.selected-about .logo h1 {
   color: $newDanger;
 }
+nav.selected-about .is-current a {
+  background: $newDanger;
+}
 nav.selected-skills .logo h1 {
   color: $newSuccess;
 }
+nav.selected-skills .is-current a {
+  background: $newSuccess;
+}
+
 nav.selected-experience .logo h1 {
   color: $newWarning;
+}
+nav.selected-experience .is-current a {
+  background: $newWarning;
 }
 nav.selected-projects .logo h1 {
   color: $newSecondary;
 }
+nav.selected-projects .is-current a {
+  background: $newSecondary;
+}
+// header main definition
 nav.black {
   background: $black-transparent;
   height: 60px;
@@ -141,12 +160,7 @@ nav.black .nav-right-links a {
 nav.black .logo img {
   height: 60px;
 }
-
-.is-current a {
-  color: $white;
-  background: $active;
-}
-
+// medias
 @media (min-width: 769px) {
   .nav-right-links {
     display: inline;

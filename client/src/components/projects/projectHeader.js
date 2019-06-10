@@ -1,9 +1,19 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+// styles
 import "../../css/projects/projects-section.css";
 
-import { Container, Row, Col } from "react-bootstrap";
+// app components
 import ProjectSection from "./projectContainer";
 import BlankSpace from "../UI/blankSpace";
+import SectionHeader from "../UI/sectionHeader";
+import SectionDescription from "../UI/sectionDescription";
+
+const descriptionText = `Et pariatur veniam ea eu fugiat sunt cillum do ipsum non. Enim incididunt laboris ullamco exercitation laboris quis est in reprehenderit nisi sit laborum. Ex aliqua minim eiusmod irure voluptate in consectetur elit Lorem dolor fugiat tempor labore. Nulla aliqua esse aliqua do anim reprehenderit id laborum do aute sunt proident non quis. Ad ipsum ad excepteur consequat. Reprehenderit mollit cillum magna voluptate elit cillum minim ipsum adipisicing fugiat.
+
+Nostrud dolor aliqua laboris eu ad ullamco officia duis occaecat ea. Exercitation officia laborum do incididunt. Veniam enim in sunt nostrud ut velit nisi consequat commodo. Magna ad fugiat commodo ut id enim qui. Et velit occaecat nisi sint cillum.
+
+Labore duis voluptate anim Lorem velit Lorem laborum Lorem proident laborum. Ut dolor aliquip incididunt excepteur nostrud tempor dolor ea aliqua ut ex ea. Deserunt veniam ipsum aute mollit eu incididunt id esse nostrud consequat magna commodo consequat incididunt. Minim qui esse laboris pariatur et deserunt esse magna deserunt. Lorem pariatur reprehenderit ex anim sint.`;
 
 const ProjectHeader = props => {
   const features = [`it's RWD`, `search bar`, `tag management`, `crawler`];
@@ -17,25 +27,25 @@ const ProjectHeader = props => {
   return (
     <section id="section-projects" ref={props.refs.projects}>
       <Container>
+        <BlankSpace />
         <Row noGutters>
           <Col md={3}>
-            <div className="bg-secondary projects-title">
-              <h1 className="display-3 text-white">{props.sectionName}</h1>
-            </div>
+            <SectionHeader
+              sectionName={props.sectionName}
+              bootstrapClass="bg-secondary"
+              headerClass="projects-title"
+            />
           </Col>
           <Col md={9}>
-            <div className="projects-content">
-              <h4>Projects I've made</h4>
-              <p>
-                Basically everything is focused in React / Redux with Node.js
-                connected to MongoDB
-              </p>
-            </div>
+            <SectionDescription
+              descriptionClass="projects-description"
+              descriptionHeader={`Projects I've made`}
+              descriptionText={descriptionText}
+            />
           </Col>
         </Row>
       </Container>
-      <BlankSpace />
-      {/* write that it has demo data and priviliges at admin level only */}
+      {/* TODO write that it has demo data and priviliges at admin level only */}
       <ProjectSection
         ref={props.refs.bikeyshComponent}
         refProject={props.refs.bikeysh}
@@ -49,7 +59,6 @@ const ProjectHeader = props => {
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
-      <BlankSpace />
       <ProjectSection
         ref={props.refs.googleMapComponent}
         refProject={props.refs.googleMap}
@@ -63,7 +72,6 @@ const ProjectHeader = props => {
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
-      <BlankSpace />
       {/* // put this portfolio as a project also */}
 
       {/* <Tutorial  - make websites from it and put as a websites also/> */}

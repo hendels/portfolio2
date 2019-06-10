@@ -1,10 +1,20 @@
-//vars
+// vars
 @import "../general/palette.scss";
 $shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 $grey: #262626;
 $primary: #ddd;
 
-//rest
+// introduce
+.introduce {
+  background: $main_pal_2;
+  .introduce-header {
+    text-transform: uppercase;
+    line-height: 4rem;
+    color: $main_pal_1;
+    font-size: 4rem;
+  }
+}
+// cv section
 .bg-black {
   color: #fff;
   background: black;
@@ -53,10 +63,10 @@ $primary: #ddd;
   left: 0;
   width: 100px;
   height: 100px;
-  background: green;
+  background: $main_pal_7;
   z-index: 2;
 }
-// items
+// animated home items
 #main-header .main-header-item {
   width: 30%;
 }
@@ -66,6 +76,9 @@ $primary: #ddd;
 .shadow-pop-long {
   animation: shadow-pop-long 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
+
+// medias
+
 @media (min-width: 1199px) {
   #main-header .main-header-item {
     padding: 3em !important;

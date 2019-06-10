@@ -1,3 +1,14 @@
+.introduce {
+  background: #fce373;
+}
+
+.introduce .introduce-header {
+  text-transform: uppercase;
+  line-height: 4rem;
+  color: #231f20;
+  font-size: 4rem;
+}
+
 .bg-black {
   color: #fff;
   background: black;
@@ -63,7 +74,7 @@
   left: 0;
   width: 100px;
   height: 100px;
-  background: green;
+  background: #cca69a;
   z-index: 2;
 }
 

@@ -61,7 +61,7 @@ wanna be web dev / 'some icon' Krakow / Wroclaw
 // SKILLAZ
 * bootstrap css, bootstrap react, materialUi react
 * git
-
+* i have strong understanding how react works with redux
 // EXPERIENCE
 * wypisz technologie
 * vba -programowanie / nav , ca-l programowanie na pierwszym miejscu
@@ -69,3 +69,4 @@ wanna be web dev / 'some icon' Krakow / Wroclaw
 
 // PROJECTS
 // # portfolio - made using React and some classes from bootstrap library, but it's highly cssesed to show you, that i can css (flex, grid).
+// # bikeysh - written in pure react

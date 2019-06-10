@@ -7,7 +7,7 @@ import CarouselStack from "./carouselStack";
 import ProjectTitle from "./projectTitle";
 import ProjectAbout from "./projectAbout";
 import ProjectFeatures from "./projectFeatures";
-
+import BlankSpace from "../UI/blankSpace";
 // bootstrap
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -86,6 +86,7 @@ class ProjectContainer extends React.Component {
     return (
       <section ref={refProject}>
         <Container>
+          <BlankSpace />
           <Row noGutters>
             <Col md={12}>
               {/* main element - screenshot & landing image*/}

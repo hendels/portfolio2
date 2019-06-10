@@ -1,10 +1,11 @@
 import React from "react";
-import "../css/home/home.css";
 import ReactSvg from "react-svg";
+// styles
+import "../css/home/home.css";
 
 // photos
 import mePhoto from "../img/me-resized.jpg";
-import person1 from "../img/person1.jpg";
+// import mePhoto from "../img/person1.jpg";
 // icons
 import CvIcon from "../svg/cv.svg";
 // bootstrap
@@ -45,22 +46,30 @@ class Home extends React.Component {
           <Row noGutters>
             <Col md={5}>
               <img className="profile-photo" src={mePhoto} />
-              <div className="profile-overlay" />
+              <div className="profile-overlay">contact</div>
             </Col>
             <Col md={7}>
               <div className="d-flex flex-column">
-                <div className="p-5 bg-dark text-white">
+                <div className="introduce text-white">
                   <Row>
                     <Col md={12}>
-                      <h1 className="display-4">
-                        {Name}
-                        <span className="text-secondary">H</span>a
-                        <span className="text-secondary">r</span>
-                        en
-                        <span className="text-secondary">d</span>
-                        ar
-                        <span className="text-secondary">z</span>
-                      </h1>
+                      <Row noGutters>
+                        <Col md={12}>
+                          <div className="introduce-header">{Name}</div>
+                        </Col>
+                      </Row>
+                      <Row noGutters>
+                        <Col md={12}>
+                          <div className="introduce-header">
+                            <span className="text-secondary">H</span>a
+                            <span className="text-secondary">r</span>
+                            en
+                            <span className="text-secondary">d</span>
+                            ar
+                            <span className="text-secondary">z</span>
+                          </div>
+                        </Col>
+                      </Row>
                     </Col>
                   </Row>
                   <Row>

@@ -3,6 +3,7 @@ import Scrollspy from "react-scrollspy";
 
 class NavItems extends React.Component {
   handleOnUpdateScrollspy = items => {
+    // change logo & navitems while ScrollSpy - color handler
     const navItems = document.getElementsByClassName("is-current");
     let element = null;
     for (let i = 0; i < navItems.length; i++) {
@@ -40,7 +41,6 @@ class NavItems extends React.Component {
       "section-contact"
     ];
     if (!useScrollSpy) scrollSpyItems = [];
-    // const sidebar = linksClass === "nav-side-items";
     return (
       <span className={`${linksClass}`}>
         <Scrollspy
