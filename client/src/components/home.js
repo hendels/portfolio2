@@ -13,6 +13,11 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const cvLink =
   "https://drive.google.com/open?id=1_Czm0U78tT7b2iPh1gYdGPs_hPxzN-ch";
+const aboutMeIcon = "fas fa-globe-europe";
+const skillsIcon = "fa-air-freshener";
+const experienceIcon = "fa-dog";
+const projectsIcon = "fa-dragon";
+
 class Home extends React.Component {
   handleClickToNavItem(e, ref, focusedId) {
     e.preventDefault();
@@ -46,7 +51,7 @@ class Home extends React.Component {
           <Row noGutters>
             <Col md={5}>
               <img className="profile-photo" src={mePhoto} />
-              <div className="profile-overlay">contact</div>
+              {/* <div className="profile-overlay">contact</div> */}
             </Col>
             <Col md={7}>
               <div className="d-flex flex-column">
@@ -55,66 +60,53 @@ class Home extends React.Component {
                     <Col md={12}>
                       <Row noGutters>
                         <Col md={12}>
-                          <div className="introduce-header">{Name}</div>
+                          <span className="introduce-header">
+                            <span className="name">{Name}</span>
+                          </span>
                         </Col>
                       </Row>
                       <Row noGutters>
                         <Col md={12}>
-                          <div className="introduce-header">
-                            <span className="text-secondary">H</span>a
-                            <span className="text-secondary">r</span>
-                            en
-                            <span className="text-secondary">d</span>
-                            ar
-                            <span className="text-secondary">z</span>
-                          </div>
+                          <span className="introduce-header">
+                            <span className="pl-4 surname">
+                              <span className="text-secondary">H</span>a
+                              <span className="text-secondary">r</span>
+                              en
+                              <span className="text-secondary">d</span>
+                              ar
+                              <span className="text-secondary">z</span>
+                            </span>
+                          </span>
                         </Col>
                       </Row>
                     </Col>
                   </Row>
-                  <Row>
-                    <Col md={12}>
-                      <div className="d-flex flex-row justify-content-between align-items-center">
-                        <a href="https://facebook.com" className="text-white">
-                          <i className="fab fa-facebook" />
-                        </a>
-                        <a href="https://facebook.com" className="text-white">
-                          <i className="fab fa-twitter" />
-                        </a>
-                        <a href="https://facebook.com" className="text-white">
-                          <i className="fab fa-instagram" />
-                        </a>
-                        <a href="https://facebook.com" className="text-white">
-                          <i className="fab fa-linkedin" />
-                        </a>
-                      </div>
-                    </Col>
-                  </Row>
                 </div>
-                <div className="p-4 bg-black profile-label">
+                <div className="p-4  profile-label">
                   <span className="description">
-                    <h3>Wanna be Java Script developer</h3>
+                    <h3>Junior Java Script developer</h3>
                   </span>
-                  <a href={cvLink} target="_blank" className="file-container">
-                    <ReactSvg
-                      className="svg-icon"
-                      src={CvIcon}
-                      style={{ height: "3rem" }}
-                    />
+                  <a href={cvLink} className="contact-icon">
+                    <i class="far fa-address-book" />
                   </a>
-                  <span className="file-description">get CV here</span>
+                  <span className="contact-label">contact</span>
+                  <a href={cvLink} target="_blank" className="file-container">
+                    <i class="far fa-file-alt" />
+                  </a>
+                  <span className="file-description">my CV</span>
                 </div>
                 <div>
-                  <div className="bg-primary d-flex flex-row align-items-stretch text-center text-white">
+                  <div className="bg-primary d-flex flex-row align-items-stretch text-center">
                     <div
                       className="main-header-item p-4 bg-danger"
                       onClick={e =>
                         this.handleClickToNavItem(e, aboutMe, "about")
                       }
                     >
-                      <i className="fas fa-address-card fa-2x d-none d-sm-block" />
-                      about me
-                      {/* </a> */}
+                      <i
+                        className={`fas ${aboutMeIcon} fa-2x d-none d-sm-block`}
+                      />
+                      about
                     </div>
                     <div
                       className="main-header-item p-4  bg-success"
@@ -122,14 +114,10 @@ class Home extends React.Component {
                         this.handleClickToNavItem(e, skills, "skills")
                       }
                     >
-                      {/* <a
-                        onClick={e =>
-                          this.handleClickToNavItem(e, skills, "skills")
-                        }
-                      > */}
-                      <i className="fas fa-air-freshener fa-2x d-none d-sm-block" />
-                      skilz
-                      {/* </a> */}
+                      <i
+                        className={`fas ${skillsIcon} fa-2x d-none d-sm-block`}
+                      />
+                      skills
                     </div>
                     <div
                       className="main-header-item p-4 bg-warning"
@@ -137,14 +125,10 @@ class Home extends React.Component {
                         this.handleClickToNavItem(e, experience, "experience")
                       }
                     >
-                      {/* <a
-                        onClick={e =>
-                          this.handleClickToNavItem(e, experience, "experience")
-                        }
-                      > */}
-                      <i className="fas fa-dog fa-2x d-none d-sm-block" />
-                      exp
-                      {/* </a> */}
+                      <i
+                        className={`fas ${experienceIcon} fa-2x d-none d-sm-block`}
+                      />
+                      experience
                     </div>
                     <div
                       className="main-header-item p-4 bg-secondary"
@@ -152,14 +136,10 @@ class Home extends React.Component {
                         this.handleClickToNavItem(e, projects, "projects")
                       }
                     >
-                      {/* <a
-                        onClick={e =>
-                          this.handleClickToNavItem(e, projects, "projects")
-                        }
-                      > */}
-                      <i className="fas fa-dragon fa-2x d-none d-sm-block" />
+                      <i
+                        className={`fas ${projectsIcon} fa-2x d-none d-sm-block`}
+                      />
                       projects
-                      {/* </a> */}
                     </div>
                   </div>
                 </div>
@@ -167,10 +147,6 @@ class Home extends React.Component {
             </Col>
           </Row>
         </Container>
-        {/* =================================================== OLD */}
-        {/* <a className="flipBtn" onClick={this.handleFlip}>
-            {this.state.flipped ? "Proffesional" : "Flip"}{" "}
-          </a> */}
       </section>
     );
   }

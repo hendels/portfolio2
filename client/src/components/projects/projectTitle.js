@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-const Title = props => {
+import { Container, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
+
+const TitleSection = props => {
   return (
-    <div className="d-flex display-4 justify-content-start">
+    <div className="d-flex align-items-center buttons-container">
       <span
         onClick={e => props.handleClickToNavItem(e, props.refProject)}
-        className="text-white pr-5 title-item"
+        className="title-item"
       >
         {props.projectName}
       </span>
@@ -13,20 +14,29 @@ const Title = props => {
         onClick={e =>
           props.handleClickToNavItem(e, props.refProject, "features")
         }
-        className="text-white pr-5 title-item"
+        className="title-item"
       >
         Features
       </span>
       <span
         onClick={e => props.handleClickToNavItem(e, props.refProject, "about")}
-        className="text-white pr-5 title-item"
+        className="title-item"
       >
         About
       </span>
       {/*  dummy */}
-      <span className="text-white title-item">Demo</span>
+      <OverlayTrigger
+        placement="right"
+        overlay={
+          <Tooltip id="tooltip-disabled">
+            Please wait 15-30 sec to load Heroku's dyno.
+          </Tooltip>
+        }
+      >
+        <span className="title-item demo">Demo</span>
+      </OverlayTrigger>
     </div>
   );
 };
 
-export default Title;
+export default TitleSection;

@@ -10,12 +10,12 @@ class SectionDescription extends React.Component {
       >
         <Row>
           <Col md={12}>
-            <h4>{this.props.descriptionHeader}</h4>
+            <p className="section-header">{this.props.descriptionHeader}</p>
           </Col>
         </Row>
         <Row>
           <Col md={12}>
-            <p>{this.props.descriptionText}</p>
+            {this.props.descriptionText}
             {this.props.children ? this.props.children : null}
           </Col>
         </Row>

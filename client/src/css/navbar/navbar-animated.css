@@ -47,7 +47,6 @@ html {
 }
 
 .nav-side .nav-side-items a.focused {
-  color: #231f20;
   background: purple;
 }
 
@@ -77,23 +76,25 @@ nav .logo img {
 
 nav .project-specific {
   float: left;
-  font-size: 1rem;
-  text-transform: uppercase;
-  padding-top: 2rem;
-  color: #231f20;
+  margin: 0;
+  color: #6fab9e;
 }
 
 nav .project-specific span {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  line-height: 80px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav .project-specific span.project-specific-demo {
+  color: #f37449;
 }
 
 nav .project-specific span:hover {
-  background: #83bb00;
-}
-
-nav .project-specific span.project-specific-name {
-  color: #f37449;
+  color: #fff !important;
+  background: #6fab9e;
 }
 
 nav .nav-right-links {
@@ -104,7 +105,6 @@ nav .nav-right-links {
 nav .nav-right-links a {
   line-height: 80px;
   padding: 5px 20px;
-  color: #262626;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: 0.5s;
@@ -112,19 +112,18 @@ nav .nav-right-links a {
 }
 
 nav .nav-right-links a:hover {
-  color: #231f20;
+  color: #fff !important;
   background: #6fab9e;
 }
 
 .nav-right-links .is-current a {
-  color: #231f20;
+  color: #fff !important;
 }
 
 nav.selected-home .nav-right-links a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: none;
-  color: #fce373;
 }
 
 nav.selected-about .logo h1 {
@@ -166,7 +165,7 @@ nav.black {
 
 .nav-side-items a,
 nav.black .nav-right-links a {
-  color: #fff;
+  color: #88787c;
 }
 
 nav.black .logo img {

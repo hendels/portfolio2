@@ -9,20 +9,10 @@ import BlankSpace from "../UI/blankSpace";
 import SectionHeader from "../UI/sectionHeader";
 import SectionDescription from "../UI/sectionDescription";
 
-const descriptionText = `Et pariatur veniam ea eu fugiat sunt cillum do ipsum non. Enim incididunt laboris ullamco exercitation laboris quis est in reprehenderit nisi sit laborum. Ex aliqua minim eiusmod irure voluptate in consectetur elit Lorem dolor fugiat tempor labore. Nulla aliqua esse aliqua do anim reprehenderit id laborum do aute sunt proident non quis. Ad ipsum ad excepteur consequat. Reprehenderit mollit cillum magna voluptate elit cillum minim ipsum adipisicing fugiat.
-
-Nostrud dolor aliqua laboris eu ad ullamco officia duis occaecat ea. Exercitation officia laborum do incididunt. Veniam enim in sunt nostrud ut velit nisi consequat commodo. Magna ad fugiat commodo ut id enim qui. Et velit occaecat nisi sint cillum.
-
-Labore duis voluptate anim Lorem velit Lorem laborum Lorem proident laborum. Ut dolor aliquip incididunt excepteur nostrud tempor dolor ea aliqua ut ex ea. Deserunt veniam ipsum aute mollit eu incididunt id esse nostrud consequat magna commodo consequat incididunt. Minim qui esse laboris pariatur et deserunt esse magna deserunt. Lorem pariatur reprehenderit ex anim sint.`;
+const descriptionText = ``;
 
 const ProjectHeader = props => {
   const features = [`it's RWD`, `search bar`, `tag management`, `crawler`];
-  const stack = {
-    mongodb: true,
-    sass: true,
-    react: true,
-    RWD: true
-  };
   const { bikeysh, googleMap } = props.projects;
   return (
     <section id="section-projects" ref={props.refs.projects}>
@@ -39,7 +29,7 @@ const ProjectHeader = props => {
           <Col md={9}>
             <SectionDescription
               descriptionClass="projects-description"
-              descriptionHeader={`Projects I've made`}
+              descriptionHeader={`check the features, git or demo`}
               descriptionText={descriptionText}
             />
           </Col>
@@ -55,7 +45,8 @@ const ProjectHeader = props => {
         projectName={bikeysh.name}
         projectId={bikeysh.id}
         idSubbar={bikeysh.idSubbar}
-        stack={stack}
+        screenshots={bikeysh.screenshots}
+        stack={bikeysh.technology}
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
@@ -68,7 +59,8 @@ const ProjectHeader = props => {
         projectName={googleMap.name}
         projectId={googleMap.id}
         idSubbar={googleMap.idSubbar}
-        stack={stack}
+        screenshots={googleMap.screenshots}
+        stack={googleMap.technology}
         features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />

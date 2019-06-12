@@ -1,20 +1,27 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+// config
+import screenshots from "./config/images";
 // app
 import Navbar from "./components/navbar/navbar";
 import Home from "./components/home";
 import AboutMe from "./components/aboutMe";
 
 import SkillsSection from "./components/skills/skillsSection";
-import ExperienceSection from "./components/experienceSection";
+import ExperienceSection from "./components/experience/experienceSection";
 import ProjectsSection from "./components/projects/projectHeader";
 
 import ContactForm from "./components/contactForm";
 import BlankSpace from "./components/UI/blankSpace";
+
 // import Tutorial from "./components/tutorial";
 //styles
 import "./css/bootstrap/bootstrap.css";
 import "./css/general/main-html.css";
+
+const bikeyshDescription = `Scores offers from popular bike parts market (web scraper) and shows the best ones for specific category. Basing on tags provided by user bikeysh interprets each new scraped record and deduct membership to a given category and name, counted unified name sets shows statistics and scores for each offer listing the best ones on the dashboard. User can do basic operations: search offers, set offers as favorites, hide them from dashboard, add tags with drag and drop view and check the details about each one.`;
+const googleMapDescription = ``;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -81,13 +88,19 @@ class App extends React.Component {
       id: "bikeysh",
       idSubbar: "subbar_bikeysh",
       name: "Bikeysh",
-      elementsSubbar: ["Bikeysh", "Features", "About", "Demo"]
+      elementsSubbar: ["Bikeysh", "Features", "About", "Demo"],
+      technology: ["mongodb", "js", "css"],
+      screenshots: screenshots.bikeysh,
+      description: bikeyshDescription
     };
     const projectGoogleMap = {
       id: "googleMap",
       idSubbar: "subbar_googleMap",
       name: "Google Map",
-      elementsSubbar: ["GoogleMap", "Features", "About", "Demo"]
+      elementsSubbar: ["GoogleMap", "Features", "About", "Demo"],
+      technology: ["mongo"],
+      screenshots: screenshots.bikeysh,
+      description: googleMapDescription
     };
     const projects = { bikeysh: projectBikeysh, googleMap: projectGoogleMap };
     return (

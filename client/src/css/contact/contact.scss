@@ -6,3 +6,24 @@
   box-shadow: $shadow;
   background: $main_pal_9;
 }
+
+.contact-how-to-reach-me {
+  width: 100%;
+  // height: 100%;
+  border: 3px dashed $main_pal_1;
+  background: $main_pal_9;
+}
+.contact-item {
+  color: $main_pal_10 !important;
+  border: 3px solid $main_pal_10 !important;
+}
+.item-label {
+  text-transform: uppercase !important;
+  font-family: $font1;
+  // font-weight: bold;
+}
+.button-submit {
+  float: right;
+  border: 3px solid $main_pal_7 !important;
+  font-family: $font1;
+}

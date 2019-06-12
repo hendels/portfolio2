@@ -1,5 +1,7 @@
 .introduce {
   background: #fce373;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .introduce .introduce-header {
@@ -10,14 +12,14 @@
 }
 
 .bg-black {
-  color: #fff;
   background: black;
 }
 
 .profile-label {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "description file" "description file-description";
+  background: #141213;
+      grid-template-areas: "description contact-icon file" "description contact-label file-description";
 }
 
 .description {
@@ -25,32 +27,92 @@
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: description;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #ad989d;
+}
+
+.contact-icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contact-icon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-icon i {
+  color: #fce373;
+  font-size: 2.4rem;
+}
+
+.contact-icon i:hover {
+  color: #f37449;
+  font-size: 2.4rem;
+}
+
+.contact-label {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: contact-label;
+  color: #ad989d;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .file-container {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   grid-area: file;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.svg-icon {
-  fill: red;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.file-container i {
+  color: #fce373;
+  font-size: 2.4rem;
 }
 
-.svg-icon:hover {
-  fill: yellowgreen;
-  -webkit-animation: text-shadow-svg-icon 0.6s both;
-          animation: text-shadow-svg-icon 0.6s both;
-  border-top: 1px solid rgba(104, 104, 104, 0.3);
-  border-left: 1px solid rgba(104, 104, 104, 0.3);
+.file-container i:hover {
+  color: #f37449;
+  font-size: 2.4rem;
 }
 
 .file-description {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   grid-area: file-description;
+  color: #ad989d;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #main-header-photo {
@@ -64,8 +126,8 @@
 #main-header img.profile-photo {
   width: 100%;
   height: 100%;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: grayscale(0%) contrast(65%) brightness(100%);
+          filter: grayscale(0%) contrast(65%) brightness(100%);
 }
 
 .profile-overlay {
@@ -80,6 +142,8 @@
 
 #main-header .main-header-item {
   width: 30%;
+  color: #231f20;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 #main-header .main-header-item:hover {

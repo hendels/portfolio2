@@ -81,7 +81,13 @@ class ProjectContainer extends React.Component {
     );
   }
   render() {
-    const { refProject, refEndProject, projectName, projectId } = this.props;
+    const {
+      refProject,
+      refEndProject,
+      projectName,
+      projectId,
+      screenshots
+    } = this.props;
     const { about, features } = this.state;
     return (
       <section ref={refProject}>
@@ -93,6 +99,7 @@ class ProjectContainer extends React.Component {
               <Carousel
                 refEndProject={refEndProject}
                 turnOffElements={about || features}
+                screenshots={screenshots}
               />
               {/*  overlays */}
               <div
@@ -114,16 +121,16 @@ class ProjectContainer extends React.Component {
               ) : null}
               {/* down */}
               <div className="git-button-overlay">
-                <h3 className="text-white">Git</h3>
+                <i class="fab fa-github git-icon" />
               </div>
               <div className="blank-button-overlay">
-                <h1 className="display-4 text-white">stack =></h1>
+                {/* <h1 className="display-4 text-white"></h1> */}
               </div>
               <div className="pre-bracket-overlay display-2 ">
                 <p className="overlay-text">&#123;</p>
               </div>
               <div className="stack-overlay">
-                <CarouselStack />
+                <CarouselStack stack={this.props.stack} />
               </div>
               <div className="after-bracket-overlay display-2">
                 <p className="overlay-text">&#125;</p>

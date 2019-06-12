@@ -32,13 +32,16 @@ TODO:::
 * wyjeb wszystkie komentarze w projektach po polsku, sprawdz je - dodaj wiele nowych, skup sie na tym!
 // motivation:
 AVAILABLE FROM NOW
-i have 2+ years of experience as a proffesional Dynamics NAV programmer. 
+* zdecydowałem sie 14 misiecy temu na zmiane technologii, ale nie branży - for about 2 years i worked as a professional programmer - but in different envorinement
+* zaczalem programowac w JS w ramach rozwoju, ale tak mi sie spodobało że postanowilem zmienic jezyk :)
+* i could be valuable because
+*i have 2+ years of experience as a proffesional Dynamics NAV programmer. 
 now i need some guidance to improve and not making errors
 * i have background in sales analytics, medium-sized (100+ users) system administration
 * fast learner
 * i decided to change technology, for about 14 months im learning by myself javascript
 * hard worker / scraper 
-          
+* napisz ze pracowales w zespole developerow przy duzych projektach         
 * https://github.com/kamranahmedse/developer-roadmap napisz ze
 pokrywasz jakis t am procent tego linka
 * i have database / backend background, i just know how it works, is is an asset in front end development
@@ -69,4 +72,6 @@ wanna be web dev / 'some icon' Krakow / Wroclaw
 
 // PROJECTS
 // # portfolio - made using React and some classes from bootstrap library, but it's highly cssesed to show you, that i can css (flex, grid).
+* features: reusability
 // # bikeysh - written in pure react
+ * its filled with demo data

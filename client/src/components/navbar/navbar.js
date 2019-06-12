@@ -109,7 +109,9 @@ class Navbar extends React.Component {
       (element, index) => {
         return (
           <span
-            className={index === 0 ? "project-specific-name" : null}
+            className={`${
+              element.toLowerCase() === "demo" ? "project-specific-demo" : null
+            }`}
             onClick={e =>
               this.handleClickToNavItem(
                 e,
@@ -130,7 +132,9 @@ class Navbar extends React.Component {
       (element, index) => {
         return (
           <span
-            className={index === 0 ? "project-specific-name" : null}
+            className={`${
+              element.toLowerCase() === "demo" ? "project-specific-demo" : null
+            }`}
             onClick={e =>
               this.handleClickToNavItem(
                 e,
@@ -150,15 +154,15 @@ class Navbar extends React.Component {
     return (
       <nav>
         <Logo />
-        {/* subbars - project specific - left side bar*/}
-        <div id={bikeysh.idSubbar} className="project-specific">
-          {elementsSubbarBikeysh}
-        </div>
-        <div id={googleMap.idSubbar} className="project-specific">
-          {elementsSubbarGoogleMap}
-        </div>
-        {/* standard right side bar */}
         <Container>
+          {/* subbars - project specific - left side bar*/}
+          <div id={bikeysh.idSubbar} className="project-specific">
+            {elementsSubbarBikeysh}
+          </div>
+          <div id={googleMap.idSubbar} className="project-specific">
+            {elementsSubbarGoogleMap}
+          </div>
+          {/* standard right side bar */}
           <NavItems
             refs={this.props.refs}
             linksClass="nav-right-links"

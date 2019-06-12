@@ -38,6 +38,13 @@ class Additional extends React.Component {
                   { name: "C/AL", lvl: 4 }
                 ]}
               />
+              <TableRow
+                rowName="Hobbies!"
+                rowBadges={[
+                  { name: "Techno production", lvl: 2 },
+                  { name: "Downhill Riding", lvl: 3 }
+                ]}
+              />
             </tbody>
           </Table>
           {/* <Accordion>

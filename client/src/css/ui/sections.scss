@@ -1,9 +1,17 @@
 @import "../general/palette.scss";
+// section header
+.section-header {
+  color: $main_pal_1;
+  font-family: $font2;
+  font-size: 3.5rem;
+}
 // section description
 .section-description {
   color: $newPrimary;
   height: 100%;
   box-shadow: $shadow;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .about-description {
@@ -28,7 +36,7 @@
   color: $main_pal_1;
   font-family: $font4;
   font-size: 8rem;
-  word-wrap: break-word;
+  // word-wrap: break-word;
   text-align: center;
 }
 .letter-grid {

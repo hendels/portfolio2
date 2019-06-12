@@ -55,7 +55,7 @@ html {
   transition: 0.5s;
 }
 .nav-side .nav-side-items a.focused {
-  color: $main_pal_1;
+  // color: $main_pal_1;
   background: $active;
 }
 // navbar
@@ -77,36 +77,39 @@ nav {
       transition: 0.5s;
     }
   }
+  // top section
+  // # LEFT PROJECT SPECIFIC LINKS
   .project-specific {
     float: left;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding-top: 2rem;
-    color: $main_pal_1;
+    margin: 0;
+    color: $main_pal_9;
     span {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      line-height: 80px;
+      padding: 5px 20px;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+    span.project-specific-demo {
+      color: $main_pal_5;
     }
     span:hover {
-      background: $hover;
-    }
-    span.project-specific-name {
-      color: $newSecondary;
+      color: $white !important;
+      background: $main_pal_9;
     }
   }
+  // # RIGHT LINKS
   .nav-right-links {
     float: right;
     margin: 0;
     a {
       line-height: 80px;
       padding: 5px 20px;
-      color: $black;
       text-decoration: none;
       text-transform: uppercase;
       transition: 0.5s;
     }
     a:hover {
-      color: $main_pal_1;
+      color: $white !important;
       background: $main_pal_9;
     }
   }
@@ -114,13 +117,12 @@ nav {
 // # color changes
 // * scrollspy
 .nav-right-links .is-current a {
-  color: $main_pal_1;
+  color: $white !important;
 }
 
 nav.selected-home .nav-right-links a {
   transition: 0.5s;
   display: none;
-  color: $main_pal_2;
 }
 
 nav.selected-about .logo h1 {
@@ -155,7 +157,7 @@ nav.black {
 }
 .nav-side-items a,
 nav.black .nav-right-links a {
-  color: $white;
+  color: $main_pal_10;
 }
 nav.black .logo img {
   height: 60px;

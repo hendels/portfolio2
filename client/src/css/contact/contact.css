@@ -5,4 +5,26 @@
           box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
   background: #6fab9e;
 }
+
+.contact-how-to-reach-me {
+  width: 100%;
+  border: 3px dashed #231f20;
+  background: #6fab9e;
+}
+
+.contact-item {
+  color: #88787c !important;
+  border: 3px solid #88787c !important;
+}
+
+.item-label {
+  text-transform: uppercase !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+.button-submit {
+  float: right;
+  border: 3px solid #cca69a !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
 /*# sourceMappingURL=contact.css.map */

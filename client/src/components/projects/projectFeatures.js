@@ -12,10 +12,10 @@ class Features extends React.Component {
         <Container>
           <Row>
             <div
-              className="d-flex justify-content-between"
+              className="d-flex justify-content-between info-header"
               style={{ width: "100%" }}
             >
-              <h1 className="display-4 p-2 text-white">FEATURES</h1>
+              <h1 className="display-4 p-2">FEATURES</h1>
               <span
                 onClick={() => this.props.handleShowElement()}
                 className="p-2 fas fa-times-circle close-icon"
@@ -23,31 +23,15 @@ class Features extends React.Component {
             </div>
           </Row>
           <Row>
-            <Table striped bordered hover variant="dark">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
+            <Table striped bordered hover variant="info" className="info-body">
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
                   <td>@mdo</td>
                 </tr>
                 <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
                   <td>@fat</td>
                 </tr>
                 <tr>
-                  <td>3</td>
-                  <td colSpan="2">Larry the Bird</td>
                   <td>@twitter</td>
                 </tr>
               </tbody>

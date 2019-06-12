@@ -6,10 +6,10 @@ const About = props => {
       <Container>
         <Row>
           <div
-            className="d-flex justify-content-between"
+            className="d-flex justify-content-between info-header"
             style={{ width: "100%" }}
           >
-            <h1 className="display-4 p-2 text-white">ABOUT</h1>
+            <h1 className="display-4 p-2">ABOUT</h1>
             <span
               onClick={() => props.handleShowElement()}
               className="p-2 fas fa-times-circle close-icon"
@@ -17,7 +17,7 @@ const About = props => {
           </div>
         </Row>
         <Row>
-          <p className="lead p-2 text-white">
+          <p className="lead p-2 info-body">
             Voluptate excepteur aliqua nostrud ad. Sunt Lorem consectetur enim
             dolor reprehenderit cillum anim commodo occaecat labore sunt ad duis
             consequat. Amet do eiusmod fugiat laborum pariatur. Id officia id

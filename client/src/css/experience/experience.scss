@@ -5,3 +5,64 @@
   height: 100%;
   box-shadow: $shadow;
 }
+// # timeline
+.time-container {
+  color: $main_pal_1;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "description description description"
+    "projects-header projects-header projects-header"
+    "projects projects projects"
+    "date-reversed blank date";
+  justify-content: center;
+  align-items: center;
+  box-shadow: $shadow;
+  // font-size: 10px;
+  font-weight: bold;
+  font-family: $font2;
+}
+.time-header {
+  grid-area: header;
+  font-size: 1.5rem;
+  border: 2px dashed $main_pal_6;
+  margin-bottom: 5px;
+}
+.monkey {
+  font-size: 1rem;
+}
+.time-text {
+  grid-area: description;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  text-align: left;
+  // border: 2px dashed $main_pal_10;
+}
+.time-projects-header {
+  // font-weight: lighter;
+  text-align: left;
+  grid-area: projects-header;
+}
+.time-projects {
+  grid-area: projects;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  text-align: left;
+  border: 2px dashed $main_pal_6;
+}
+
+.time-projects-icons {
+  grid-area: icons-projects;
+}
+.time-date {
+  font-size: 0.8rem;
+  grid-area: date;
+  padding: 2px;
+  border: 2px dashed $main_pal_1;
+}
+.time-date-reversed {
+  font-size: 0.8rem;
+  grid-area: date-reversed;
+  padding: 2px;
+  border: 2px dashed $main_pal_1;
+}

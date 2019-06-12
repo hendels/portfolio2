@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import screenshots from "../../config/images";
 // styles
@@ -10,18 +9,22 @@ class Logos extends Component {
   // TODO - turn off animation after some value of pixel reach or last element - somehow
   render() {
     let carouselElements = screenshots.logos.map(logo => {
-      return (
-        <div className="logo-icons">
-          {logo.iconSvg !== "" ? (
-            <div className="icon-svg">
-              <img src={logo.iconSvg} />
+      for (let i = 0; i < this.props.stack.length; i++) {
+        if (logo.id === this.props.stack[i]) {
+          return (
+            <div className="logo-icons">
+              {logo.iconSvg !== "" ? (
+                <div className="icon-svg">
+                  <img src={logo.iconSvg} />
+                </div>
+              ) : (
+                <i className={`${logo.iconClass} ${logo.specificClass}`} />
+              )}
+              <p className="carousel-logo-label">{logo.label}</p>
             </div>
-          ) : (
-            <i className={`${logo.iconClass} ${logo.specificClass}`} />
-          )}
-          <p className="carousel-logo-label">{logo.label}</p>
-        </div>
-      );
+          );
+        }
+      }
     });
     return (
       <Carousel
