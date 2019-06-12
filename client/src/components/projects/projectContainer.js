@@ -14,7 +14,7 @@ import { Container, Row, Col } from "react-bootstrap";
 class ProjectContainer extends React.Component {
   state = {
     features: false,
-    about: false
+    about: this.props.showAbout
   };
   handleChangeElement = element => {
     this.setState({ activeComponent: element });
@@ -110,18 +110,28 @@ class ProjectContainer extends React.Component {
                   projectName={projectName}
                   handleClickToNavItem={this.handleClickToNavItem}
                   refProject={refProject}
+                  demoLink={this.props.demoLink}
                 />
               </div>
               {/* middle */}
+
               {about ? (
-                <ProjectAbout handleShowElement={this.handleShowElement} />
+                <ProjectAbout
+                  handleShowElement={this.handleShowElement}
+                  about={this.props.about}
+                />
               ) : null}
               {features ? (
-                <ProjectFeatures handleShowElement={this.handleShowElement} />
+                <ProjectFeatures
+                  handleShowElement={this.handleShowElement}
+                  features={this.props.screenshots}
+                />
               ) : null}
               {/* down */}
               <div className="git-button-overlay">
-                <i class="fab fa-github git-icon" />
+                <a href={this.props.gitLink} target="_blank">
+                  <i class="fab fa-github git-icon" />
+                </a>
               </div>
               <div className="blank-button-overlay">
                 {/* <h1 className="display-4 text-white"></h1> */}

@@ -9,6 +9,10 @@ import SectionDescription from "./UI/sectionDescription";
 
 const descriptionText = `Et pariatur veniam ea eu fugiat sunt cillum do ipsum non. Enim incididunt laboris ullamco exercitation laboris quis est in reprehenderit nisi sitnim qui esse laboris pariatur et deserunt esse magna deserunt. Lorem pariatur reprehenderit ex anim sint.`;
 
+const gitIcon = <i className="fab fa-github-square reach-me-icon" />;
+const linkedInIcon = <i className="fab fa-linkedin reach-me-icon" />;
+const mailIcon = <i className="fas fa-envelope-square reach-me-icon" />;
+
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +36,7 @@ class NameForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    alert("A name was submitted: " + this.state.name);
+    alert("Currently unavailable.");
   }
 
   render() {
@@ -89,13 +93,31 @@ class NameForm extends React.Component {
           <Col md={4}>
             <div className="contact-how-to-reach-me">
               <Col md={12}>
-                <h5>How to reach me?</h5>
+                <p className="title-reach-me">How to reach me?</p>
               </Col>
 
-              <Col md={12}>elo linked</Col>
-              <Col md={12}>Email: pharendarz@gmail.com</Col>
-              <Col md={12}>GIT</Col>
-              <Col md={12}>Linked IN</Col>
+              <Col md={12}>
+                <p className="reach-me-item">
+                  <a
+                    href="https://www.linkedin.com/in/przemys%C5%82aw-harendarz-4052b252"
+                    target="_blank"
+                  >
+                    {linkedInIcon}
+                    {` LinkedIn`}
+                  </a>
+                </p>
+              </Col>
+              <Col md={12}>
+                <p className="reach-me-item">{mailIcon} pharendarz@gmail.com</p>
+              </Col>
+              <Col md={12}>
+                <p className="reach-me-item">
+                  <a href="https://github.com/pharendarz" target="_blank">
+                    {gitIcon} GitHub
+                  </a>
+                </p>
+              </Col>
+              <Col md={12} />
             </div>
           </Col>
         </Row>

@@ -4,4 +4,24 @@
   -webkit-box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
           box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
 }
+
+.skills-category {
+  font-size: 2rem;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: bold;
+}
+
+.badge {
+  color: #231f20 !important;
+}
+
+.progress-bar {
+  color: #88787c !important;
+}
+
+.skill-description {
+  font-size: 1rem;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: bold;
+}
 /*# sourceMappingURL=skills.css.map */

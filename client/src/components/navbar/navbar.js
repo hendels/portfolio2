@@ -46,7 +46,7 @@ class Navbar extends React.Component {
   //     }
   //   }
   // };
-  handleClickToNavItem(e, ref, navItem, focus, refComponent, element, sidebar) {
+  handleClickToNavItem(e, ref, navItem, focus, refComponent, element, href) {
     e.preventDefault();
     if (focus)
       this.setState(
@@ -57,6 +57,7 @@ class Navbar extends React.Component {
           // scroll to given ref
           window.scrollTo(0, ref.current.offsetTop);
           // animate buttons after scroll to home position with some delay
+
           setTimeout(() => {
             if (navItem.toLowerCase() === "home")
               this.setState({ sideBarOpened: false }, () => {
@@ -84,6 +85,8 @@ class Navbar extends React.Component {
             { about: !refComponent.current.state.about, features: false },
             () => {}
           );
+        case "demo":
+          window.open(href);
           break;
         default:
           break;
@@ -104,7 +107,7 @@ class Navbar extends React.Component {
   render() {
     const { refs, subbarId } = this.props;
 
-    const { bikeysh, googleMap } = this.props.projects;
+    const { bikeysh, googleMap, portfolio } = this.props.projects;
     const elementsSubbarBikeysh = bikeysh.elementsSubbar.map(
       (element, index) => {
         return (
@@ -119,7 +122,8 @@ class Navbar extends React.Component {
                 "",
                 false,
                 refs.bikeyshComponent,
-                element
+                element,
+                bikeysh.demoLink
               )
             }
           >
@@ -142,6 +146,30 @@ class Navbar extends React.Component {
                 "",
                 false,
                 refs.googleMapComponent,
+                element,
+                googleMap.demoLink
+              )
+            }
+          >
+            {element}
+          </span>
+        );
+      }
+    );
+    const elementsSubbarPortfolio = portfolio.elementsSubbar.map(
+      (element, index) => {
+        return (
+          <span
+            className={`${
+              element.toLowerCase() === "demo" ? "project-specific-demo" : null
+            }`}
+            onClick={e =>
+              this.handleClickToNavItem(
+                e,
+                refs.portfolio,
+                "",
+                false,
+                refs.portfolioComponent,
                 element
               )
             }
@@ -161,6 +189,9 @@ class Navbar extends React.Component {
           </div>
           <div id={googleMap.idSubbar} className="project-specific">
             {elementsSubbarGoogleMap}
+          </div>
+          <div id={portfolio.idSubbar} className="project-specific">
+            {elementsSubbarPortfolio}
           </div>
           {/* standard right side bar */}
           <NavItems

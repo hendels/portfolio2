@@ -5,3 +5,19 @@
   height: 100%;
   box-shadow: $shadow;
 }
+.skills-category {
+  font-size: 2rem;
+  font-family: $font1;
+  font-weight: bold;
+}
+.badge {
+  color: $main_pal_1 !important;
+}
+.progress-bar {
+  color: $main_pal_10 !important;
+}
+.skill-description {
+  font-size: 1rem;
+  font-family: $font1;
+  font-weight: bold;
+}

@@ -11,10 +11,11 @@ const SkillBar = props => {
             animated
             label={`${props.percentage} %`}
             now={props.percentage}
+            className="progress-bar"
           />
         </Col>
         <Col md={props.rightSize}>
-          <p>{props.description}</p>
+          <p className="skill-description">{props.description}</p>
         </Col>
       </Row>
     </div>

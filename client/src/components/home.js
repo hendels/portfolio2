@@ -12,7 +12,8 @@ import CvIcon from "../svg/cv.svg";
 import { Container, Row, Col } from "react-bootstrap";
 
 const cvLink =
-  "https://drive.google.com/open?id=1_Czm0U78tT7b2iPh1gYdGPs_hPxzN-ch";
+  "https://drive.google.com/open?id=0BzWRWdaIKn0KMUhTUFFwRi1EQmpDR1FDQUx4VFZwbkRaNzhF";
+
 const aboutMeIcon = "fas fa-globe-europe";
 const skillsIcon = "fa-air-freshener";
 const experienceIcon = "fa-dog";
@@ -84,9 +85,14 @@ class Home extends React.Component {
                 </div>
                 <div className="p-4  profile-label">
                   <span className="description">
-                    <h3>Junior Java Script developer</h3>
+                    <h3>Junior Front End developer</h3>
                   </span>
-                  <a href={cvLink} className="contact-icon">
+                  <a
+                    onClick={e =>
+                      this.handleClickToNavItem(e, contact, "contact")
+                    }
+                    className="contact-icon"
+                  >
                     <i class="far fa-address-book" />
                   </a>
                   <span className="contact-label">contact</span>

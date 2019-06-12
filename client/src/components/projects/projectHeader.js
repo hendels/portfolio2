@@ -12,8 +12,7 @@ import SectionDescription from "../UI/sectionDescription";
 const descriptionText = ``;
 
 const ProjectHeader = props => {
-  const features = [`it's RWD`, `search bar`, `tag management`, `crawler`];
-  const { bikeysh, googleMap } = props.projects;
+  const { bikeysh, googleMap, portfolio } = props.projects;
   return (
     <section id="section-projects" ref={props.refs.projects}>
       <Container>
@@ -41,28 +40,44 @@ const ProjectHeader = props => {
         refProject={props.refs.bikeysh}
         refEndProject={props.refs.bikeyshEnd}
         showHeader
-        colorVariant="variant-1"
         projectName={bikeysh.name}
         projectId={bikeysh.id}
+        demoLink={bikeysh.demoLink}
+        gitLink={bikeysh.gitLink}
         idSubbar={bikeysh.idSubbar}
         screenshots={bikeysh.screenshots}
+        about={bikeysh.about}
         stack={bikeysh.technology}
-        features={features}
         handleChangeSubbar={props.handleChangeSubbar}
       />
       <ProjectSection
         ref={props.refs.googleMapComponent}
         refProject={props.refs.googleMap}
         refEndProject={props.refs.googleMapEnd}
-        showHeader
-        colorVariant="variant-2"
         projectName={googleMap.name}
         projectId={googleMap.id}
+        demoLink={googleMap.demoLink}
+        gitLink={googleMap.gitLink}
         idSubbar={googleMap.idSubbar}
         screenshots={googleMap.screenshots}
+        about={googleMap.about}
         stack={googleMap.technology}
-        features={features}
         handleChangeSubbar={props.handleChangeSubbar}
+      />
+      <ProjectSection
+        ref={props.refs.portfolioComponent}
+        refProject={props.refs.portfolio}
+        refEndProject={props.refs.portfolioEnd}
+        projectName={portfolio.name}
+        projectId={portfolio.id}
+        demoLink={portfolio.demoLink}
+        gitLink={portfolio.gitLink}
+        idSubbar={portfolio.idSubbar}
+        screenshots={portfolio.screenshots}
+        about={portfolio.about}
+        stack={portfolio.technology}
+        handleChangeSubbar={props.handleChangeSubbar}
+        // showAbout
       />
       {/* // put this portfolio as a project also */}
 

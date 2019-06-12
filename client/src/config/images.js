@@ -1,8 +1,21 @@
 import redux from "../svg/redux.svg";
 import mongodb from "../svg/mongodb.svg";
-import bikeysh1 from "../img/bikeysh/best_offers.PNG";
-import bikeysh2 from "../img/bikeysh/frames.PNG";
-import bikeysh3 from "../img/bikeysh/frames_modal.PNG";
+import bikeysh1 from "../img/bikeysh/resized/best_offers.png";
+import bikeysh2 from "../img/bikeysh/resized/frames.png";
+import bikeysh3 from "../img/bikeysh/resized/frames_modal.png";
+import bikeysh4 from "../img/bikeysh/resized/favorites.png";
+import bikeysh5 from "../img/bikeysh/resized/tags.png";
+import bikeysh6 from "../img/bikeysh/resized/search.png";
+import bikeysh7 from "../img/bikeysh/resized/favorite_view.png";
+import bikeysh8 from "../img/bikeysh/resized/rwd.png";
+
+import gmap1 from "../img/google-maps/filled.png";
+import gmap2 from "../img/google-maps/search.png";
+import gmap3 from "../img/google-maps/pin.png";
+import gmap4 from "../img/google-maps/handling.png";
+
+import portfolio1 from "../img/portfolio/home.png";
+
 const resolutionUnsplash = "400x300";
 {
   /* TODO - add label (animated) to inform that dyno is loading couple of seconds */
@@ -11,18 +24,77 @@ export default {
   // if something is landing show it as first, when mobile mode - show only landing!
   bikeysh: [
     {
+      link: bikeysh8,
+      label: "It's fully responsive.",
+      landing: false
+    },
+    {
       link: bikeysh1,
-      label: "It's responsive.",
+      label:
+        "Based on historical entries, app scores each offer by given parameters and shows the best ones.",
       landing: true
     },
     {
       link: bikeysh2,
-      label: "It's responsive.",
+      label: "Each category has dedicated view.",
       landing: false
     },
     {
       link: bikeysh3,
-      label: "It's responsive.",
+      label:
+        "When you click on any offer it'll show modal with nice details about statistics and parameters.",
+      landing: false
+    },
+    {
+      link: bikeysh4,
+      label: "You can add offers to favorites.",
+      landing: false
+    },
+    {
+      link: bikeysh7,
+      label: "You can show your favorites on dedicated view.",
+      landing: false
+    },
+    {
+      link: bikeysh5,
+      label:
+        "App automatically add tags to offers - this the key to recognize collected data. Admin can manually tweak tags by drag & drop or add / delete them.",
+      landing: false
+    },
+    {
+      link: bikeysh6,
+      label: "There is search feature.",
+      landing: false
+    }
+  ],
+  googleMap: [
+    {
+      link: gmap1,
+      label:
+        "Point & click on map multiple times and add selected places to list through ADD TO LIST BUTTON.",
+      landing: false
+    },
+    {
+      link: gmap2,
+      label: "You can search your place through bar.",
+      landing: false
+    },
+    {
+      link: gmap3,
+      label:
+        "Navigation through places on map is possible by clicking the location PIN on list.",
+      landing: false
+    },
+    {
+      link: gmap4,
+      label: "Messages from app has been wraped in Snackbars.",
+      landing: false
+    }
+  ],
+  portfolio: [
+    {
+      link: portfolio1,
+      label: "Feel free to look around this site :)",
       landing: false
     }
   ],
@@ -88,7 +160,7 @@ export default {
       label: "react"
     },
     {
-      id: "sass",
+      id: "redux",
       iconClass: "redux",
       iconSvg: redux,
       specificClass: "redux-icon",
@@ -96,17 +168,17 @@ export default {
     },
     {
       id: "bootstrap",
-      iconClass: "bootstrap",
+      iconClass: "fab fa-bootstrap",
       iconSvg: "",
       specificClass: "bootstrap-icon",
-      label: "redux"
+      label: "bootstrap 4"
     },
     {
       id: "materialui",
-      iconClass: "material-ui",
+      iconClass: "fas fa-spray-can",
       iconSvg: "",
       specificClass: "material-ui-icon",
-      label: "redux"
+      label: "material-ui"
     },
     {
       id: "js",

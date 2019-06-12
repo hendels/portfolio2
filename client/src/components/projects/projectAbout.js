@@ -17,12 +17,7 @@ const About = props => {
           </div>
         </Row>
         <Row>
-          <p className="lead p-2 info-body">
-            Voluptate excepteur aliqua nostrud ad. Sunt Lorem consectetur enim
-            dolor reprehenderit cillum anim commodo occaecat labore sunt ad duis
-            consequat. Amet do eiusmod fugiat laborum pariatur. Id officia id
-            adipisicing Amet fugiat mollit excepteur ex mollit Lorem eu et amet.
-          </p>
+          <p className="lead p-2 info-body">{props.about}</p>
         </Row>
       </Container>
     </div>

@@ -28,11 +28,11 @@ class TableRow extends React.Component {
   render() {
     const rowBadges = this.props.rowBadges.map(badge => {
       return (
-        <Aux className="d-flex">
-          <Badge variant="light" className="p-2">
+        <Aux className="d-flex p-2">
+          <Badge variant="secondary" className="p-2 badge">
             {badge.name}
           </Badge>
-          <Badge variant="danger" className="p-2">
+          <Badge variant="danger" className="p-2 badge">
             {this.state.hovered ? this.translateLevel(badge.lvl) : ""}
           </Badge>
         </Aux>

@@ -42,12 +42,14 @@
   background: #6fab9e;
   color: #231f20;
   padding: 10px;
-  font-size: 12px;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
   text-align: center;
   opacity: 0.25;
   -webkit-transition: opacity 0.35s ease-in-out;
   transition: opacity 0.35s ease-in-out;
-  border: 2px dotted #231f20;
+  border: 2px dashed #231f20;
 }
 
 .carousel:hover .slide .screenshot-feature {
@@ -86,7 +88,9 @@
 }
 
 .demo:hover {
+  color: #f37449;
   opacity: 1;
+  text-decoration: none;
 }
 
 .info-overlay {
@@ -94,6 +98,8 @@
   color: #231f20;
   border-bottom: 3px dotted #231f20;
   background: #6fab9e;
+  text-align: justify;
+  text-justify: inter-word;
   top: 25%;
   width: 100%;
   height: 250px;

@@ -33,7 +33,13 @@ const TitleSection = props => {
           </Tooltip>
         }
       >
-        <span className="title-item demo">Demo</span>
+        <span className="title-item ">
+          {props.demoLink ? (
+            <a className="demo" href={props.demoLink} target="_blank">
+              Demo
+            </a>
+          ) : null}
+        </span>
       </OverlayTrigger>
     </div>
   );

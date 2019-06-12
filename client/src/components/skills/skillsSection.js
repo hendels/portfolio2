@@ -37,7 +37,7 @@ class Skills extends React.Component {
               <Col md={9}>
                 <SectionDescription
                   descriptionClass="skills-description"
-                  descriptionHeader={`Things I know`}
+                  descriptionHeader={``}
                   descriptionText={descriptionText}
                 >
                   <CoreSkills />

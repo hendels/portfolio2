@@ -8,10 +8,11 @@ import "../../css/projects/carousel-technology-stack.css";
 class Logos extends Component {
   // TODO - turn off animation after some value of pixel reach or last element - somehow
   render() {
-    let carouselElements = screenshots.logos.map(logo => {
+    let carouselElements = [];
+    screenshots.logos.forEach(logo => {
       for (let i = 0; i < this.props.stack.length; i++) {
         if (logo.id === this.props.stack[i]) {
-          return (
+          carouselElements.push(
             <div className="logo-icons">
               {logo.iconSvg !== "" ? (
                 <div className="icon-svg">
@@ -29,8 +30,8 @@ class Logos extends Component {
     return (
       <Carousel
         autoPlay
-        interval={1000}
-        transitionTime={500}
+        interval={2000}
+        transitionTime={1000}
         centerMode
         centerSlidePercentage={33}
         infiniteLoop

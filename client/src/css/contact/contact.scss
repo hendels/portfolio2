@@ -8,10 +8,25 @@
 }
 
 .contact-how-to-reach-me {
+  font-size: 1rem;
   width: 100%;
+  font-family: $font1;
+  a {
+    text-decoration: none;
+  }
+  padding: 0.2rem;
   // height: 100%;
   border: 3px dashed $main_pal_1;
   background: $main_pal_9;
+  .reach-me-icon {
+    font-size: 1.5rem;
+  }
+  .title-reach-me {
+    font-size: 1.5rem;
+  }
+  .reach-me-item:hover {
+    border: 3px dashed $main_pal_3;
+  }
 }
 .contact-item {
   color: $main_pal_10 !important;

@@ -7,9 +7,28 @@
 }
 
 .contact-how-to-reach-me {
+  font-size: 1rem;
   width: 100%;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  padding: 0.2rem;
   border: 3px dashed #231f20;
   background: #6fab9e;
+}
+
+.contact-how-to-reach-me a {
+  text-decoration: none;
+}
+
+.contact-how-to-reach-me .reach-me-icon {
+  font-size: 1.5rem;
+}
+
+.contact-how-to-reach-me .title-reach-me {
+  font-size: 1.5rem;
+}
+
+.contact-how-to-reach-me .reach-me-item:hover {
+  border: 3px dashed #9ad18b;
 }
 
 .contact-item {

@@ -4,9 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 class Features extends React.Component {
   render() {
-    // const features = this.props.features.map(feature => {
-    //   return <li>{feature}</li>;
-    // });
+    const features = this.props.features.map(feature => {
+      return (
+        <tr>
+          <td>{feature.label}</td>
+        </tr>
+      );
+    });
     return (
       <div className="info-overlay">
         <Container>
@@ -23,18 +27,15 @@ class Features extends React.Component {
             </div>
           </Row>
           <Row>
-            <Table striped bordered hover variant="info" className="info-body">
-              <tbody>
-                <tr>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
+            <Table
+              size="sm"
+              striped
+              bordered
+              hover
+              variant="info"
+              className="info-body"
+            >
+              <tbody>{features}</tbody>
             </Table>
           </Row>
         </Container>

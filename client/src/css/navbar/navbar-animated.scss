@@ -49,7 +49,7 @@ html {
   flex-direction: column;
   margin: 0;
   padding: 5px 20px;
-  color: $main_pal_1;
+  color: $main_pal_11;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
@@ -72,6 +72,9 @@ nav {
     float: left;
     opacity: 0.5;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       height: 80px;
       transition: 0.5s;
