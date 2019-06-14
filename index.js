@@ -24,7 +24,7 @@ app.get("/api/emailForm", (req, res) => {
   const data = {
     from: "test@przemy.com", //test
     //   from: req.body.nameText + ' ' + reqFrom,
-    to: "przemygit@gmail.com",
+    to: "nexdtmail@gmail.com",
     subject: "Wiadomość z Twojej strony internetowej!",
     //   text: req.body.messageText + ' --------------------- numer telefonu: ' + req.body.phoneText
     text: " asdasd --------------------- numer telefonu: " // test
