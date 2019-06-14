@@ -6,8 +6,9 @@
 }
 
 .skills-category {
-  font-size: 2rem;
-  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-size: 2rem !important;
+  font-family: "Cairo", sans-serif;
+  color: #231f20 !important;
   font-weight: bold;
 }
 
@@ -20,8 +21,9 @@
 }
 
 .skill-description {
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #231f20 !important;
   font-weight: bold;
 }
 /*# sourceMappingURL=skills.css.map */

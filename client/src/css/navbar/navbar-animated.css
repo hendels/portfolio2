@@ -29,6 +29,10 @@ html {
 }
 
 .nav-side .nav-side-items a {
+  font-size: 1.5rem !important;
+  font-family: "Rajdhani", sans-serif;
+  color: #ad989d !important;
+  font-weight: inherit;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,7 +43,6 @@ html {
           flex-direction: column;
   margin: 0;
   padding: 5px 20px;
-  color: #ad989d;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: 0.5s;
@@ -62,7 +65,8 @@ nav {
 }
 
 nav .logo {
-  float: left;
+  position: absolute;
+  left: 1rem;
   opacity: 0.5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -75,12 +79,10 @@ nav .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-nav .logo img {
-  height: 80px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  font-size: 3rem !important;
+  font-family: "Poiret One", cursive;
+  color: #231f20 !important;
+  font-weight: bold;
 }
 
 nav .project-specific {
@@ -135,7 +137,7 @@ nav.selected-home .nav-right-links a {
   display: none;
 }
 
-nav.selected-about .logo h1 {
+nav.selected-about .logo span {
   color: #a385bd;
 }
 
@@ -143,7 +145,7 @@ nav.selected-about .is-current a {
   background: #a385bd;
 }
 
-nav.selected-skills .logo h1 {
+nav.selected-skills .logo span {
   color: #f9a04e;
 }
 
@@ -151,7 +153,7 @@ nav.selected-skills .is-current a {
   background: #f9a04e;
 }
 
-nav.selected-experience .logo h1 {
+nav.selected-experience .logo span {
   color: #9ad18b;
 }
 
@@ -159,7 +161,7 @@ nav.selected-experience .is-current a {
   background: #9ad18b;
 }
 
-nav.selected-projects .logo h1 {
+nav.selected-projects .logo span {
   color: #f37449;
 }
 
@@ -175,10 +177,6 @@ nav.black {
 .nav-side-items a,
 nav.black .nav-right-links a {
   color: #88787c;
-}
-
-nav.black .logo img {
-  height: 60px;
 }
 
 @media (min-width: 769px) {

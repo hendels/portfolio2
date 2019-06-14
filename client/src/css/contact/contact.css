@@ -7,9 +7,11 @@
 }
 
 .contact-how-to-reach-me {
-  font-size: 1rem;
+  font-size: 0.9rem !important;
+  font-family: "Cuprum", sans-serif;
+  color: #231f20 !important;
+  font-weight: inherit;
   width: 100%;
-  font-family: "Fira Sans Extra Condensed", sans-serif;
   padding: 0.2rem;
   border: 3px dashed #231f20;
   background: #6fab9e;
@@ -24,7 +26,10 @@
 }
 
 .contact-how-to-reach-me .title-reach-me {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
+  font-family: "Cuprum", sans-serif;
+  color: #231f20 !important;
+  font-weight: bold;
 }
 
 .contact-how-to-reach-me .reach-me-item:hover {
@@ -38,12 +43,18 @@
 
 .item-label {
   text-transform: uppercase !important;
+  font-size: 0.9rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #231f20 !important;
+  font-weight: bold;
 }
 
 .button-submit {
   float: right;
   border: 3px solid #cca69a !important;
+  font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #fff !important;
+  font-weight: bold;
 }
 /*# sourceMappingURL=contact.css.map */

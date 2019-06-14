@@ -1,16 +1,20 @@
 .section-header {
-  color: #231f20;
-  font-family: "Cairo", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.7rem !important;
+  font-family: "Rajdhani", sans-serif;
+  color: #231f20 !important;
+  font-weight: inherit;
 }
 
 .section-description {
-  color: #231f20;
   height: 100%;
   -webkit-box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
           box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
   text-align: justify;
   text-justify: inter-word;
+  font-size: 1.5rem !important;
+  font-family: "Rajdhani", sans-serif;
+  color: #231f20 !important;
+  font-weight: inherit;
 }
 
 .about-description {
@@ -35,9 +39,10 @@
 
 .section-title {
   width: 100%;
-  color: #231f20;
+  font-size: 7rem !important;
   font-family: "Rajdhani", sans-serif;
-  font-size: 8rem;
+  color: #231f20 !important;
+  font-weight: inherit;
   text-align: center;
 }
 
@@ -123,31 +128,5 @@
   -ms-grid-row: 4;
   -ms-grid-column: 3;
   grid-area: row_4col_3;
-}
-
-@-webkit-keyframes shadow-pop-text {
-  0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
-    -webkit-transform: translateX(0) translateY(0);
-            transform: translateX(0) translateY(0);
-  }
-  100% {
-    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
-    -webkit-transform: translateX(8px) translateY(8px);
-            transform: translateX(8px) translateY(8px);
-  }
-}
-
-@keyframes shadow-pop-text {
-  0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
-    -webkit-transform: translateX(0) translateY(0);
-            transform: translateX(0) translateY(0);
-  }
-  100% {
-    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
-    -webkit-transform: translateX(8px) translateY(8px);
-            transform: translateX(8px) translateY(8px);
-  }
 }
 /*# sourceMappingURL=sections.css.map */

@@ -16,7 +16,7 @@ class Logo extends React.Component {
   render() {
     return (
       <div className="logo">
-        {this.state.minified ? <h1>H.</h1> : <h1>HRDZ</h1>}
+        {this.state.minified ? <span>H.</span> : <span>HRDZ</span>}
       </div>
     );
   }

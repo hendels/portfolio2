@@ -3,7 +3,7 @@
     "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,ECsBH,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAmB;CDrB3C",
     "sources": [
         "aboutMe.scss",
-        "../general/palette.scss"
+        "../general/_palette.scss"
     ],
     "names": [],
     "file": "aboutMe.css"

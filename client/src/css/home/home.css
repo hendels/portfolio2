@@ -7,8 +7,11 @@
 .introduce .introduce-header {
   text-transform: uppercase;
   line-height: 4rem;
-  color: #231f20;
   font-size: 4rem;
+  font-size: 3rem !important;
+  font-family: "Unica One", cursive;
+  color: #231f20 !important;
+  font-weight: inherit;
 }
 
 .bg-black {
@@ -27,8 +30,10 @@
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: description;
+  font-size: 2rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
-  color: #ad989d;
+  color: #ad989d !important;
+  font-weight: inherit;
 }
 
 .contact-icon {
@@ -60,8 +65,10 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: contact-label;
-  color: #ad989d;
+  font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #ad989d !important;
+  font-weight: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,8 +109,10 @@
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: file-description;
-  color: #ad989d;
+  font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #ad989d !important;
+  font-weight: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,8 +151,10 @@
 
 #main-header .main-header-item {
   width: 30%;
-  color: #231f20;
+  font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #231f20 !important;
+  font-weight: inherit;
 }
 
 #main-header .main-header-item:hover {
@@ -159,14 +170,6 @@
 @media (min-width: 1199px) {
   #main-header .main-header-item {
     padding: 3em !important;
-  }
-}
-
-@media (max-width: 1199px) {
-  #main-header .display-4 {
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 1.2;
   }
 }
 

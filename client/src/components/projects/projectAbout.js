@@ -9,7 +9,7 @@ const About = props => {
             className="d-flex justify-content-between info-header"
             style={{ width: "100%" }}
           >
-            <h1 className="display-4 p-2">ABOUT</h1>
+            <span className=" p-2">ABOUT</span>
             <span
               onClick={() => props.handleShowElement()}
               className="p-2 fas fa-times-circle close-icon"

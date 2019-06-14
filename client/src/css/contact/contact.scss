@@ -9,9 +9,8 @@
 }
 
 .contact-how-to-reach-me {
-  font-size: 1rem;
+  @include contactReachElementFont;
   width: 100%;
-  font-family: $font1;
   a {
     text-decoration: none;
   }
@@ -23,23 +22,24 @@
     font-size: 1.5rem;
   }
   .title-reach-me {
-    font-size: 1.5rem;
+    @include contactReachHeaderFont;
   }
   .reach-me-item:hover {
     border: 3px dashed $main_pal_3;
   }
 }
+
 .contact-item {
   color: $main_pal_10 !important;
   border: 3px solid $main_pal_10 !important;
 }
 .item-label {
   text-transform: uppercase !important;
-  font-family: $font1;
+  @include contactFormLabelsFont;
   // font-weight: bold;
 }
 .button-submit {
   float: right;
   border: 3px solid $main_pal_7 !important;
-  font-family: $font1;
+  @include contactFormSubmitButtonFont;
 }

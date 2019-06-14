@@ -3,7 +3,7 @@
     "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,UAAU,EAAE,KAAK,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,kBAAkB;CACrD",
     "sources": [
         "blank-spaces.scss",
-        "../general/palette.scss"
+        "../general/_palette.scss"
     ],
     "names": [],
     "file": "blank-spaces.css"

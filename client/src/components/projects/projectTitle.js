@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const TitleSection = props => {
   return (

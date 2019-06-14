@@ -2,17 +2,15 @@
 @import "../general/fonts.scss";
 // section header
 .section-header {
-  color: $main_pal_1;
-  font-family: $font2;
-  font-size: 3.5rem;
+  @include sectionDescriptionHeaderFont;
 }
 // section description
 .section-description {
-  color: $newPrimary;
   height: 100%;
   box-shadow: $shadow;
   text-align: justify;
   text-justify: inter-word;
+  @include sectionDescriptionFont;
 }
 
 .about-description {
@@ -34,9 +32,7 @@
 // section left letters
 .section-title {
   width: 100%;
-  color: $main_pal_1;
-  font-family: $font4;
-  font-size: 8rem;
+@include sectionHeaderFont;
   // word-wrap: break-word;
   text-align: center;
 }
@@ -88,32 +84,4 @@
 }
 .row_4col_3 {
   grid-area: row_4col_3;
-}
-// .header-title h1 {
-//   // width: 50%;
-//   // height: 60px;
-//   font-size: 2rem;
-//   // box-shadow: $shadow;
-//   // opacity: 0;
-//   text-align: center;
-//   // transition: 0.5s;
-// }
-// .header-title h1:hover {
-//   // color: $newSecondary;
-//   // opacity: 1;
-//   animation: shadow-pop-text 0.6s both;
-// }
-
-@keyframes shadow-pop-text {
-  0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555,
-      0 0 #555555, 0 0 #555555, 0 0 #555555;
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555,
-      4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555,
-      8px 8px #555555;
-    transform: translateX(8px) translateY(8px);
-  }
 }

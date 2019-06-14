@@ -1,0 +1,129 @@
+@import "../general/palette.scss";
+// fonts
+$font1: "Fira Sans Extra Condensed", sans-serif;
+$font2: "Cairo", sans-serif;
+$font3: "News Cycle", sans-serif;
+$font4: "Rajdhani", sans-serif;
+$font5: "Cuprum", sans-serif;
+$font6: "IBM Plex Sans", sans-serif;
+$font7: "Poiret One", cursive;
+$font8: "Josefin Slab", serif;
+$font9: "Unica One", cursive;
+$font10: "Julius Sans One", sans-serif;
+
+@mixin fontDefinition($size, $family, $color, $weight){
+    font-size: $size !important;
+    font-family: $family;
+    color: $color !important;
+    font-weight: $weight;
+}
+// # sections-general
+// * section-header
+@mixin sectionHeaderFont(){
+    @include fontDefinition(7rem, $font4, $main_pal_1, inherit)
+}
+// * section-description-header
+@mixin sectionDescriptionHeaderFont(){
+    @include fontDefinition(2.7rem, $font4, $main_pal_1, inherit)
+}
+// * section-description
+@mixin sectionDescriptionFont(){
+    @include fontDefinition(1.5rem, $font4, $main_pal_1, inherit)
+}
+
+// #nav
+// * nav-logo
+@mixin navLogoFont(){
+    @include fontDefinition(3rem, $font7, $main_pal_1, bold)
+}
+// * nav-items
+@mixin navItemsTopFont(){
+    @include fontDefinition(1.5rem, $font4, $main_pal_1, inherit)
+}
+// * nav-side-items
+@mixin navItemsRightFont(){
+    @include fontDefinition(1.5rem, $font4, $main_pal_11, inherit)
+}
+// #home
+// * home-header
+
+@mixin homeFont(){
+    @include fontDefinition(3rem, $font9, $main_pal_1, inherit)
+}
+// * home-subheader
+@mixin homeSubheaderFont(){
+    @include fontDefinition(2rem, $font1, $main_pal_11, inherit)
+}
+// * home-buttons
+@mixin homeButtonsFont(){
+    @include fontDefinition(1rem, $font1, $main_pal_11, inherit)
+}
+@mixin homeCategoryButtonsFont(){
+    @include fontDefinition(1rem, $font1, $main_pal_1, inherit)
+}
+
+// #skills 
+// * skills-categories
+@mixin skillsCategoriesFont(){
+    @include fontDefinition(2rem, $font2, $main_pal_1, bold)
+}
+// * skills-progressbar-labels
+@mixin skillsLabelFont(){
+    @include fontDefinition(1rem, $font1, $main_pal_1, bold)
+}
+
+// #experience
+// * experience-position-header
+@mixin experiencePositionHeaderFont(){
+    @include fontDefinition(1.5rem, $font3, $main_pal_1, bold)
+}
+// * experience-position-description
+@mixin experiencePositionDescriptionFont(){
+    @include fontDefinition(1rem, $font3, $main_pal_1, bold)
+}
+// * experience-position-date
+@mixin experiencePositionDateFont(){
+    @include fontDefinition(0.8rem, $font3, $main_pal_1, bold)
+}
+// # projects
+// * projects-buttons
+@mixin projectsButtonsFont(){
+    @include fontDefinition(2.3rem, $font2, $main_pal_9, bold)
+}
+// * projects-screenshot-description
+@mixin projectsScreenshotDescriptionFont(){
+    @include fontDefinition(1rem, $font1, $main_pal_1, bold)
+}
+    // * projects-info-header
+@mixin projectsInfoHeaderFont(){
+    @include fontDefinition(3rem, $font3, $main_pal_1, bold)
+}
+        // * projects-info-description
+@mixin projectsInfoDescriptionFont(){
+    @include fontDefinition(1.5rem, $font3, $main_pal_1, inherit)
+}
+// * project-technology-labels
+@mixin projectsTechnologyLabelsFont(){
+    @include fontDefinition(0.9rem, $font5, $main_pal_7, bold)
+}
+
+// # contact
+// * contact-form-labels
+@mixin contactFormLabelsFont(){
+    @include fontDefinition(0.9rem, $font1, $main_pal_1, bold)
+}
+// * contact-reach-header
+@mixin contactReachHeaderFont(){
+    @include fontDefinition(1.5rem, $font5, $main_pal_1, bold)
+}
+    
+// * contact-reach-element
+@mixin contactReachElementFont(){
+    @include fontDefinition(0.9rem, $font5, $main_pal_1, inherit)
+}
+        
+// * contact-form-submit-button
+@mixin contactFormSubmitButtonFont(){
+    @include fontDefinition(1rem, $font1, #fff, bold)
+}
+

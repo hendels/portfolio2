@@ -30,6 +30,10 @@
 }
 
 .carousel .slide .screenshot-feature {
+  font-size: 1rem !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  color: #231f20 !important;
+  font-weight: bold;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: absolute;
@@ -40,9 +44,6 @@
   background: #6fab9e;
   color: #231f20;
   padding: 10px;
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
   text-align: center;
   opacity: 0.25;
   -webkit-transition: opacity 0.35s ease-in-out;
@@ -69,10 +70,12 @@
 }
 
 .title-item {
+  font-size: 2.3rem !important;
+  font-family: "Cairo", sans-serif;
+  color: #6fab9e !important;
+  font-weight: bold;
   line-height: 0px;
-  font-size: 2.3rem;
   padding: 0 10px;
-  color: #6fab9e;
   opacity: 0.7;
 }
 
@@ -92,8 +95,8 @@
 }
 
 .info-overlay {
-  position: absolute;
   color: #231f20;
+  position: absolute;
   border-bottom: 3px dotted #231f20;
   background: #6fab9e;
   text-align: justify;
@@ -106,10 +109,18 @@
 
 .info-overlay .info-header {
   background: #f37449;
+  font-size: 3rem !important;
+  font-family: "News Cycle", sans-serif;
+  color: #231f20 !important;
+  font-weight: bold;
 }
 
 .info-overlay .info-body {
   background: #6fab9e;
+  font-size: 1.5rem !important;
+  font-family: "News Cycle", sans-serif;
+  color: #231f20 !important;
+  font-weight: inherit;
 }
 
 .info-overlay .close-icon {
@@ -203,10 +214,10 @@
 }
 
 .overlay-text {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
   font-size: 4.2rem;
   opacity: 1;
-  color: #a385bd;
+  color: #6fab9e;
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
@@ -214,7 +225,10 @@
 }
 
 .carousel-logo-label {
-  color: #cca69a;
+  font-size: 0.9rem !important;
+  font-family: "Cuprum", sans-serif;
+  color: #cca69a !important;
+  font-weight: bold;
   margin: 0;
 }
 

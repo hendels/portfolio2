@@ -85,9 +85,9 @@ class Home extends React.Component {
                 </div>
                 <div className="p-4  profile-label">
                   <span className="description">
-                    <h3>Junior Front End developer</h3>
+                    <span>Junior Front End developer</span>
                   </span>
-                  <a
+                  <a href
                     onClick={e =>
                       this.handleClickToNavItem(e, contact, "contact")
                     }

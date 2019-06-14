@@ -45,12 +45,12 @@ html {
   border: 1px solid black;
 }
 .nav-side .nav-side-items a {
+  @include navItemsRightFont;
   z-index: 3;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 5px 20px;
-  color: $main_pal_11;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
@@ -70,16 +70,15 @@ nav {
   transition: 0.5s;
 
   .logo {
-    float: left;
+    position: absolute;
+    left: 1rem;
+    // float: left;
     opacity: 0.5;
     transition: 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      height: 80px;
-      transition: 0.5s;
-    }
+    @include navLogoFont;
   }
   // top section
   // # LEFT PROJECT SPECIFIC LINKS
@@ -129,26 +128,26 @@ nav.selected-home .nav-right-links a {
   display: none;
 }
 
-nav.selected-about .logo h1 {
+nav.selected-about .logo span {
   color: $newDanger;
 }
 nav.selected-about .is-current a {
   background: $newDanger;
 }
-nav.selected-skills .logo h1 {
+nav.selected-skills .logo span {
   color: $newSuccess;
 }
 nav.selected-skills .is-current a {
   background: $newSuccess;
 }
 
-nav.selected-experience .logo h1 {
+nav.selected-experience .logo span {
   color: $newWarning;
 }
 nav.selected-experience .is-current a {
   background: $newWarning;
 }
-nav.selected-projects .logo h1 {
+nav.selected-projects .logo span {
   color: $newSecondary;
 }
 nav.selected-projects .is-current a {
@@ -162,9 +161,6 @@ nav.black {
 .nav-side-items a,
 nav.black .nav-right-links a {
   color: $main_pal_10;
-}
-nav.black .logo img {
-  height: 60px;
 }
 // medias
 @media (min-width: 769px) {

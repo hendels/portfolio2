@@ -6,7 +6,6 @@
 }
 
 .time-container {
-  color: #231f20;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header header header" "description description description" "projects-header projects-header projects-header" "projects projects projects" "date-reversed blank date";
@@ -18,8 +17,10 @@
           align-items: center;
   -webkit-box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
           box-shadow: 5px 5px 0px 0px rgba(53, 53, 53, 0);
+  font-size: 1rem !important;
+  font-family: "News Cycle", sans-serif;
+  color: #231f20 !important;
   font-weight: bold;
-  font-family: "Cairo", sans-serif;
 }
 
 .time-header {
@@ -27,9 +28,12 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header;
-  font-size: 1.5rem;
   border: 2px dashed #f9a04e;
   margin-bottom: 5px;
+  font-size: 1.5rem !important;
+  font-family: "News Cycle", sans-serif;
+  color: #231f20 !important;
+  font-weight: bold;
 }
 
 .monkey {
@@ -42,7 +46,6 @@
   -ms-grid-column-span: 3;
   grid-area: description;
   margin-bottom: 5px;
-  font-size: 1rem;
   text-align: left;
 }
 
@@ -60,7 +63,6 @@
   -ms-grid-column-span: 3;
   grid-area: projects;
   margin-bottom: 5px;
-  font-size: 1rem;
   text-align: left;
   border: 2px dashed #f9a04e;
 }
@@ -70,7 +72,10 @@
 }
 
 .time-date {
-  font-size: 0.8rem;
+  font-size: 0.8rem !important;
+  font-family: "News Cycle", sans-serif;
+  color: #231f20 !important;
+  font-weight: bold;
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: date;

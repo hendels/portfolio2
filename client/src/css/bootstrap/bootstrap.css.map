@@ -5,7 +5,7 @@
         "bootstrap.scss",
         "_functions.scss",
         "_variables.scss",
-        "../general/palette.scss",
+        "../general/_palette.scss",
         "_mixins.scss",
         "vendor/_rfs.scss",
         "mixins/_deprecate.scss",

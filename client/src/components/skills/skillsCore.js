@@ -66,7 +66,14 @@ class Core extends React.Component {
             leftSize={8}
             rightSize={4}
             percentage={70}
-            description="CSS / Sass"
+            description="CSS"
+          />
+          <SkillBar
+            variant="danger"
+            leftSize={8}
+            rightSize={4}
+            percentage={50}
+            description="SASS"
           />
           <SkillBar
             variant="danger"

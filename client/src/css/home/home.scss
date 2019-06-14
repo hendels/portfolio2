@@ -10,8 +10,9 @@ $fontColor: $main_pal_11;
   .introduce-header {
     text-transform: uppercase;
     line-height: 4rem;
-    color: $main_pal_1;
     font-size: 4rem;
+    // font-family: $font-home-header;
+    @include homeFont;
   }
 }
 // cv section
@@ -27,8 +28,7 @@ $fontColor: $main_pal_11;
 }
 .description {
   grid-area: description;
-  font-family: $font1;
-  color: $fontColor;
+  @include homeSubheaderFont;
 }
 .contact-icon {
   grid-area: contact-icon;
@@ -46,8 +46,7 @@ $fontColor: $main_pal_11;
 }
 .contact-label {
   grid-area: contact-label;
-  color: $fontColor;
-  font-family: $font1;
+  @include homeButtonsFont;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,8 +67,7 @@ $fontColor: $main_pal_11;
 }
 .file-description {
   grid-area: file-description;
-  color: $fontColor;
-  font-family: $font1;
+  @include homeButtonsFont;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,8 +97,7 @@ $fontColor: $main_pal_11;
 // animated home items
 #main-header .main-header-item {
   width: 30%;
-  color: $main_pal_1;
-  font-family: $font1;
+  @include homeCategoryButtonsFont;
 }
 #main-header .main-header-item:hover {
   animation: shadow-pop-short 0.25s cubic-bezier(0.47, 0, 0.745, 0.715) both;
@@ -117,11 +114,11 @@ $fontColor: $main_pal_11;
   }
 }
 @media (max-width: 1199px) {
-  #main-header .display-4 {
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 1.2;
-  }
+  // #main-header .display-4 {
+  //   font-size: 3rem;
+  //   font-weight: 300;
+  //   line-height: 1.2;
+  // }
 }
 
 /**
