@@ -20,7 +20,7 @@ app.get("/api/emailForm", (req, res) => {
   //    reqFrom = req.body.emailText }
   // else
   //    {reqFrom = 'p.harendarz@gmail.com'};
-  reqFrom = "przemygit@gmail.com"; // test
+  reqFrom = "przemsygit@gmail.com"; // test
   const data = {
     from: "test@przemy.com", //test
     //   from: req.body.nameText + ' ' + reqFrom,
