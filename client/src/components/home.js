@@ -12,7 +12,7 @@ import CvIcon from "../svg/cv.svg";
 import { Container, Row, Col } from "react-bootstrap";
 
 const cvLink =
-  "https://drive.google.com/open?id=0BzWRWdaIKn0KMUhTUFFwRi1EQmpDR1FDQUx4VFZwbkRaNzhF";
+  "https://drive.google.com/open?id=0BzWRWdaIKn0KblRsd3JwMTZjU0pkYjAtTUJtMjNkQW1nMHRJ";
 
 const aboutMeIcon = "fas fa-globe-europe";
 const skillsIcon = "fa-air-freshener";

@@ -9,7 +9,7 @@
   color: #231f20;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "header header header" "description description description" "projects-header projects-header projects-header" "projects projects projects" "date-reversed blank date";
+      grid-template-areas: "header header header" "description description description" "projects-header projects-header projects-header" "projects projects projects" "date-reversed blank date";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

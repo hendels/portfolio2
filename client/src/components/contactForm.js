@@ -7,7 +7,7 @@ import SectionHeader from "./UI/sectionHeader";
 import Blankspace from "./UI/blankSpace";
 import SectionDescription from "./UI/sectionDescription";
 
-const descriptionText = `Et pariatur veniam ea eu fugiat sunt cillum do ipsum non. Enim incididunt laboris ullamco exercitation laboris quis est in reprehenderit nisi sitnim qui esse laboris pariatur et deserunt esse magna deserunt. Lorem pariatur reprehenderit ex anim sint.`;
+const descriptionText = ``;
 
 const gitIcon = <i className="fab fa-github-square reach-me-icon" />;
 const linkedInIcon = <i className="fab fa-linkedin reach-me-icon" />;

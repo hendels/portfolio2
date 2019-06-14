@@ -44,7 +44,7 @@
 .letter-grid {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "row_1col_1 row_1col_2 row_1col_3" "row_2col_1 row_2col_2 row_2col_3" "row_3col_1 row_3col_2 row_3col_3" "row_4col_1 row_4col_2 row_4col_3";
+      grid-template-areas: "row_1col_1 row_1col_2 row_1col_3" "row_2col_1 row_2col_2 row_2col_3" "row_3col_1 row_3col_2 row_3col_3" "row_4col_1 row_4col_2 row_4col_3";
 }
 
 .letter {
@@ -127,12 +127,12 @@
 
 @-webkit-keyframes shadow-pop-text {
   0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
+    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
     -webkit-transform: translateX(8px) translateY(8px);
             transform: translateX(8px) translateY(8px);
   }
@@ -140,12 +140,12 @@
 
 @keyframes shadow-pop-text {
   0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
+    text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
     -webkit-transform: translateX(8px) translateY(8px);
             transform: translateX(8px) translateY(8px);
   }

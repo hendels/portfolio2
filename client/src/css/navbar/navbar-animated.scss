@@ -1,4 +1,5 @@
 @import "../general/palette.scss";
+@import "../general/fonts.scss";
 //vars
 
 $black: #262626;
@@ -6,7 +7,7 @@ $white: #fff;
 $active: purple;
 $hover: #83bb00;
 $black-transparent: rgba(26, 26, 26, 0.8);
-
+// font
 $navHeight: 60px;
 //rest
 html {
@@ -88,7 +89,7 @@ nav {
     color: $main_pal_9;
     span {
       line-height: 80px;
-      padding: 5px 20px;
+      padding: 5px 10px;
       text-transform: uppercase;
       transition: 0.5s;
     }
