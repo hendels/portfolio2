@@ -5,35 +5,31 @@
 }
 
 .introduce .introduce-header {
-  text-transform: uppercase;
-  line-height: 4rem;
-  font-size: 4rem;
   font-size: 3rem !important;
   font-family: "Unica One", cursive;
   color: #231f20 !important;
   font-weight: inherit;
-}
-
-.bg-black {
-  background: black;
+  text-transform: uppercase;
+  line-height: 4rem;
+  font-size: 4rem;
 }
 
 .profile-label {
+  background: #141213;
   display: -ms-grid;
   display: grid;
-  background: #141213;
       grid-template-areas: "description contact-icon file" "description contact-label file-description";
 }
 
 .description {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: description;
   font-size: 2rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   color: #ad989d !important;
   font-weight: inherit;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: description;
 }
 
 .contact-icon {
@@ -62,13 +58,13 @@
 }
 
 .contact-label {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: contact-label;
   font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   color: #ad989d !important;
   font-weight: inherit;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: contact-label;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,13 +102,13 @@
 }
 
 .file-description {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: file-description;
   font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   color: #ad989d !important;
   font-weight: inherit;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: file-description;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,22 +135,28 @@
           filter: grayscale(0%) contrast(65%) brightness(100%);
 }
 
-.profile-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background: #cca69a;
-  z-index: 2;
+.aboutButton {
+  background: #a385bd;
+}
+
+.skillsButton {
+  background: #f9a04e;
+}
+
+.experienceButton {
+  background: #9ad18b;
+}
+
+.projectsButton {
+  background: #f37449;
 }
 
 #main-header .main-header-item {
-  width: 30%;
   font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   color: #231f20 !important;
   font-weight: inherit;
+  width: 30%;
 }
 
 #main-header .main-header-item:hover {

@@ -21,7 +21,7 @@ const ProjectHeader = props => {
           <Col md={3}>
             <SectionHeader
               sectionName={props.sectionName}
-              bootstrapClass="bg-secondary"
+              backgroundClass="projects-header"
               headerClass="projects-title"
             />
           </Col>

@@ -1,5 +1,6 @@
 @import "../general/palette.scss";
 @import "../general/fonts.scss";
+@import "../general/colorScheme.scss";
 
 .experience-title {
   width: 100%;
@@ -22,10 +23,10 @@
   @include experiencePositionDescriptionFont;
 }
 .time-header {
-  grid-area: header;
-  border: 2px dashed $main_pal_6;
-  margin-bottom: 5px;
+  @include experiencePaletteJobHeader;
   @include experiencePositionHeaderFont;
+  grid-area: header;
+  margin-bottom: 5px;
 }
 .monkey {
   font-size: 1rem;
@@ -43,11 +44,11 @@
   grid-area: projects-header;
 }
 .time-projects {
+  @include experiencePaletteJobHeader;
   grid-area: projects;
   margin-bottom: 5px;
   // font-size: 1rem;
   text-align: left;
-  border: 2px dashed $main_pal_6;
 }
 
 .time-projects-icons {
@@ -55,13 +56,13 @@
 }
 .time-date {
   @include experiencePositionDateFont;
+  @include experiencePaletteJobDate;
   grid-area: date;
   padding: 2px;
-  border: 2px dashed $main_pal_1;
 }
 .time-date-reversed {
+  @include experiencePaletteJobDate;
   font-size: 0.8rem;
   grid-area: date-reversed;
   padding: 2px;
-  border: 2px dashed $main_pal_1;
 }

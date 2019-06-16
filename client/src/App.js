@@ -149,20 +149,20 @@ class App extends React.Component {
           animateHomeButtons={this.animateHomeButtons}
         />
         <Home refs={refs} animateHomeButtons={this.animateHomeButtons} />
-        <AboutMe refAboutMe={refs.aboutMe} sectionName="ABOUT-ME" />
-        <SkillsSection refSkills={refs.skills} sectionName="SKILLS" />
+        <AboutMe refAboutMe={refs.aboutMe} sectionName="about-me" />
+        <SkillsSection refSkills={refs.skills} sectionName="skills" />
         <ExperienceSection
           refExperience={refs.experience}
-          sectionName="EXPERIENCE"
+          sectionName="experience"
         />
 
         <ProjectsSection
-          sectionName="PROJECTS"
+          sectionName="projects"
           refs={refs}
           handleChangeSubbar={this.handleChangeSubbar}
           projects={projects}
         />
-        <ContactForm sectionName="CONTACT" refContact={refs.contact} />
+        <ContactForm sectionName="contact" refContact={refs.contact} />
         <Container>
           <BlankSpace />
           <BlankSpace />

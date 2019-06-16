@@ -17,6 +17,9 @@ $font10: "Julius Sans One", sans-serif;
     color: $color !important;
     font-weight: $weight;
 }
+@mixin fontColorChange($color){
+    color: $color;
+}
 // # sections-general
 // * section-header
 @mixin sectionHeaderFont(){
@@ -34,12 +37,41 @@ $font10: "Julius Sans One", sans-serif;
 // #nav
 // * nav-logo
 @mixin navLogoFont(){
-    @include fontDefinition(3rem, $font7, $main_pal_1, bold)
+    @include fontDefinition(3rem, $font9, $main_pal_1, bold)
+}
+// * nav-logo colors
+@mixin navLogoAboutFont(){
+    @include fontColorChange($main_pal_4)
+}
+@mixin navLogoSkillsFont(){
+    @include fontColorChange($main_pal_6)
+}
+@mixin navLogoExperienceFont(){
+    @include fontColorChange($main_pal_3)
+}
+@mixin navLogoProjectsFont(){
+    @include fontColorChange($main_pal_5)
+}
+@mixin navLogoContactFont(){
+    @include fontColorChange($main_pal_9)
 }
 // * nav-items
 @mixin navItemsTopFont(){
-    @include fontDefinition(1.5rem, $font4, $main_pal_1, inherit)
+    @include fontDefinition(1.2rem, $font4, $main_pal_1, inherit)
 }
+@mixin navItemsTopSpecific(){
+    @include fontDefinition(inherit, inherit, $main_pal_9, inherit)
+}
+@mixin navItemsTopSpecificDemo(){
+    @include fontDefinition(inherit, inherit, $main_pal_5, inherit)
+}
+@mixin navItemsTopHover(){
+    @include fontColorChange(#fff !important)
+}
+@mixin navItemsTopScrollSpy(){
+    @include fontColorChange(#fff !important)
+}
+
 // * nav-side-items
 @mixin navItemsRightFont(){
     @include fontDefinition(1.5rem, $font4, $main_pal_11, inherit)
@@ -48,7 +80,7 @@ $font10: "Julius Sans One", sans-serif;
 // * home-header
 
 @mixin homeFont(){
-    @include fontDefinition(3rem, $font9, $main_pal_1, inherit)
+    @include fontDefinition(3rem, $font10, $main_pal_1, inherit)
 }
 // * home-subheader
 @mixin homeSubheaderFont(){
@@ -90,27 +122,38 @@ $font10: "Julius Sans One", sans-serif;
 @mixin projectsButtonsFont(){
     @include fontDefinition(2.3rem, $font2, $main_pal_9, bold)
 }
+@mixin projectsButtonDemoFont(){
+    @include fontDefinition(2.3rem, $font2, $main_pal_5, bold)
+}
 // * projects-screenshot-description
 @mixin projectsScreenshotDescriptionFont(){
     @include fontDefinition(1rem, $font1, $main_pal_1, bold)
 }
-    // * projects-info-header
+// * projects-info-header
 @mixin projectsInfoHeaderFont(){
-    @include fontDefinition(3rem, $font3, $main_pal_1, bold)
+    @include fontDefinition(2.5rem, $font3, $main_pal_1, bold)
 }
-        // * projects-info-description
+// * projects-info-description
 @mixin projectsInfoDescriptionFont(){
-    @include fontDefinition(1.5rem, $font3, $main_pal_1, inherit)
+    @include fontDefinition(1.2rem, $font3, $main_pal_1, inherit)
 }
 // * project-technology-labels
 @mixin projectsTechnologyLabelsFont(){
     @include fontDefinition(0.9rem, $font5, $main_pal_7, bold)
+}
+// * project-brackets
+@mixin projectsBracketsFont(){
+    @include fontDefinition(4.2rem, $font1, $main_pal_9, inherit)
 }
 
 // # contact
 // * contact-form-labels
 @mixin contactFormLabelsFont(){
     @include fontDefinition(0.9rem, $font1, $main_pal_1, bold)
+}
+// * contact-form-elements
+@mixin contactFormElementsFont(){
+    @include fontDefinition(0.9rem, $font1, $main_pal_10, inherit)
 }
 // * contact-reach-header
 @mixin contactReachHeaderFont(){

@@ -1,34 +1,31 @@
 // vars
 @import "../general/palette.scss";
 @import "../general/fonts.scss";
+@import "../general/colorScheme.scss";
 $fontColor: $main_pal_11;
 // introduce
 .introduce {
-  background: $main_pal_2;
+  @include homePaletteHeader;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   .introduce-header {
+    @include homeFont;
     text-transform: uppercase;
     line-height: 4rem;
     font-size: 4rem;
-    // font-family: $font-home-header;
-    @include homeFont;
   }
 }
 // cv section
-.bg-black {
-  background: black;
-}
 .profile-label {
+  @include homePaletteDownHeader;
   display: grid;
-  background: $main_pal_12;
   grid-template-areas:
     "description contact-icon file"
     "description contact-label file-description";
 }
 .description {
-  grid-area: description;
   @include homeSubheaderFont;
+  grid-area: description;
 }
 .contact-icon {
   grid-area: contact-icon;
@@ -36,17 +33,17 @@ $fontColor: $main_pal_11;
   justify-content: center;
   align-items: center;
   i {
-    color: $main_pal_2;
+    @include homePaletteDownHeaderIcon;
     font-size: 2.4rem;
   }
   i:hover {
-    color: $main_pal_5;
+    @include homePaletteDownHeaderIconHover;
     font-size: 2.4rem;
   }
 }
 .contact-label {
-  grid-area: contact-label;
   @include homeButtonsFont;
+  grid-area: contact-label;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,17 +54,17 @@ $fontColor: $main_pal_11;
   justify-content: center;
   align-items: center;
   i {
-    color: $main_pal_2;
+    @include homePaletteDownHeaderIcon;
     font-size: 2.4rem;
   }
   i:hover {
-    color: $main_pal_5;
+    @include homePaletteDownHeaderIconHover;
     font-size: 2.4rem;
   }
 }
 .file-description {
-  grid-area: file-description;
   @include homeButtonsFont;
+  grid-area: file-description;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,19 +82,26 @@ $fontColor: $main_pal_11;
   height: 100%;
   filter: grayscale(0%) contrast(65%) brightness(100%);
 }
-.profile-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background: $main_pal_7;
-  z-index: 2;
+// home items
+.aboutButton {
+  @include homePaletteButtonAbout;
+}
+.skillsButton {
+  @include homePaletteButtonSkills;
+  
+}
+.experienceButton {
+  @include homePaletteButtonExperience;
+  
+}
+.projectsButton {
+  @include homePaletteButtonProjects;
+
 }
 // animated home items
 #main-header .main-header-item {
-  width: 30%;
   @include homeCategoryButtonsFont;
+  width: 30%;
 }
 #main-header .main-header-item:hover {
   animation: shadow-pop-short 0.25s cubic-bezier(0.47, 0, 0.745, 0.715) both;
@@ -112,13 +116,6 @@ $fontColor: $main_pal_11;
   #main-header .main-header-item {
     padding: 3em !important;
   }
-}
-@media (max-width: 1199px) {
-  // #main-header .display-4 {
-  //   font-size: 3rem;
-  //   font-weight: 300;
-  //   line-height: 1.2;
-  // }
 }
 
 /**

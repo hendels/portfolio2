@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
 // styles
 import "../css/contact/contact.css";
+import "../css/ui/sections.css";
 // app components
 import SectionHeader from "./UI/sectionHeader";
 import Blankspace from "./UI/blankSpace";
@@ -52,7 +53,7 @@ class NameForm extends React.Component {
                   placeholder="Nice to meet you!"
                   value={this.state.name}
                   onChange={this.handleChangeName}
-                  className="rounded-0 bg-primary contact-item"
+                  className="rounded-0  contact-item"
                 />
               </Form.Group>
             </Col>
@@ -64,7 +65,7 @@ class NameForm extends React.Component {
                   placeholder="name@example.com"
                   value={this.state.email}
                   onChange={this.handleChangeEmail}
-                  className="rounded-0 bg-primary contact-item"
+                  className="rounded-0  contact-item"
                 />
               </Form.Group>
             </Col>
@@ -76,13 +77,13 @@ class NameForm extends React.Component {
                   rows="3"
                   value={this.state.message}
                   onChange={this.handleChangeMessage}
-                  className="rounded-0 bg-primary contact-item"
+                  className="rounded-0  contact-item"
                 />
               </Form.Group>
             </Col>
             <Col md={12}>
               <Button
-                className="rounded-0 bg-primary button-submit"
+                className="rounded-0 button-submit"
                 onClick={this.handleSubmit}
               >
                 Submit
@@ -131,7 +132,7 @@ class NameForm extends React.Component {
             <Col md={3}>
               <SectionHeader
                 sectionName={this.props.sectionName}
-                bootstrapClass=""
+                backgroundClass="contact-header"
                 headerClass="contact-title"
               />
             </Col>

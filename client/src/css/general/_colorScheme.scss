@@ -1,13 +1,150 @@
 @import "../general/palette.scss";
 
-@mixin colorDefinition($background){
+@mixin colorDefinition($background, $border){
     background: $background;
+    border: $border;
 }
-// # home
-
-
-// # about
-// # skills
-// # experience
-// # projects
-
+@mixin colorIcon($color) {
+    color: $color;
+}
+//# nav =========================
+// * main color top-nav
+@mixin navPaletteTop {
+    @include colorDefinition(rgba(26, 25, 26, 0.8), inherit);
+}
+// * main color side-nav
+@mixin navPaletteSide {
+    @include colorDefinition(rgba(26, 25, 26, 0.8), inherit);
+}
+// * project specific 
+@mixin navPaletteProjectSpecificHover {
+    @include colorDefinition($main_pal_9, inherit);
+}
+// * right links
+@mixin navPaletteRightLinksHover {
+    @include colorDefinition($main_pal_9, inherit);
+}
+@mixin navPaletteAbout(){
+    @include colorDefinition($main_pal_4, inherit);
+}
+@mixin navPaletteSkills(){
+    @include colorDefinition($main_pal_6, inherit);
+}
+@mixin navPaletteExperience(){
+    @include colorDefinition($main_pal_3, inherit);
+}
+@mixin navPaletteProjects(){
+    @include colorDefinition($main_pal_5, inherit);
+}
+@mixin navPaletteContact(){
+    @include colorDefinition($main_pal_9, inherit);
+}
+// # home =========================
+@mixin homePaletteHeader {
+    @include colorDefinition($main_pal_2, inherit);
+}
+@mixin homePaletteDownHeader {
+    @include colorDefinition($main_pal_12, inherit);
+}
+@mixin homePaletteDownHeaderIcon {
+    @include colorIcon($main_pal_2, inherit);
+}
+@mixin homePaletteDownHeaderIconHover {
+    @include colorIcon($main_pal_5, inherit);
+}
+@mixin homePaletteButtonAbout {
+    @include colorDefinition($main_pal_4, inherit);
+}
+@mixin homePaletteButtonSkills {
+    @include colorDefinition($main_pal_6, inherit);
+}
+@mixin homePaletteButtonExperience {
+    @include colorDefinition($main_pal_3, inherit);
+}
+@mixin homePaletteButtonProjects {
+    @include colorDefinition($main_pal_5, inherit);
+}
+// # about =========================
+// * header & description
+@mixin aboutPaletteSectionHeader {
+    @include colorDefinition($main_pal_4, inherit);
+}
+@mixin aboutPaletteSectionDescription {
+    @include colorDefinition($main_pal_9, inherit);
+}
+// # skills ========================= 
+// * header & description
+@mixin skillsPaletteSectionHeader {
+    @include colorDefinition($main_pal_6, inherit);
+}
+@mixin skillsPaletteSectionDescription {
+    @include colorDefinition($main_pal_2, inherit);
+}
+// # experience =========================
+// * header & description
+@mixin experiencePaletteSectionHeader {
+    @include colorDefinition($main_pal_3, inherit);
+}
+@mixin experiencePaletteSectionDescription {
+    @include colorDefinition($main_pal_4, inherit);
+}
+// --------------------- CAROUSEL styled through PROPS in experienceSection.js ------------------------------
+@mixin experiencePaletteJobHeader {
+    @include colorDefinition(inherit, 2px dashed $main_pal_6);
+}
+@mixin experiencePaletteJobDate {
+    @include colorDefinition(inherit, 2px dashed $main_pal_1);
+}
+// # projects =========================
+// * header & description
+@mixin projectsPaletteSectionHeader {
+    @include colorDefinition($main_pal_5, inherit);
+}
+@mixin projectsPaletteSectionDescription {
+    @include colorDefinition($main_pal_9, inherit);
+}
+// * screenshot features
+@mixin projectsPaletteScreenshotFeature {
+    @include colorDefinition($main_pal_9, 2px dashed $main_pal_1);
+}
+// * info overlay
+@mixin projectsPaletteInfoOverlay {
+    @include colorDefinition($main_pal_9, inherit);
+}
+@mixin projectsPaletteInfoOverlayHeader {
+    @include colorDefinition($main_pal_5, inherit);
+}
+@mixin projectsPaletteInfoOverlayBody {
+    @include colorDefinition($main_pal_9, inherit);
+}
+// * container overlay
+@mixin projectsPaletteGeneralOverlay {
+    @include colorDefinition(rgba(0, 0, 0, 0.83), inherit);
+}
+// * git icon
+@mixin projectsPalleteGitIcon {
+    @include colorIcon($main_pal_5);
+}
+// # contact =========================
+// * header & description
+@mixin contactPaletteSectionHeader {
+    @include colorDefinition($main_pal_9, inherit);
+}
+@mixin contactPaletteSectionDescription {
+    @include colorDefinition($main_pal_8, inherit);
+}
+// * how to reach me
+@mixin contactPaletteHowToReachMe {
+    @include colorDefinition($main_pal_9, 3px dashed $main_pal_1);
+}
+@mixin contactPaletteHowToReachMeItemHover {
+    @include colorDefinition(inherit, 3px dashed $main_pal_3);
+}
+// * form fields
+@mixin contactPaletteFormItem {
+    @include colorDefinition($main_pal_1 !important,  3px solid $main_pal_10 !important);
+}
+// * button submit
+@mixin contactPaletteSubmitButton {
+    @include colorDefinition(inherit, 3px solid $main_pal_7 !important);
+}

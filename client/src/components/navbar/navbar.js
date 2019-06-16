@@ -46,6 +46,7 @@ class Navbar extends React.Component {
   //     }
   //   }
   // };
+  // TODO 
   handleClickToNavItem(e, ref, navItem, focus, refComponent, element, href) {
     e.preventDefault();
     if (focus)

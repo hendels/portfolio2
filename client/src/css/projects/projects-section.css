@@ -21,19 +21,13 @@
   width: 100%;
 }
 
-.variant-1 {
-  background: #bfd7ea;
-}
-
-.variant-2 {
-  background: #087e8b;
-}
-
 .carousel .slide .screenshot-feature {
   font-size: 1rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   color: #231f20 !important;
   font-weight: bold;
+  background: #6fab9e;
+  border: 2px dashed #231f20;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: absolute;
@@ -41,14 +35,12 @@
   left: 50%;
   margin-left: -45%;
   width: 90%;
-  background: #6fab9e;
   color: #231f20;
   padding: 10px;
   text-align: center;
   opacity: 0.25;
   -webkit-transition: opacity 0.35s ease-in-out;
   transition: opacity 0.35s ease-in-out;
-  border: 2px dashed #231f20;
 }
 
 .carousel:hover .slide .screenshot-feature {
@@ -56,8 +48,9 @@
 }
 
 .project-title-overlay {
-  position: absolute;
   background: rgba(0, 0, 0, 0.83);
+  border: inherit;
+  position: absolute;
   z-index: 1;
   width: 100%;
   height: 80px;
@@ -84,21 +77,24 @@
 }
 
 .demo {
-  color: #f37449;
+  font-size: 2.3rem !important;
+  font-family: "Cairo", sans-serif;
+  color: #f37449 !important;
+  font-weight: bold;
   opacity: 0.7;
 }
 
 .demo:hover {
-  color: #f37449;
   opacity: 1;
   text-decoration: none;
 }
 
 .info-overlay {
+  background: #6fab9e;
+  border: inherit;
   color: #231f20;
   position: absolute;
   border-bottom: 3px dotted #231f20;
-  background: #6fab9e;
   text-align: justify;
   text-justify: inter-word;
   top: 25%;
@@ -109,7 +105,8 @@
 
 .info-overlay .info-header {
   background: #f37449;
-  font-size: 3rem !important;
+  border: inherit;
+  font-size: 2.5rem !important;
   font-family: "News Cycle", sans-serif;
   color: #231f20 !important;
   font-weight: bold;
@@ -117,7 +114,8 @@
 
 .info-overlay .info-body {
   background: #6fab9e;
-  font-size: 1.5rem !important;
+  border: inherit;
+  font-size: 1.2rem !important;
   font-family: "News Cycle", sans-serif;
   color: #231f20 !important;
   font-weight: inherit;
@@ -134,9 +132,9 @@
 }
 
 .blank-button-overlay {
+  background: rgba(0, 0, 0, 0.83);
+  border: inherit;
   position: absolute;
-  background: #000;
-  opacity: 0.83;
   z-index: 1;
   width: 20%;
   height: 80px;
@@ -146,11 +144,12 @@
 }
 
 .git-button-overlay {
+  background: rgba(0, 0, 0, 0.83);
+  border: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  background: rgba(0, 0, 0, 0.83);
   z-index: 1;
   width: 20%;
   height: 80px;
@@ -165,9 +164,9 @@
 }
 
 .git-button-overlay .git-icon {
+  color: #f37449;
   font-size: 3rem;
   opacity: 0.7;
-  color: #f37449;
 }
 
 .git-button-overlay .git-icon:hover {
@@ -175,9 +174,10 @@
 }
 
 .stack-overlay {
-  position: absolute;
-  background: #000;
+  background: rgba(0, 0, 0, 0.83);
+  border: inherit;
   opacity: 0.83;
+  position: absolute;
   z-index: 1;
   width: 50%;
   height: 80px;
@@ -186,9 +186,9 @@
 }
 
 .pre-bracket-overlay {
+  background: rgba(0, 0, 0, 0.83);
+  border: inherit;
   position: absolute;
-  background: #000;
-  opacity: 0.83;
   z-index: 1;
   width: 5%;
   height: 80px;
@@ -200,9 +200,9 @@
 }
 
 .after-bracket-overlay {
+  background: rgba(0, 0, 0, 0.83);
+  border: inherit;
   position: absolute;
-  background: #000;
-  opacity: 0.83;
   z-index: 1;
   width: 5%;
   height: 80px;
@@ -214,10 +214,11 @@
 }
 
 .overlay-text {
+  font-size: 4.2rem !important;
   font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-size: 4.2rem;
+  color: #6fab9e !important;
+  font-weight: inherit;
   opacity: 1;
-  color: #6fab9e;
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;

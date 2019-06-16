@@ -30,7 +30,7 @@ const ExperienceSection = props => {
           <Col md={3}>
             <SectionHeader
               sectionName={props.sectionName}
-              bootstrapClass="bg-warning"
+              backgroundClass="experience-header"
               headerClass="experience-title"
             />
           </Col>

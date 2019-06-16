@@ -17,24 +17,54 @@
   font-weight: inherit;
 }
 
+.about-header {
+  background: #a385bd;
+  border: inherit;
+}
+
+.skills-header {
+  background: #f9a04e;
+  border: inherit;
+}
+
+.experience-header {
+  background: #9ad18b;
+  border: inherit;
+}
+
+.projects-header {
+  background: #f37449;
+  border: inherit;
+}
+
+.contact-header {
+  background: #6fab9e;
+  border: inherit;
+}
+
 .about-description {
   background: #6fab9e;
+  border: inherit;
 }
 
 .skills-description {
   background: #fce373;
+  border: inherit;
 }
 
 .experience-description {
   background: #a385bd;
+  border: inherit;
 }
 
 .projects-description {
   background: #6fab9e;
+  border: inherit;
 }
 
 .contact-description {
   background: #f8b5b8;
+  border: inherit;
 }
 
 .section-title {

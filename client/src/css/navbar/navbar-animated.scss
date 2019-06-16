@@ -1,5 +1,6 @@
 @import "../general/palette.scss";
 @import "../general/fonts.scss";
+@import "../general/colorScheme.scss";
 //vars
 
 $black: #262626;
@@ -30,18 +31,17 @@ html {
 .nav-side-background {
   position: absolute;
   z-index: 2;
-  background: rgba(26, 25, 26, 0.6);
   width: 100vw;
   height: 100vh;
 }
 .nav-side {
+  @include navPaletteSide;
   position: absolute;
   z-index: 3;
   right: 0;
   top: $navHeight;
   width: 200px;
   height: 95vh;
-  background: $black-transparent;
   border: 1px solid black;
 }
 .nav-side .nav-side-items a {
@@ -56,11 +56,19 @@ html {
   transition: 0.5s;
 }
 .nav-side .nav-side-items a.focused {
-  // color: $main_pal_1;
   background: $active;
 }
 // navbar
+nav.black {
+  @include navPaletteTop;
+  height: 60px;
+}
+.nav-side-items a,
+nav.black .nav-right-links a {
+  color: $main_pal_10;
+}
 nav {
+  @include navItemsTopFont;
   z-index: 10;
   position: fixed;
   top: 0;
@@ -83,9 +91,9 @@ nav {
   // top section
   // # LEFT PROJECT SPECIFIC LINKS
   .project-specific {
+    @include navItemsTopSpecific;
     float: left;
     margin: 0;
-    color: $main_pal_9;
     span {
       line-height: 80px;
       padding: 5px 10px;
@@ -93,11 +101,11 @@ nav {
       transition: 0.5s;
     }
     span.project-specific-demo {
-      color: $main_pal_5;
+      @include navItemsTopSpecificDemo;
     }
     span:hover {
-      color: $white !important;
-      background: $main_pal_9;
+      @include navItemsTopHover;
+      @include navPaletteProjectSpecificHover;
     }
   }
   // # RIGHT LINKS
@@ -112,15 +120,15 @@ nav {
       transition: 0.5s;
     }
     a:hover {
-      color: $white !important;
-      background: $main_pal_9;
+      @include navItemsTopHover;
+      @include navPaletteRightLinksHover;
     }
   }
 }
 // # color changes
 // * scrollspy
 .nav-right-links .is-current a {
-  color: $white !important;
+  @include navItemsTopScrollSpy;
 }
 
 nav.selected-home .nav-right-links a {
@@ -129,39 +137,41 @@ nav.selected-home .nav-right-links a {
 }
 
 nav.selected-about .logo span {
-  color: $newDanger;
+  @include navLogoAboutFont;
 }
 nav.selected-about .is-current a {
-  background: $newDanger;
+  @include navPaletteAbout;
 }
+
 nav.selected-skills .logo span {
-  color: $newSuccess;
+  @include navLogoSkillsFont;
 }
 nav.selected-skills .is-current a {
-  background: $newSuccess;
+  @include navPaletteSkills;
 }
 
 nav.selected-experience .logo span {
-  color: $newWarning;
+  @include navLogoExperienceFont;
 }
 nav.selected-experience .is-current a {
-  background: $newWarning;
+  @include navPaletteExperience;
 }
+
 nav.selected-projects .logo span {
-  color: $newSecondary;
+  @include navLogoProjectsFont;
+}
+
+nav.selected-contact .is-current a {
+  @include navPaletteProjects;
+}
+
+nav.selected-contact .logo span {
+  @include navLogoProjectsFont;
 }
 nav.selected-projects .is-current a {
-  background: $newSecondary;
+  @include navPaletteContact;
 }
-// header main definition
-nav.black {
-  background: $black-transparent;
-  height: 60px;
-}
-.nav-side-items a,
-nav.black .nav-right-links a {
-  color: $main_pal_10;
-}
+
 // medias
 @media (min-width: 769px) {
   .nav-right-links {

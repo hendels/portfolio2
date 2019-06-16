@@ -24,7 +24,7 @@ class SectionHeader extends React.Component {
       return set;
     });
     return (
-      <div className={`${this.props.bootstrapClass} ${this.props.headerClass}`}>
+      <div className={`${this.props.backgroundClass} ${this.props.headerClass}`}>
         {/* <h1 className="section-title ">{this.props.sectionName}</h1> */}
         <div className="letter-grid section-title">{mapOfLetters}</div>
       </div>

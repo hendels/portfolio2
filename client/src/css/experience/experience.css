@@ -24,16 +24,17 @@
 }
 
 .time-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: header;
+  background: inherit;
   border: 2px dashed #f9a04e;
-  margin-bottom: 5px;
   font-size: 1.5rem !important;
   font-family: "News Cycle", sans-serif;
   color: #231f20 !important;
   font-weight: bold;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  margin-bottom: 5px;
 }
 
 .monkey {
@@ -58,13 +59,14 @@
 }
 
 .time-projects {
+  background: inherit;
+  border: 2px dashed #f9a04e;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: projects;
   margin-bottom: 5px;
   text-align: left;
-  border: 2px dashed #f9a04e;
 }
 
 .time-projects-icons {
@@ -76,19 +78,21 @@
   font-family: "News Cycle", sans-serif;
   color: #231f20 !important;
   font-weight: bold;
+  background: inherit;
+  border: 2px dashed #231f20;
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: date;
   padding: 2px;
-  border: 2px dashed #231f20;
 }
 
 .time-date-reversed {
+  background: inherit;
+  border: 2px dashed #231f20;
   font-size: 0.8rem;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: date-reversed;
   padding: 2px;
-  border: 2px dashed #231f20;
 }
 /*# sourceMappingURL=experience.css.map */

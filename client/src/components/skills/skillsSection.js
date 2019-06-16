@@ -30,7 +30,7 @@ class Skills extends React.Component {
               <Col md={3}>
                 <SectionHeader
                   sectionName={this.props.sectionName}
-                  bootstrapClass="bg-success"
+                  backgroundClass="skills-header"
                   headerClass="skills-title"
                 />
               </Col>

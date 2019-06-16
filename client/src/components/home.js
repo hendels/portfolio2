@@ -102,7 +102,7 @@ class Home extends React.Component {
                   <span className="file-description">my CV</span>
                 </div>
                 <div>
-                  <div className="bg-primary d-flex flex-row align-items-stretch text-center">
+                  <div className="aboutButton d-flex flex-row align-items-stretch text-center">
                     <div
                       className="main-header-item p-4 bg-danger"
                       onClick={e =>
@@ -115,7 +115,7 @@ class Home extends React.Component {
                       about
                     </div>
                     <div
-                      className="main-header-item p-4  bg-success"
+                      className="main-header-item p-4  skillsButton"
                       onClick={e =>
                         this.handleClickToNavItem(e, skills, "skills")
                       }
@@ -126,7 +126,7 @@ class Home extends React.Component {
                       skills
                     </div>
                     <div
-                      className="main-header-item p-4 bg-warning"
+                      className="main-header-item p-4 experienceButton"
                       onClick={e =>
                         this.handleClickToNavItem(e, experience, "experience")
                       }
@@ -137,7 +137,7 @@ class Home extends React.Component {
                       experience
                     </div>
                     <div
-                      className="main-header-item p-4 bg-secondary"
+                      className="main-header-item p-4 projectsButton"
                       onClick={e =>
                         this.handleClickToNavItem(e, projects, "projects")
                       }

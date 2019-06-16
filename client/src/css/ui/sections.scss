@@ -1,5 +1,6 @@
 @import "../general/palette.scss";
 @import "../general/fonts.scss";
+@import "../general/colorScheme.scss";
 // section header
 .section-header {
   @include sectionDescriptionHeaderFont;
@@ -12,21 +13,37 @@
   text-justify: inter-word;
   @include sectionDescriptionFont;
 }
-
+// header
+.about-header {
+  @include aboutPaletteSectionHeader;
+}
+.skills-header {
+  @include skillsPaletteSectionHeader;
+}
+.experience-header {
+  @include experiencePaletteSectionHeader;
+}
+.projects-header {
+  @include projectsPaletteSectionHeader;
+}
+.contact-header {
+  @include contactPaletteSectionHeader;
+}
+// description
 .about-description {
-  background: $main_pal_9;
+  @include aboutPaletteSectionDescription;
 }
 .skills-description {
-  background: $main_pal_2;
+  @include skillsPaletteSectionDescription;
 }
 .experience-description {
-  background: $main_pal_4;
+  @include experiencePaletteSectionDescription;
 }
 .projects-description {
-  background: $main_pal_9;
+  @include projectsPaletteSectionDescription;
 }
 .contact-description {
-  background: $main_pal_8;
+  @include contactPaletteSectionDescription;
 }
 
 // section left letters

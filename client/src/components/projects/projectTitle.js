@@ -24,7 +24,6 @@ const TitleSection = props => {
       >
         About
       </span>
-      {/*  dummy */}
       <OverlayTrigger
         placement="right"
         overlay={

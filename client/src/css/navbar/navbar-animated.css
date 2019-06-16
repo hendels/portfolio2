@@ -12,19 +12,19 @@ html {
 .nav-side-background {
   position: absolute;
   z-index: 2;
-  background: rgba(26, 25, 26, 0.6);
   width: 100vw;
   height: 100vh;
 }
 
 .nav-side {
+  background: rgba(26, 25, 26, 0.8);
+  border: inherit;
   position: absolute;
   z-index: 3;
   right: 0;
   top: 60px;
   width: 200px;
   height: 95vh;
-  background: rgba(26, 26, 26, 0.8);
   border: 1px solid black;
 }
 
@@ -53,7 +53,22 @@ html {
   background: purple;
 }
 
+nav.black {
+  background: rgba(26, 25, 26, 0.8);
+  border: inherit;
+  height: 60px;
+}
+
+.nav-side-items a,
+nav.black .nav-right-links a {
+  color: #88787c;
+}
+
 nav {
+  font-size: 1.2rem !important;
+  font-family: "Rajdhani", sans-serif;
+  color: #231f20 !important;
+  font-weight: inherit;
   z-index: 10;
   position: fixed;
   top: 0;
@@ -80,15 +95,18 @@ nav .logo {
       -ms-flex-align: center;
           align-items: center;
   font-size: 3rem !important;
-  font-family: "Poiret One", cursive;
+  font-family: "Unica One", cursive;
   color: #231f20 !important;
   font-weight: bold;
 }
 
 nav .project-specific {
+  font-size: inherit !important;
+  font-family: inherit;
+  color: #6fab9e !important;
+  font-weight: inherit;
   float: left;
   margin: 0;
-  color: #6fab9e;
 }
 
 nav .project-specific span {
@@ -100,12 +118,16 @@ nav .project-specific span {
 }
 
 nav .project-specific span.project-specific-demo {
-  color: #f37449;
+  font-size: inherit !important;
+  font-family: inherit;
+  color: #f37449 !important;
+  font-weight: inherit;
 }
 
 nav .project-specific span:hover {
   color: #fff !important;
   background: #6fab9e;
+  border: inherit;
 }
 
 nav .nav-right-links {
@@ -125,6 +147,7 @@ nav .nav-right-links a {
 nav .nav-right-links a:hover {
   color: #fff !important;
   background: #6fab9e;
+  border: inherit;
 }
 
 .nav-right-links .is-current a {
@@ -143,6 +166,7 @@ nav.selected-about .logo span {
 
 nav.selected-about .is-current a {
   background: #a385bd;
+  border: inherit;
 }
 
 nav.selected-skills .logo span {
@@ -151,6 +175,7 @@ nav.selected-skills .logo span {
 
 nav.selected-skills .is-current a {
   background: #f9a04e;
+  border: inherit;
 }
 
 nav.selected-experience .logo span {
@@ -159,24 +184,25 @@ nav.selected-experience .logo span {
 
 nav.selected-experience .is-current a {
   background: #9ad18b;
+  border: inherit;
 }
 
 nav.selected-projects .logo span {
   color: #f37449;
 }
 
-nav.selected-projects .is-current a {
+nav.selected-contact .is-current a {
   background: #f37449;
+  border: inherit;
 }
 
-nav.black {
-  background: rgba(26, 26, 26, 0.8);
-  height: 60px;
+nav.selected-contact .logo span {
+  color: #f37449;
 }
 
-.nav-side-items a,
-nav.black .nav-right-links a {
-  color: #88787c;
+nav.selected-projects .is-current a {
+  background: #6fab9e;
+  border: inherit;
 }
 
 @media (min-width: 769px) {

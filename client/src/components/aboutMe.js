@@ -50,7 +50,7 @@ class AboutMe extends React.Component {
             <Col md={3}>
               <SectionHeader
                 sectionName={this.props.sectionName}
-                bootstrapClass="bg-danger"
+                backgroundClass="about-header"
                 headerClass="about-title"
               />
             </Col>

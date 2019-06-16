@@ -33,7 +33,7 @@ class CvCarousel extends Component {
     return (
       <Carousel
         // dynamicHeight
-        autoPlay={!turnOffElements}
+        autoPlay={false}
         emulateTouch={!turnOffElements}
         // width='50vw'
         showThumbs={false}
