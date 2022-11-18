@@ -11,7 +11,7 @@
     "react-dom": "^16.8.6",
     "react-dual-timeline": "^0.3.0",
     "react-responsive-carousel": "^3.1.49",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-scrollspy": "^3.4.0",
     "react-svg": "^10.0.7"
   },
